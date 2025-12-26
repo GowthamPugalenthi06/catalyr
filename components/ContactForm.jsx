@@ -6,11 +6,15 @@ const ContactForm = () => {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+    const encodedData = new URLSearchParams(formData).toString();
 
     try {
       await fetch("/", {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: encodedData,
       });
 
       toast.success("Thanks! We’ll get back to you shortly.");
@@ -25,9 +29,11 @@ const ContactForm = () => {
       name="contact"
       method="POST"
       data-netlify="true"
+      action="/"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
       className="space-y-6"
+      
     >
       {/* REQUIRED FOR NETLIFY */}
       <input type="hidden" name="form-name" value="contact" />
