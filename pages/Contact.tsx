@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import ContactForm from '@/components/ContactForm';
 import { Mail, Linkedin, ArrowRight, MessageCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
@@ -60,27 +61,7 @@ const Contact: React.FC = () => {
             <p className="text-gray-400 mb-10 text-lg leading-relaxed">
               We focus on one project at a time to ensure maximum quality and focus. Get in touch to check our availability for your next milestone.
             </p>
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-               <div>
-                 <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">Your Email</label>
-                 <input 
-                  type="email" 
-                  placeholder="name@company.com" 
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white placeholder-gray-600 focus:outline-none focus:border-white transition-colors" 
-                 />
-               </div>
-               <div>
-                 <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">Project Overview</label>
-                 <textarea 
-                  rows={4} 
-                  placeholder="What are you building?" 
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white placeholder-gray-600 focus:outline-none focus:border-white transition-colors"
-                 ></textarea>
-               </div>
-               <button className="w-full py-5 bg-white text-black font-extrabold rounded-2xl hover:bg-gray-200 transition-colors">
-                 Send Request
-               </button>
-            </form>
+            <ContactForm/>
           </motion.div>
         </div>
       </div>
