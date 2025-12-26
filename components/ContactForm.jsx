@@ -1,169 +1,89 @@
-import { useState } from "react";
 import { toast } from "sonner";
 
-import DarkSelect from "./DarkSelect";
-
-
 const ContactForm = () => {
-  const [step, setStep] = useState(1);
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  const form = e.currentTarget;
-  const formData = new FormData(form);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  try {
-    await fetch("/", { method: "POST", body: formData });
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-    await fetch("/.netlify/functions/sendEmail", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        email: formData.get("email"),
-        projectType: formData.get("projectType"),
-      }),
-    });
+    try {
+      await fetch("/", {
+        method: "POST",
+        body: formData,
+      });
 
-    toast.success("Thanks! We'll contact you shortly.");
-  } catch (error) {
-    toast.error("Something went wrong. Please try again.");
-  }
-};
+      toast.success("Thanks! We’ll get back to you shortly.");
+      form.reset();
+    } catch (error) {
+      toast.error("Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <form
       name="contact"
       method="POST"
       data-netlify="true"
-      className="space-y-6"
+      data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
-
+      className="space-y-6"
     >
       {/* REQUIRED FOR NETLIFY */}
       <input type="hidden" name="form-name" value="contact" />
 
-      {/* STEP 1 */}
-      {step === 1 && (
-        <>
-          <div>
-            <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">
-              Full Name
-            </label>
-            <input
-              name="name"
-              required
-              className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white"
-              placeholder="Your name"
-            />
-          </div>
+      {/* Honeypot field (anti-spam) */}
+      <input type="hidden" name="bot-field" />
 
-          <div>
-            <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              required
-              className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white"
-              placeholder="name@company.com"
-            />
-          </div>
+      {/* Full Name */}
+      <div>
+        <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">
+          Full Name
+        </label>
+        <input
+          type="text"
+          name="name"
+          required
+          placeholder="Your name"
+          className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white outline-none"
+        />
+      </div>
 
-          <button
-            type="button"
-            onClick={() => setStep(2)}
-            className="w-full py-5 bg-white text-black font-extrabold rounded-2xl"
-          >
-            Next 
-          </button>
-        </>
-      )}
+      {/* Email */}
+      <div>
+        <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">
+          Email
+        </label>
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="name@email.com"
+          className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white outline-none"
+        />
+      </div>
 
-      {/* STEP 2 */}
-      {step === 2 && (
-        <>
-          <DarkSelect
-  label="Project Type"
-  name="project_type"
-  required
-  options={[
-    "Web Application",
-    "Mobile App",
-    "MVP",
-    "AI Integration",
-    "Automation / Internal Tool",
-  ]}
-/>
+      {/* Message */}
+      <div>
+        <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">
+          Message
+        </label>
+        <textarea
+          name="message"
+          rows={4}
+          required
+          placeholder="Tell us briefly about your project"
+          className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white outline-none resize-none"
+        />
+      </div>
 
-
-          <div>
-            <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">
-              Project Overview
-            </label>
-            <textarea
-              name="overview"
-              rows={4}
-              required
-              className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white"
-              placeholder="Briefly describe your idea"
-            />
-          </div>
-
-          <div className="flex gap-4">
-            <button
-              type="button"
-              onClick={() => setStep(1)}
-              className="w-1/2 py-5 border border-white/20 rounded-2xl"
-            >
-               Back
-            </button>
-            <button
-              type="button"
-              onClick={() => setStep(3)}
-              className="w-1/2 py-5 bg-white text-black font-extrabold rounded-2xl"
-            >
-              Next 
-            </button>
-          </div>
-        </>
-      )}
-
-      {/* STEP 3 */}
-      {step === 3 && (
-        <>
-          <DarkSelect
-            label="Timeline"
-            name="timeline"
-            options={["ASAP", "1–3 months", "3–6 months"]}
-          />
-          
-          <div>
-            <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">
-              Budget Range (optional)
-            </label>
-            <input
-              name="budget"
-              className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white"
-              placeholder="₹ / $"
-            />
-          </div>
-
-          <div className="flex gap-4">
-            <button
-              type="button"
-              onClick={() => setStep(2)}
-              className="w-1/2 py-5 border border-white/20 rounded-2xl"
-            >
-               Back
-            </button>
-            <button
-              type="submit"
-              className="w-1/2 py-5 bg-white text-black font-extrabold rounded-2xl"
-            >
-              Send Request
-            </button>
-          </div>
-        </>
-      )}
+      {/* Submit */}
+      <button
+        type="submit"
+        className="w-full py-5 bg-white text-black font-extrabold rounded-2xl hover:opacity-90 transition"
+      >
+        Send Message
+      </button>
     </form>
   );
 };
