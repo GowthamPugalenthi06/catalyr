@@ -9,6 +9,9 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Process from './pages/Process';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -31,6 +34,8 @@ const App: React.FC = () => {
             <Route path="/services" element={<Services />} />
             <Route path="/process" element={<Process />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
           </Routes>
         </main>
         <Footer />

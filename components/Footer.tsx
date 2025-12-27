@@ -49,8 +49,8 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-100 text-sm text-gray-400">
           <p>© {new Date().getFullYear()} Catalyr. All rights reserved.</p>
           <div className="flex space-x-8 mt-4 md:mt-0">
-            <span className="hover:text-black cursor-pointer transition-colors">Privacy Policy</span>
-            <span className="hover:text-black cursor-pointer transition-colors">Terms of Service</span>
+            <Link to="/privacy-policy" className="hover:text-black cursor-pointer transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-black cursor-pointer transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
