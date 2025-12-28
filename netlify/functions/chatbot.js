@@ -3,11 +3,11 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { Groq } from 'groq-sdk';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const _filename = fileURLToPath(import.meta.url);
+const _dirname = path.dirname(_filename);
 
 // Load embeddings.json safely
-const embeddingsPath = path.join(__dirname, "data", "embeddings.json");
+const embeddingsPath = path.join(_dirname, "data", "embeddings.json");
 const embeddings = JSON.parse(fs.readFileSync(embeddingsPath, "utf-8"));
 
 let groq;
