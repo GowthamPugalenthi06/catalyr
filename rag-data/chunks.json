@@ -1,57 +1,27 @@
 [
   {
     "id": 0,
-    "text": "--- Source: About.tsx ---\nimport React from 'react'; import from 'framer-motion'; import from 'lucide-react'; const About: React.FC = () => Who We Are Clarity, discipline, and long-term thinking. Catalyr is a product engineering studio built around clarity, discipline, and long-term thinking. We partner with founders and teams who want dependable digital products — not rushed builds or temporary solutions. Our focus is on engineering systems that remain stable, maintainable, and scalable as",
+    "text": "COMPANY PROFILE: CATALYR\nTagline: The First Zero-Debt Engineering Studio. URL: https://catalyr.netlify.app Contact Email: catalyr6@gmail.com Core Mission: A product engineering studio focused on building reliable web and mobile applications, startup MVPs, and business systems with clarity, discipline, and long-term stability.\n\n1. CORE PHILOSOPHY & APPROACH\nCatalyr prioritizes \"Zero-Debt\" engineering. This means we value clean architecture and realistic delivery timelines over rushed, low-quality execution.\n\nKey Beliefs:\n\nClear Understanding: We don't code until the problem space, users, and constraints are fully understood.\n\nEngineering Quality: Technical choices made today define the development speed of the future.\n\nStructure First: Speed without structure creates technical debt that eventually halts progress.\n\nFocused Teams: We use small, highly focused teams to build cohesive systems rather than large, disjointed ones.\n\nThe Catalyr Difference:\n\nDelivery-first mindset: Shipping",
     "source": "catalyr.txt"
   },
   {
     "id": 1,
-    "text": "that remain stable, maintainable, and scalable as businesses grow. We believe the best code is the code that lasts. Our Beliefs , , , ].map((belief, idx) => ( ))} What Makes Catalyr Different We aren't a traditional \"agency.\" We are an engineering partner. We care as much about your codebase as you do. , , , ].map((item, idx) => ( ))} ); }; export default About;\n\n--- Source: Contact.tsx ---\nimport React from 'react'; import from 'framer-motion'; import ContactForm from",
+    "text": "lyr Difference:\n\nDelivery-first mindset: Shipping high-quality, functional code at every milestone.\n\nSimplicity: Solving complex problems with elegant, simple technical solutions—no unnecessary complexity.\n\nHonest Timelines: We offer realistic expectations and clear communication, never false promises.\n\nScalability: Systems are built to grow with the business, not just as a temporary patch.\n\n2. SERVICES & CAPABILITIES\nCatalyr provides full-cycle product engineering from concept to production-ready systems.\n\nA. Custom Web Application Development\nFocused on scalable, secure, and modular backend architecture.\n\nIncludes: Dashboards, Admin Tools, Backend Systems, APIs, Auth & Role Management, 3rd Party Integrations, Marketing Websites & Landing Pages.\n\nIdeal for: Startups, SaaS products, and internal business tools.\n\nB. Mobile Application Development\nHigh-performance cross-platform apps for iOS and Android.\n\nTechnologies: Flutter, React Native.\n\nIncludes: Native performance optimization,",
     "source": "catalyr.txt"
   },
   {
     "id": 2,
-    "text": "ort from 'framer-motion'; import ContactForm from '@/components/ContactForm'; import from 'lucide-react'; const Contact: React.FC = () => ; export default Contact;\n\n--- Source: Home.tsx ---\nimport React from 'react'; import from 'framer-motion'; import from 'lucide-react'; import from 'react-router-dom'; const Home: React.FC = () => , visible: } }; const itemVariants = , visible: } }; return ( Engineering Excellence The First Zero-Debt Engineering Studio Catalyr is a product engineering studio",
+    "text": "tive.\n\nIncludes: Native performance optimization, API integration, secure authentication, and deployment support.\n\nC. Startup MVP Development\nHelping founders validate ideas by building focused MVPs that do not require a rewrite after six months.\n\nFocus: Web-first development, core features, clean architecture, and a clear delivery path.\n\nD. Business Automation Systems\nDesigning systems that reduce manual work and improve operational efficiency.\n\nIncludes: CRM & ERP Integration, Workflow Automation, Reporting Dashboards, POS, and Event Management.\n\nE. AI Integration (Service Add-on)\nWe integrate AI only where it adds practical utility, avoiding \"gimmicks.\"\n\nOfferings: WhatsApp & Web Chatbots, Workflow Automation, In-app AI Assistants, Smart Summaries, and Insights.\n\nImpact: Up to 90% efficiency gain and 24/7 system uptime.\n\n3. WORKFLOW: THE DISCIPLINE-FIRST MODEL\nCatalyr follows a four-step process to ensure engineering excellence:\n\nUnderstand: Deep dive into business problems and",
     "source": "catalyr.txt"
   },
   {
     "id": 3,
-    "text": "ng Studio Catalyr is a product engineering studio focused on building reliable web and mobile applications, startup MVPs, and business systems with clarity and discipline. Get Started We work with startups and growing businesses to design, build, and maintain digital products. Our approach prioritizes long-term stability, clean architecture, and realistic delivery timelines over rushed execution. Building for production-readiness, scalability, and ease of management from day one. Capabilities",
+    "text": "Understand: Deep dive into business problems and constraints. Success metrics are defined before any coding begins.\n\nDefine: Creating clear scope, technical architecture, and documentation to prevent rework.\n\nBuild: Milestone-based execution. Clients receive regular updates and see functional parts of the product as they are built.\n\nDeliver & Support: Transitioning to production-ready systems with long-term maintenance and stability support.\n\n4. TARGET CLIENTS & INDUSTRIES\nCatalyr is industry-agnostic but expertise-driven. We work with founders who prioritize stable foundations over temporary hype.\n\nPrimary Segments: Startups & SaaS, Internal Business Tools, Education & Training, Event Operations, and Service Businesses.\n\n5. CONTACT & ENGAGEMENT\nCatalyr focuses on one project at a time to ensure maximum quality and focus.\n\nCall to Action: Start a conversation to check availability for the next milestone.\n\nEmail: catalyr6@gmail.com\n\nLinkedIn: Available via the website link.\n\nInquiry",
     "source": "catalyr.txt"
   },
   {
     "id": 4,
-    "text": "and ease of management from day one. Capabilities What We Do View all services , , , ].map((service, idx) => ( ))} Workflow How We Work Engineering excellence isn't just about code. It's about process, transparency, and structure. ))} \"Built for teams who care about reliability, not shortcuts.\" Start your project Integrity in code We partner with founders who prioritize stable foundations over temporary hype. ); }; export default Home;\n\n--- Source: PrivacyPolicy.tsx ---\nimport React from",
-    "source": "catalyr.txt"
-  },
-  {
-    "id": 5,
-    "text": "- Source: PrivacyPolicy.tsx ---\nimport React from \"react\"; import from \"framer-motion\"; const PrivacyPolicy: React.FC = () => Information We Collect We only collect information that you voluntarily provide to us. This typically includes: Your name Email address Project or business-related information Any details you submit through our contact forms How We Use Your Information The information you share is used strictly for professional communication purposes, such as: Responding to inquiries",
-    "source": "catalyr.txt"
-  },
-  {
-    "id": 6,
-    "text": "cation purposes, such as: Responding to inquiries Discussing project requirements Providing proposals or estimates Maintaining professional correspondence Cookies & Tracking We do not use cookies, tracking pixels, analytics tools, or advertising trackers on our website at this time. Data Sharing We do not sell, rent, or share your personal information with third parties. Your data remains confidential and is used only for legitimate business communication. Data Security We take reasonable",
-    "source": "catalyr.txt"
-  },
-  {
-    "id": 7,
-    "text": "s communication. Data Security We take reasonable technical and organizational measures to protect your information against unauthorized access, loss, or misuse. Contact Us If you have any questions regarding this Privacy Policy, you may contact us at: catalyr6@gmail.com ); }; export default PrivacyPolicy;\n\n--- Source: Process.tsx ---\nimport React from 'react'; import from 'framer-motion'; import from 'lucide-react'; const Process: React.FC = () => , , , ]; return ( Our Approach A",
-    "source": "catalyr.txt"
-  },
-  {
-    "id": 8,
-    "text": "React.FC = () => , , , ]; return ( Our Approach A discipline-first delivery model. ))} Where We Work We are industry-agnostic but expertise-driven. We've built solutions for founders across various domains. ))} Ready to build? Join the teams who trust Catalyr with their most critical engineering projects. Planning Engineering Scale ); }; export default Process;\n\n--- Source: Services.tsx ---\nimport React from 'react'; import from 'framer-motion'; import from 'lucide-react'; const ServiceCard:",
-    "source": "catalyr.txt"
-  },
-  {
-    "id": 9,
-    "text": "'; import from 'lucide-react'; const ServiceCard: React.FC = ( ) => ( Includes ))} )} ))} )} ); const Services: React.FC = () => includes= idealFor=\"Startups, SaaS products, internal tools\" /> } includes= tech= /> } includes= idealFor=\"Early-stage founders validating concepts\" /> } includes= /> Service Add-on AI Integrations AI is integrated only where it adds practical value. We avoid gimmicks and focus on utility. ))} 90% Efficiency Gain 24/7 System Uptime ); }; export default Services;\n\n---",
-    "source": "catalyr.txt"
-  },
-  {
-    "id": 10,
-    "text": "System Uptime ); }; export default Services;\n\n--- Source: TermsOfService.tsx ---\nimport React from \"react\"; import from \"framer-motion\"; const TermsOfService: React.FC = () => ; export default TermsOfService;",
+    "text": "inkedIn: Available via the website link.\n\nInquiry Details Needed: Full Name, Email, and a Message regarding project requirements.",
     "source": "catalyr.txt"
   }
 ]

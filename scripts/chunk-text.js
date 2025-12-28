@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const inputFile = path.join(__dirname, '../rag-data/catalyr.txt');
 const outputFile = path.join(__dirname, '../rag-data/chunks.json');
 
-const CHUNK_SIZE = 500; // Characters
+const CHUNK_SIZE = 1000; // Characters
 const OVERLAP = 50;
 
 function chunkText(text) {
