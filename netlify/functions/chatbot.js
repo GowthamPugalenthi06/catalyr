@@ -2,7 +2,7 @@ import { Groq } from 'groq-sdk';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
-const embeddings = require('../../rag-data/embeddings.json');
+const embeddings = require('./data/embeddings.json');
 
 const groq = new Groq({
     apiKey: process.env.GROQ_API_KEY,
