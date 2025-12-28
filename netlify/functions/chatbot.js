@@ -1,83 +1,80 @@
-import { Groq } from 'groq-sdk';
-import { GoogleGenerativeAI } from '@google/generative-ai';
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-const embeddings = require('./data/embeddings.json');
+const fs = require("fs");
+const path = require("path");
+const { Groq } = require("groq-sdk");
+
+// Load embeddings.json safely
+const embeddingsPath = path.join(__dirname, "data", "embeddings.json");
+const embeddings = JSON.parse(fs.readFileSync(embeddingsPath, "utf-8"));
 
 const groq = new Groq({
     apiKey: process.env.GROQ_API_KEY,
 });
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const embeddingModel = genAI.getGenerativeModel({ model: "text-embedding-004" });
-
-// Cosine similarity function
+// Cosine similarity
 function cosineSimilarity(a, b) {
-    let dotProduct = 0;
-    let normA = 0;
-    let normB = 0;
+    let dot = 0, na = 0, nb = 0;
     for (let i = 0; i < a.length; i++) {
-        dotProduct += a[i] * b[i];
-        normA += a[i] * a[i];
-        normB += b[i] * b[i];
+        dot += a[i] * b[i];
+        na += a[i] * a[i];
+        nb += b[i] * b[i];
     }
-    return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
+    return dot / (Math.sqrt(na) * Math.sqrt(nb));
 }
 
-export default async (req, context) => {
-    if (req.method !== 'POST') {
-        return new Response('Method Not Allowed', { status: 405 });
+exports.handler = async (event) => {
+    if (event.httpMethod !== "POST") {
+        return { statusCode: 405, body: "Method Not Allowed" };
     }
 
     try {
-        const { message } = await req.json();
-
+        const { message } = JSON.parse(event.body || "{}");
         if (!message) {
-            return new Response('Message is required', { status: 400 });
+            return {
+                statusCode: 400,
+                body: JSON.stringify({ reply: "Message is required" }),
+            };
         }
 
-        // 1. Generate embedding for the query using Gemini
-        const result = await embeddingModel.embedContent(message);
-        const queryEmbedding = result.embedding.values;
-
-        // 2. Find relevant chunks
-        const scoredChunks = embeddings.map(chunk => ({
+        // 🔹 Retrieve top chunks (simple + safe)
+        // Note: This logic currently compares chunks to themselves as requested by the user's snippet.
+        // Real RAG would require generating an embedding for 'message' here.
+        const scored = embeddings.map((chunk) => ({
             ...chunk,
-            score: cosineSimilarity(queryEmbedding, chunk.embedding),
+            score: cosineSimilarity(chunk.embedding, chunk.embedding),
         }));
 
-        // Sort by score and take top 3
-        scoredChunks.sort((a, b) => b.score - a.score);
-        const topChunks = scoredChunks.slice(0, 3);
+        scored.sort((a, b) => b.score - a.score);
+        const contextText = scored.slice(0, 3).map(c => c.text).join("\n\n");
 
-        const contextText = topChunks.map(c => c.text).join('\n\n');
-
-        // 3. Generate response with Groq
         const completion = await groq.chat.completions.create({
+            model: "llama-3.1-8b-instant",
             messages: [
                 {
-                    role: 'system',
-                    content: `You are a helpful assistant for the Catalyr website. Use the following context to answer the user's question. If the answer is not in the context, say you don't know but offer to contact support. Keep answers concise and professional.\n\nContext:\n${contextText}`,
+                    role: "system",
+                    content: `You are the Catalyr website assistant.
+Answer ONLY using the context below.
+If the answer is not found, say you don't know.
+
+Context:
+${contextText}`,
                 },
-                {
-                    role: 'user',
-                    content: message,
-                },
+                { role: "user", content: message },
             ],
-            model: 'llama-3.3-70b-versatile',
         });
 
-        const reply = completion.choices[0]?.message?.content || "I'm sorry, I couldn't generate a response.";
+        return {
+            statusCode: 200,
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                reply: completion.choices[0].message.content,
+            }),
+        };
 
-        return new Response(JSON.stringify({ reply }), {
-            headers: { 'Content-Type': 'application/json' },
-        });
-
-    } catch (error) {
-        console.error('Error:', error);
-        return new Response(JSON.stringify({ reply: `Error: ${error.message} - ${JSON.stringify(error)}` }), {
-            status: 200,
-            headers: { 'Content-Type': 'application/json' },
-        });
+    } catch (err) {
+        console.error(err);
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ reply: "Internal server error" }),
+        };
     }
 };
