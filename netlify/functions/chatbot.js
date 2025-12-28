@@ -31,6 +31,17 @@ export const handler = async (event) => {
                 body: JSON.stringify({ reply: "Message is required" }),
             };
         }
+        // 🔹 Handle Greetings Explicitly
+        const greetings = ["hi", "hello", "hey", "greetings", "good morning", "good afternoon", "good evening"];
+        if (greetings.includes(message.toLowerCase().trim().replace(/[!.]/g, ""))) {
+            return {
+                statusCode: 200,
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    reply: "Hi! I'm the Catalyr AI assistant. I can answer questions about our services, engineering philosophy, and how we work. How can I help you today?",
+                }),
+            };
+        }
 
         // 🔹 Keyword-based Retrieval (Option A - Fast Fix)
         // We use simple keyword matching to ensure the most relevant chunks are found.
