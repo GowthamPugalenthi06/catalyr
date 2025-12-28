@@ -1,12 +1,15 @@
 import { Groq } from 'groq-sdk';
-import { pipeline } from '@xenova/transformers';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const embeddings = require('../../rag-data/embeddings.json');
 
 const groq = new Groq({
-    apiKey: process.env.GROQ_API_KEY ,
+    apiKey: process.env.GROQ_API_KEY,
 });
+
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const embeddingModel = genAI.getGenerativeModel({ model: "text-embedding-004" });
 
 // Cosine similarity function
 function cosineSimilarity(a, b) {
@@ -21,8 +24,6 @@ function cosineSimilarity(a, b) {
     return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
 }
 
-let extractor = null;
-
 export default async (req, context) => {
     if (req.method !== 'POST') {
         return new Response('Method Not Allowed', { status: 405 });
@@ -35,14 +36,9 @@ export default async (req, context) => {
             return new Response('Message is required', { status: 400 });
         }
 
-        // 1. Generate embedding for the query
-        // Note: Loading the model in a serverless function might be slow on cold start.
-        if (!extractor) {
-            extractor = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
-        }
-
-        const output = await extractor(message, { pooling: 'mean', normalize: true });
-        const queryEmbedding = Array.from(output.data);
+        // 1. Generate embedding for the query using Gemini
+        const result = await embeddingModel.embedContent(message);
+        const queryEmbedding = result.embedding.values;
 
         // 2. Find relevant chunks
         const scoredChunks = embeddings.map(chunk => ({
