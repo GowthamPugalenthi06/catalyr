@@ -11,6 +11,7 @@ import Process from './pages/Process';
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import Chatbot from './components/chatbot/Chatbot';
 
 
 const ScrollToTop = () => {
@@ -41,6 +42,7 @@ const App: React.FC = () => {
         <Footer />
       </div>
       <Toaster />
+      <Chatbot />
     </Router>
   );
 };
