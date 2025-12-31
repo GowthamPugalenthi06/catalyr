@@ -16,7 +16,7 @@ export default async function handler(req, res) {
 
         await resend.emails.send({
             from: "Catalyr <contact@catalyr.com>",
-            to: ["catalyr6@gmail.com"], // <-- replace with your email
+            to: ["catalyr6@gmail.com"], 
             subject: `New Contact — ${name}`,
             html: `
         <p><b>Name:</b> ${name}</p>
