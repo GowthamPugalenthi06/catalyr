@@ -1,46 +1,45 @@
+import { useState } from "react";
 import { toast } from "sonner";
 
 const ContactForm = () => {
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    const encodedData = new URLSearchParams(formData).toString();
+    const { name, email, message } = Object.fromEntries(formData.entries());
 
     try {
-      await fetch("/", {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: encodedData,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
       });
 
-      toast.success("Thanks! We’ll get back to you shortly.");
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message || "Something went wrong");
+      }
+
+      toast.success("Thanks! We’ll contact you shortly.");
       form.reset();
     } catch (error) {
-      toast.error("Something went wrong. Please try again.");
+      console.error(error);
+      toast.error("Something went wrong. Try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <form
-      name="contact"
-      method="POST"
-      data-netlify="true"
-      action="/"
-      data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
       className="space-y-6"
-      
     >
-      {/* REQUIRED FOR NETLIFY */}
-      <input type="hidden" name="form-name" value="contact" />
-
-      {/* Honeypot field (anti-spam) */}
-      <input type="hidden" name="bot-field" />
-
       {/* Full Name */}
       <div>
         <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">
@@ -86,9 +85,10 @@ const ContactForm = () => {
       {/* Submit */}
       <button
         type="submit"
-        className="w-full py-5 bg-white text-black font-extrabold rounded-2xl hover:opacity-90 transition"
+        disabled={loading}
+        className="w-full py-5 bg-white text-black font-extrabold rounded-2xl hover:opacity-90 transition disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Send Message
+        {loading ? "Sending..." : "Send Message"}
       </button>
     </form>
   );
