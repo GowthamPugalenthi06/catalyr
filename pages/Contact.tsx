@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <span className="text-xs font-bold text-gray-400 uppercase tracking-widest block mb-1">Email us</span>
-                  <span className="text-lg md:text-2xl font-bold whitespace-nowrap">catalyr6@gmail.com</span>
+                  <span className="text-lg md:text-2xl font-bold whitespace-nowrap">catalyr06@gmail.com</span>
                 </div>
                 <ArrowRight className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all" />
               </a>
