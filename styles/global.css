@@ -30,19 +30,19 @@ a[href*="spline"][target="_blank"] {
     display: none !important;
 }
 
-/* Enable scrolling through Spline container while maintaining interactivity */
+/* Disable scroll zoom on Spline canvas but allow page scrolling */
 .spline-container {
     pointer-events: none !important;
     /* Allow scrolling through the container */
-    overflow: visible !important;
+    overflow: hidden !important;
 }
 
 .spline-container canvas,
 .spline-container>div {
-    touch-action: pan-y !important;
-    -ms-touch-action: pan-y !important;
+    touch-action: none !important;
+    -ms-touch-action: none !important;
     pointer-events: auto !important;
-    /* Keep 3D interaction while allowing vertical scroll */
+    /* Keep 3D interaction */
 }
 
 /* Hide Spline on mobile and tablet devices */

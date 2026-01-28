@@ -217,7 +217,7 @@ const Home: React.FC = () => {
           </Suspense>
         </div>
 
-        <div className="max-w-5xl mx-auto w-full text-center relative z-10 pointer-events-auto">
+        <div className="max-w-5xl mx-auto w-full text-center relative z-10 pointer-events-none">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -238,7 +238,7 @@ const Home: React.FC = () => {
             <div className="flex flex-col items-center space-y-4">
               <Link
                 to="/contact"
-                className="group inline-flex items-center space-x-3 bg-black text-white px-10 py-4 rounded-full font-bold hover:bg-gray-800 transition-all shadow-xl shadow-black/10 hover:translate-y-[-2px]"
+                className="group inline-flex items-center space-x-3 bg-black text-white px-10 py-4 rounded-full font-bold hover:bg-gray-800 transition-all shadow-xl shadow-black/10 hover:translate-y-[-2px] pointer-events-auto"
               >
                 <span>Get Started</span>
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
