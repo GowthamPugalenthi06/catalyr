@@ -30,21 +30,26 @@ a[href*="spline"][target="_blank"] {
     display: none !important;
 }
 
-/* Disable scroll zoom on Spline canvas */
-.spline-container,
+/* Enable scrolling through Spline container while maintaining interactivity */
+.spline-container {
+    pointer-events: none !important;
+    /* Allow scrolling through the container */
+    overflow: visible !important;
+}
+
 .spline-container canvas,
 .spline-container>div {
-    touch-action: none !important;
-    -ms-touch-action: none !important;
-}
-
-.spline-container canvas {
+    touch-action: pan-y !important;
+    -ms-touch-action: pan-y !important;
     pointer-events: auto !important;
+    /* Keep 3D interaction while allowing vertical scroll */
 }
 
-/* Prevent wheel events from zooming the Spline scene */
-.spline-container {
-    overflow: hidden !important;
+/* Hide Spline on mobile and tablet devices */
+@media (max-width: 1024px) {
+    .spline-container {
+        display: none !important;
+    }
 }
 
 /* Disable zoom on all Spline elements */
@@ -74,4 +79,37 @@ nav a,
 nav button,
 nav img {
     pointer-events: auto !important;
+}
+
+/* Remove background grid/whiteboard lines from Spline scene */
+.spline-container {
+    background: #ffffff !important;
+}
+
+.spline-container canvas {
+    background: transparent !important;
+    /* Apply filters to wash out any grid patterns */
+    filter: brightness(1.15) contrast(0.95) !important;
+}
+
+/* Hide any grid overlay elements */
+.spline-container svg,
+.spline-container [class*="grid"],
+.spline-container [id*="grid"],
+.spline-container [class*="background"],
+.spline-container [id*="background"] {
+    display: none !important;
+}
+
+/* Add a subtle white overlay to wash out grid lines */
+.spline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+    z-index: 1;
 }

@@ -131,9 +131,9 @@ const Home: React.FC = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-32 pb-20 px-6">
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-32 pb-20 px-6 bg-gradient-to-br from-gray-50 to-white">
 
-        {/* Spline 3D Scene Background */}
+        {/* Spline 3D Scene Background - Hidden on mobile/tablet */}
         <div className="absolute inset-0 w-full h-full z-0 spline-container">
           <Suspense fallback={<div className="w-full h-full bg-gradient-to-br from-gray-50 to-gray-100"></div>}>
             <Spline
@@ -141,7 +141,7 @@ const Home: React.FC = () => {
               onLoad={(spline) => {
                 // Set fixed zoom level - adjusted to 2.1 to be more zoomed in
                 if (spline && spline.setZoom) {
-                  spline.setZoom(1.9);
+                  spline.setZoom(1.6);
                 }
                 // Disable all camera controls
                 if (spline && spline._camera) {
@@ -152,14 +152,57 @@ const Home: React.FC = () => {
                   spline.setBackgroundColor('#ffffff');
                 }
 
+                // Access the Three.js scene directly to remove grid helpers
+                if (spline && spline._scene) {
+                  const scene = spline._scene;
+
+                  // Remove all grid helpers and background objects
+                  scene.traverse((child: any) => {
+                    // Hide grid helpers
+                    if (child.type === 'GridHelper' || child.type === 'PolarGridHelper') {
+                      child.visible = false;
+                    }
+                    // Hide planes that might be the background grid
+                    if (child.type === 'Mesh' && child.geometry && child.geometry.type === 'PlaneGeometry') {
+                      // Check if it's a large plane (likely background)
+                      if (child.scale && (child.scale.x > 100 || child.scale.y > 100 || child.scale.z > 100)) {
+                        child.visible = false;
+                      }
+                    }
+                    // Hide objects with grid-related names
+                    if (child.name && (
+                      child.name.toLowerCase().includes('grid') ||
+                      child.name.toLowerCase().includes('background') ||
+                      child.name.toLowerCase().includes('floor') ||
+                      child.name.toLowerCase().includes('plane')
+                    )) {
+                      child.visible = false;
+                    }
+                  });
+
+                  // Set scene background to white
+                  if (scene.background) {
+                    scene.background = null;
+                  }
+                }
+
+                // Hide background grid/environment elements by name
+                const backgroundElements = ['Background', 'Grid', 'Environment', 'Floor', 'Plane', 'grid', 'background'];
+                backgroundElements.forEach(name => {
+                  const obj = spline.findObjectByName(name);
+                  if (obj) {
+                    obj.visible = false;
+                  }
+                });
+
                 // Find and reposition the key objects
                 // Find and reposition the key objects individually
                 // We define offsets for each object to create the desired layout
                 // Adjust these X/Y values to swap positions or fine-tune
                 const keyPositions: Record<string, { x: number, y: number }> = {
-                  'Keyboard3': { x: -700, y: 50 },    // Left Key
-                  'Keyboard3 3': { x: 500, y: 100 },   // Top Right Key
-                  'Keyboard3 4': { x:100, y: -100 }   // Bottom Right Key
+                  'Keyboard3': { x: -790, y: -10 },    // Left Key
+                  'Keyboard3 3': { x: 500, y: 90 },   // Top Right Key
+                  'Keyboard3 4': { x: 80, y: -30 }   // Bottom Right Key
                 };
 
                 Object.entries(keyPositions).forEach(([name, offset]) => {
@@ -174,7 +217,7 @@ const Home: React.FC = () => {
           </Suspense>
         </div>
 
-        <div className="max-w-5xl mx-auto w-full text-center relative z-10 pointer-events-none">
+        <div className="max-w-5xl mx-auto w-full text-center relative z-10 pointer-events-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -195,7 +238,7 @@ const Home: React.FC = () => {
             <div className="flex flex-col items-center space-y-4">
               <Link
                 to="/contact"
-                className="group inline-flex items-center space-x-3 bg-black text-white px-10 py-4 rounded-full font-bold hover:bg-gray-800 transition-all shadow-xl shadow-black/10 hover:translate-y-[-2px] pointer-events-auto"
+                className="group inline-flex items-center space-x-3 bg-black text-white px-10 py-4 rounded-full font-bold hover:bg-gray-800 transition-all shadow-xl shadow-black/10 hover:translate-y-[-2px]"
               >
                 <span>Get Started</span>
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
