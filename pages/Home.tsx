@@ -1,10 +1,118 @@
 
-import React from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Code, Smartphone, Rocket, Settings, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+const Spline = lazy(() => import('@splinetool/react-spline'));
+
 const Home: React.FC = () => {
+  // Remove Spline watermark after component mounts
+  useEffect(() => {
+    const removeWatermark = () => {
+      // Target all links that point to spline.design
+      const splineLinks = document.querySelectorAll('a[href*="spline.design"], a[href*="spline"][target="_blank"]');
+      splineLinks.forEach(link => {
+        (link as HTMLElement).style.display = 'none';
+        link.remove();
+      });
+
+      // Target watermark elements by common patterns
+      const watermarks = document.querySelectorAll('[id*="watermark"], [class*="watermark"]');
+      watermarks.forEach(el => {
+        if (el.tagName !== 'CANVAS') {
+          (el as HTMLElement).style.display = 'none';
+        }
+      });
+    };
+
+    // Prevent scroll zoom on Spline canvas - comprehensive approach
+    const preventScrollZoom = (e: WheelEvent) => {
+      const splineContainer = document.querySelector('.spline-container');
+      if (splineContainer && splineContainer.contains(e.target as Node)) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        return false;
+      }
+    };
+
+    // Add event listeners at multiple levels for maximum coverage
+    document.addEventListener('wheel', preventScrollZoom, { passive: false, capture: true });
+
+
+    // Function to block wheel events on canvas elements
+    const blockCanvasZoom = (canvas: HTMLCanvasElement) => {
+      canvas.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+      }, { passive: false, capture: true });
+
+      // Also block on the parent
+      canvas.parentElement?.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+      }, { passive: false, capture: true });
+    };
+
+    // Also add directly to the container when it's available
+    const addContainerListener = () => {
+      const splineContainer = document.querySelector('.spline-container');
+      if (splineContainer) {
+        splineContainer.addEventListener('wheel', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+        }, { passive: false, capture: true });
+
+        // Find and block all canvas elements
+        const canvases = splineContainer.querySelectorAll('canvas');
+        canvases.forEach(canvas => blockCanvasZoom(canvas as HTMLCanvasElement));
+      }
+    };
+
+    // Watch for canvas elements being added dynamically
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeName === 'CANVAS') {
+            blockCanvasZoom(node as HTMLCanvasElement);
+          }
+          if (node instanceof HTMLElement) {
+            const canvases = node.querySelectorAll('canvas');
+            canvases.forEach(canvas => blockCanvasZoom(canvas as HTMLCanvasElement));
+          }
+        });
+      });
+    });
+
+    // Start observing the spline container
+    const splineContainer = document.querySelector('.spline-container');
+    if (splineContainer) {
+      observer.observe(splineContainer, { childList: true, subtree: true });
+    }
+
+    // Try immediately and after delays
+    addContainerListener();
+    setTimeout(addContainerListener, 500);
+    setTimeout(addContainerListener, 1000);
+    setTimeout(addContainerListener, 2000);
+
+
+    // Run immediately and also after a delay to catch dynamically added elements
+    removeWatermark();
+    const interval = setInterval(removeWatermark, 1000);
+
+    // Cleanup
+    return () => {
+      clearInterval(interval);
+      observer.disconnect();
+      document.removeEventListener('wheel', preventScrollZoom, { capture: true });
+    };
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -24,12 +132,54 @@ const Home: React.FC = () => {
     <div className="bg-white">
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-32 pb-20 px-6">
-        <div className="max-w-5xl mx-auto w-full text-center">
+
+        {/* Spline 3D Scene Background */}
+        <div className="absolute inset-0 w-full h-full z-0 spline-container">
+          <Suspense fallback={<div className="w-full h-full bg-gradient-to-br from-gray-50 to-gray-100"></div>}>
+            <Spline
+              scene="/scene.splinecode"
+              onLoad={(spline) => {
+                // Set fixed zoom level - adjusted to 2.1 to be more zoomed in
+                if (spline && spline.setZoom) {
+                  spline.setZoom(1.9);
+                }
+                // Disable all camera controls
+                if (spline && spline._camera) {
+                  spline._camera.enableZoom = false;
+                }
+                // Set background color to white to hide any grid/lines
+                if (spline && spline.setBackgroundColor) {
+                  spline.setBackgroundColor('#ffffff');
+                }
+
+                // Find and reposition the key objects
+                // Find and reposition the key objects individually
+                // We define offsets for each object to create the desired layout
+                // Adjust these X/Y values to swap positions or fine-tune
+                const keyPositions: Record<string, { x: number, y: number }> = {
+                  'Keyboard3': { x: -700, y: 50 },    // Left Key
+                  'Keyboard3 3': { x: 500, y: 100 },   // Top Right Key
+                  'Keyboard3 4': { x:100, y: -100 }   // Bottom Right Key
+                };
+
+                Object.entries(keyPositions).forEach(([name, offset]) => {
+                  const obj = spline.findObjectByName(name);
+                  if (obj) {
+                    obj.position.x += offset.x; // Add offset to original position
+                    obj.position.y += offset.y;
+                  }
+                });
+              }}
+            />
+          </Suspense>
+        </div>
+
+        <div className="max-w-5xl mx-auto w-full text-center relative z-10 pointer-events-none">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="z-10 flex flex-col items-center"
+            className="flex flex-col items-center"
           >
             <span className="inline-flex items-center px-3 py-1 mb-8 text-xs font-bold tracking-widest text-black bg-gray-100 rounded-full uppercase border border-gray-200">
               <span className="w-2 h-2 rounded-full bg-black mr-2"></span>
@@ -45,12 +195,12 @@ const Home: React.FC = () => {
             <div className="flex flex-col items-center space-y-4">
               <Link
                 to="/contact"
-                className="group inline-flex items-center space-x-3 bg-black text-white px-10 py-4 rounded-full font-bold hover:bg-gray-800 transition-all shadow-xl shadow-black/10 hover:translate-y-[-2px]"
+                className="group inline-flex items-center space-x-3 bg-black text-white px-10 py-4 rounded-full font-bold hover:bg-gray-800 transition-all shadow-xl shadow-black/10 hover:translate-y-[-2px] pointer-events-auto"
               >
                 <span>Get Started</span>
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
               </Link>
-             
+
             </div>
           </motion.div>
         </div>

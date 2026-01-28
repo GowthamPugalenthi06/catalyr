@@ -1,0 +1,77 @@
+/* Global Styles */
+
+/* Hide Spline Watermark and Logo - Specific targeting only */
+#spline-watermark,
+.spline-watermark,
+a[href*="spline.design"],
+a[href*="spline"][target="_blank"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Target Spline logo/watermark that appears as a link */
+.spline-container a[href^="https://spline.design"],
+.spline-container a[href^="http://spline.design"] {
+    display: none !important;
+}
+
+/* Hide small positioned divs that contain branding (but not the main canvas container) */
+.spline-container>div>a[target="_blank"],
+.spline-container div[style*="position: absolute"][style*="right"][style*="bottom"] a,
+.spline-container div[style*="position: fixed"][style*="right"][style*="bottom"] a {
+    display: none !important;
+}
+
+/* Additional watermark patterns - be very specific */
+[id*="watermark"]:not(canvas):not([id*="container"]),
+[class*="watermark"]:not(canvas):not([class*="container"]) {
+    display: none !important;
+}
+
+/* Disable scroll zoom on Spline canvas */
+.spline-container,
+.spline-container canvas,
+.spline-container>div {
+    touch-action: none !important;
+    -ms-touch-action: none !important;
+}
+
+.spline-container canvas {
+    pointer-events: auto !important;
+}
+
+/* Prevent wheel events from zooming the Spline scene */
+.spline-container {
+    overflow: hidden !important;
+}
+
+/* Disable zoom on all Spline elements */
+.spline-container,
+.spline-container * {
+    -webkit-user-drag: none !important;
+    -khtml-user-drag: none !important;
+    -moz-user-drag: none !important;
+    -o-user-drag: none !important;
+    user-drag: none !important;
+}
+
+/* Prevent text selection that might interfere */
+.spline-container * {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+/* Make navbar transparent to pointer events but keep links clickable */
+nav {
+    pointer-events: none !important;
+}
+
+nav a,
+nav button,
+nav img {
+    pointer-events: auto !important;
+}
