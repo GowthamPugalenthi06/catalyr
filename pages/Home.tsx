@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Spline = lazy(() => import('@splinetool/react-spline'));
 
 const Home: React.FC = () => {
-  // Remove Spline watermark after component mounts
+  // Remove Spline watermark and handle scrolling
   useEffect(() => {
     const removeWatermark = () => {
       // Target all links that point to spline.design
@@ -26,90 +26,33 @@ const Home: React.FC = () => {
       });
     };
 
-    // Prevent scroll zoom on Spline canvas - comprehensive approach
-    const preventScrollZoom = (e: WheelEvent) => {
+    // Prevent zoom on Spline but allow page scrolling
+    const handleSplineScroll = (e: WheelEvent) => {
       const splineContainer = document.querySelector('.spline-container');
       if (splineContainer && splineContainer.contains(e.target as Node)) {
+        // Prevent the default wheel behavior on Spline (which causes zoom)
         e.preventDefault();
         e.stopPropagation();
-        e.stopImmediatePropagation();
-        return false;
-      }
-    };
 
-    // Add event listeners at multiple levels for maximum coverage
-    document.addEventListener('wheel', preventScrollZoom, { passive: false, capture: true });
-
-
-    // Function to block wheel events on canvas elements
-    const blockCanvasZoom = (canvas: HTMLCanvasElement) => {
-      canvas.addEventListener('wheel', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-      }, { passive: false, capture: true });
-
-      // Also block on the parent
-      canvas.parentElement?.addEventListener('wheel', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-      }, { passive: false, capture: true });
-    };
-
-    // Also add directly to the container when it's available
-    const addContainerListener = () => {
-      const splineContainer = document.querySelector('.spline-container');
-      if (splineContainer) {
-        splineContainer.addEventListener('wheel', (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          e.stopImmediatePropagation();
-        }, { passive: false, capture: true });
-
-        // Find and block all canvas elements
-        const canvases = splineContainer.querySelectorAll('canvas');
-        canvases.forEach(canvas => blockCanvasZoom(canvas as HTMLCanvasElement));
-      }
-    };
-
-    // Watch for canvas elements being added dynamically
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        mutation.addedNodes.forEach((node) => {
-          if (node.nodeName === 'CANVAS') {
-            blockCanvasZoom(node as HTMLCanvasElement);
-          }
-          if (node instanceof HTMLElement) {
-            const canvases = node.querySelectorAll('canvas');
-            canvases.forEach(canvas => blockCanvasZoom(canvas as HTMLCanvasElement));
-          }
+        // Manually scroll the page instead
+        window.scrollBy({
+          top: e.deltaY,
+          behavior: 'auto'
         });
-      });
-    });
+      }
+    };
 
-    // Start observing the spline container
-    const splineContainer = document.querySelector('.spline-container');
-    if (splineContainer) {
-      observer.observe(splineContainer, { childList: true, subtree: true });
-    }
+    // Add event listener to intercept wheel events
+    document.addEventListener('wheel', handleSplineScroll, { passive: false, capture: true });
 
-    // Try immediately and after delays
-    addContainerListener();
-    setTimeout(addContainerListener, 500);
-    setTimeout(addContainerListener, 1000);
-    setTimeout(addContainerListener, 2000);
-
-
-    // Run immediately and also after a delay to catch dynamically added elements
+    // Run watermark removal immediately and periodically
     removeWatermark();
     const interval = setInterval(removeWatermark, 1000);
 
     // Cleanup
     return () => {
       clearInterval(interval);
-      observer.disconnect();
-      document.removeEventListener('wheel', preventScrollZoom, { capture: true });
+      document.removeEventListener('wheel', handleSplineScroll, { capture: true });
     };
   }, []);
 
