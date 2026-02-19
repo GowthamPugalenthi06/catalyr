@@ -10,13 +10,13 @@ const ContactForm = () => {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    const { name, email, message } = Object.fromEntries(formData.entries());
+    const { name, email, website, message } = Object.fromEntries(formData.entries());
 
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify({ name, email, website, message }),
       });
 
       const data = await res.json();
@@ -64,6 +64,19 @@ const ContactForm = () => {
           name="email"
           required
           placeholder="name@email.com"
+          className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white outline-none"
+        />
+      </div>
+
+      {/* Website URL */}
+      <div>
+        <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">
+          Website URL
+        </label>
+        <input
+          type="url"
+          name="website"
+          placeholder="https://yoursite.com"
           className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white outline-none"
         />
       </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { X } from 'lucide-react';
 
 interface SpeedMeterProps {
     className?: string;
@@ -6,21 +7,16 @@ interface SpeedMeterProps {
 
 const SpeedMeter: React.FC<SpeedMeterProps> = ({ className = '' }) => {
     const [loadTime, setLoadTime] = useState<number | null>(null);
+    const [dismissed, setDismissed] = useState(false);
 
     useEffect(() => {
-        // Calculate page load time
         const calculateLoadTime = () => {
             if (window.performance) {
                 const perfData = window.performance.timing;
                 const pageLoadTime = (perfData.loadEventEnd - perfData.navigationStart) / 1000;
-
-                if (pageLoadTime > 0) {
-                    setLoadTime(pageLoadTime);
-                }
+                if (pageLoadTime > 0) setLoadTime(pageLoadTime);
             }
         };
-
-        // Wait for page to fully load
         if (document.readyState === 'complete') {
             calculateLoadTime();
         } else {
@@ -29,13 +25,20 @@ const SpeedMeter: React.FC<SpeedMeterProps> = ({ className = '' }) => {
         }
     }, []);
 
-    if (!loadTime) {
-        return null;
-    }
+    if (!loadTime || dismissed) return null;
 
     return (
         <div className={`fixed bottom-4 left-4 md:bottom-6 md:left-6 z-50 ${className}`}>
-            <div className="bg-black text-white border-2 border-white rounded-xl md:rounded-2xl px-4 py-3 md:px-6 md:py-4 shadow-2xl backdrop-blur-sm">
+            <div className="relative bg-black text-white border-2 border-white rounded-xl md:rounded-2xl px-4 py-3 md:px-6 md:py-4 shadow-2xl backdrop-blur-sm">
+                {/* X dismiss button */}
+                <button
+                    onClick={() => setDismissed(true)}
+                    className="absolute -top-2 -right-2 w-5 h-5 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors shadow"
+                    aria-label="Dismiss"
+                >
+                    <X size={10} strokeWidth={3} />
+                </button>
+
                 <div className="flex items-center space-x-2 md:space-x-3">
                     <div className="flex flex-col">
                         <span className="text-[10px] md:text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">

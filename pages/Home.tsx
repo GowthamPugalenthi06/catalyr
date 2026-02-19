@@ -172,22 +172,51 @@ const Home: React.FC = () => {
               <span className="w-2 h-2 rounded-full bg-black mr-2"></span>
               Engineering Excellence
             </span>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-black mb-8 leading-[1.1]">
-              The First Zero-Debt <br />
-              <span className="text-gray-400">Engineering Studio</span>
+            <h1 className="text-5xl md:text-7xl lg:text-6xl font-extrabold tracking-tight text-black mb-8 leading-[1.1]">
+              Zero-Debt MVPs and Internal Tools<br />
+              <span className="text-gray-400">for SaaS &amp; Tech Businesses</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
-              Catalyr is a product engineering studio focused on building reliable web and mobile applications, startup MVPs, and business systems with clarity and discipline.
+            <p className="text-xl md:text-1xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
+              Catalyr builds production-ready web systems with clean architecture and zero technical debt, so you don't have to rewrite in 12 months.
             </p>
-            <div className="flex flex-col items-center space-y-4">
+            <div className="flex flex-col items-center space-y-6">
               <Link
                 to="/contact"
                 className="group inline-flex items-center space-x-3 bg-black text-white px-10 py-4 rounded-full font-bold hover:bg-gray-800 transition-all shadow-xl shadow-black/10 hover:translate-y-[-2px] pointer-events-auto"
               >
-                <span>Get Started</span>
+                <span>Get a Free Zero-Debt Audit</span>
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
               </Link>
 
+              {/* Audit Value Block — clean light card */}
+              <div className="mt-3 w-full max-w-lg pointer-events-auto">
+                <div className="bg-white border border-gray-200 rounded-2xl px-6 py-4 shadow-sm">
+                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-3 text-center">What you get in the audit</p>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                    <div className="flex items-center space-x-2">
+                      <span className="flex-shrink-0 w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center">
+                        <CheckCircle size={10} className="text-emerald-500" />
+                      </span>
+                      <span className="text-xs text-gray-600 font-medium">Speed &amp; performance report</span>
+                    </div>
+                    <div className="hidden sm:block w-px h-4 bg-gray-200" />
+                    <div className="flex items-center space-x-2">
+                      <span className="flex-shrink-0 w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center">
+                        <CheckCircle size={10} className="text-emerald-500" />
+                      </span>
+                      <span className="text-xs text-gray-600 font-medium">Architecture &amp; tech debt review</span>
+                    </div>
+                    <div className="hidden sm:block w-px h-4 bg-gray-200" />
+                    <div className="flex items-center space-x-2">
+                      <span className="flex-shrink-0 w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center">
+                        <CheckCircle size={10} className="text-emerald-500" />
+                      </span>
+                      <span className="text-xs text-gray-600 font-medium">3–5 concrete recommendations</span>
+                    </div>
+                  </div>
+                  <p className="mt-3 text-center text-[10px] text-gray-400 border-t border-gray-100 pt-2">Free &nbsp;·&nbsp; No commitment &nbsp;·&nbsp; Delivered within 48h</p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -265,15 +294,11 @@ const Home: React.FC = () => {
                   <p className="text-sm text-gray-500">Speed & Efficiency</p>
                 </div>
                 <div className="p-6 md:p-8 bg-gray-900/20 border-r border-white/5">
-                  <p className="text-gray-400 leading-relaxed">
-                    Bloated with 20+ plugins. Heavy JavaScript.
-                  </p>
+                  <p className="text-gray-400 leading-relaxed">Bloated with 20+ plugins. Heavy JavaScript.</p>
                   <p className="text-white font-bold mt-2">4s+ Load Time</p>
                 </div>
                 <div className="p-6 md:p-8 bg-white/5">
-                  <p className="text-gray-300 leading-relaxed">
-                    Clean React/Vite architecture. Zero Bloat.
-                  </p>
+                  <p className="text-gray-300 leading-relaxed">Clean React/Vite architecture. Zero Bloat.</p>
                   <p className="text-white font-bold mt-2">0.1s Interaction Latency</p>
                 </div>
               </div>
@@ -303,15 +328,11 @@ const Home: React.FC = () => {
                   <p className="text-sm text-gray-500">Asset vs Liability</p>
                 </div>
                 <div className="p-6 md:p-8 bg-gray-900/20 border-r border-white/5">
-                  <p className="text-gray-400 leading-relaxed">
-                    Locked into a platform. You rent your site.
-                  </p>
+                  <p className="text-gray-400 leading-relaxed">Locked into a platform. You rent your site.</p>
                   <p className="text-white font-bold mt-2">Subscription Debt</p>
                 </div>
                 <div className="p-6 md:p-8 bg-white/5">
-                  <p className="text-gray-300 leading-relaxed">
-                    No monthly vendor fees. You own your asset.
-                  </p>
+                  <p className="text-gray-300 leading-relaxed">No monthly vendor fees. You own your asset.</p>
                   <p className="text-white font-bold mt-2">Proprietary Codebase</p>
                 </div>
               </div>
@@ -341,15 +362,11 @@ const Home: React.FC = () => {
                   <p className="text-sm text-gray-500">Future-Proofing</p>
                 </div>
                 <div className="p-6 md:p-8 bg-gray-900/20 border-r border-white/5">
-                  <p className="text-gray-400 leading-relaxed">
-                    Breaks when you add custom features.
-                  </p>
+                  <p className="text-gray-400 leading-relaxed">Breaks when you add custom features.</p>
                   <p className="text-white font-bold mt-2">Hard to integrate AI</p>
                 </div>
                 <div className="p-6 md:p-8 bg-white/5">
-                  <p className="text-gray-300 leading-relaxed">
-                    API-First design. Unlimited scalability.
-                  </p>
+                  <p className="text-gray-300 leading-relaxed">API-First design. Unlimited scalability.</p>
                   <p className="text-white font-bold mt-2">Ready for AI, Blockchain, Enterprise</p>
                 </div>
               </div>
