@@ -1,0 +1,351 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
+const SVC = "https://phenomenonstudio.com";
+
+export default function Header() {
+  const pathname = usePathname();
+  const isInsights = pathname === "/insights";
+  const isCases = pathname === "/cases";
+
+  return (
+    <header className={isInsights ? "always_active button-after-invert" : isCases ? "always_active" : ""} suppressHydrationWarning>
+        <div className="container">
+        <div className="flex v--center h--between pt-12 pb-12">
+          <a href="/" className="logo">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="168"
+              height="22"
+              viewBox="0 0 168 22"
+              fill="none"
+            >
+              <path
+                d="M10.2264 9.01858C9.82538 9.2545 9.22712 9.60644 8.70843 10.053L8.79169 10.2542C9.476 10.2046 10.1494 10.0319 10.6006 9.91617C10.7423 9.87981 10.8622 9.84908 10.9535 9.82956C11.3871 9.73699 12.457 9.70105 12.9377 9.6947V12.4949C12.457 12.4886 11.3871 12.4527 10.9535 12.36C10.862 12.3405 10.742 12.3097 10.6 12.2733C10.149 12.1576 9.47602 11.9851 8.79219 11.9355L8.70819 12.1367C9.22716 12.5836 9.82584 12.9357 10.227 13.1716C10.353 13.2457 10.4596 13.3084 10.538 13.3589C10.9103 13.5989 11.6923 14.3271 12.0368 14.6612L10.0491 16.6412C9.71355 16.2982 8.98257 15.5192 8.74173 15.1482C8.69092 15.07 8.6279 14.9637 8.55333 14.8379C8.3165 14.4385 7.9632 13.8425 7.51488 13.3259L7.31273 13.4089C7.36243 14.0902 7.53568 14.7607 7.65181 15.21C7.68837 15.3515 7.71927 15.4711 7.73887 15.5622C7.8319 15.9941 7.86797 17.0598 7.87426 17.5387H5.06319C5.06957 17.0598 5.10565 15.9941 5.19858 15.5622C5.21817 15.4712 5.24903 15.3519 5.28553 15.2106C5.40169 14.7613 5.57507 14.0906 5.62481 13.4091L5.42315 13.3255C4.97469 13.8423 4.62129 14.4384 4.38441 14.8379C4.30986 14.9636 4.24678 15.07 4.19599 15.1482C3.95515 15.5192 3.22417 16.2982 2.88866 16.6412L0.90094 14.6612C1.2454 14.3271 2.02741 13.5989 2.39974 13.3589C2.47817 13.3084 2.58471 13.2457 2.71076 13.1716C3.1118 12.9357 3.71032 12.5837 4.22922 12.1369L4.14601 11.9359C3.46202 11.9854 2.7889 12.158 2.33774 12.2737C2.19584 12.3101 2.07562 12.3409 1.98423 12.3604C1.5506 12.4531 0.480756 12.4891 0 12.4953V9.69513C0.480756 9.70149 1.5506 9.73743 1.98423 9.83C2.07552 9.84951 2.1953 9.88023 2.337 9.91657C2.78804 10.0323 3.46134 10.205 4.14544 10.2546L4.22953 10.0532C3.71078 9.60654 3.11241 9.25453 2.71132 9.01858C2.58504 8.9443 2.47832 8.88151 2.3998 8.8309C2.02739 8.59099 1.24538 7.86284 0.900995 7.52863L2.88872 5.54861C3.22415 5.89173 3.95514 6.67071 4.19605 7.0416C4.24677 7.11973 4.30968 7.22585 4.3841 7.35142C4.6209 7.75091 4.97431 8.34714 5.42282 8.86403L5.62482 8.78106C5.5751 8.09944 5.4017 7.42868 5.28553 6.97928C5.24904 6.83813 5.21817 6.71869 5.19858 6.62775C5.10565 6.19579 5.06957 5.13009 5.06319 4.6512H7.87426C7.86797 5.13009 7.8319 6.19579 7.73887 6.62775C7.71928 6.71878 7.68841 6.83825 7.65189 6.9796C7.53579 7.42887 7.36252 8.09938 7.31277 8.7805L7.51474 8.86421C7.96333 8.34727 8.31679 7.75096 8.55362 7.35142C8.62804 7.22586 8.69095 7.11973 8.74167 7.0416C8.98259 6.67071 9.71357 5.89173 10.049 5.54861L12.0367 7.52863C11.6923 7.86284 10.9103 8.59099 10.5379 8.8309C10.4594 8.88149 10.3526 8.94433 10.2264 9.01858Z"
+                fill="#FF7A00"
+              />
+              <path
+                d="M15.3142 21.5286V4.96648H17.9343L17.9095 8.37987L18.3297 8.4039C18.4945 7.60264 18.7582 6.92157 19.1207 6.36068C19.4997 5.7998 19.9776 5.37513 20.5543 5.08667C21.131 4.79822 21.8149 4.65399 22.6059 4.65399C23.7593 4.65399 24.7398 4.93443 25.5472 5.49531C26.3547 6.04018 26.9644 6.8174 27.3763 7.82699C27.8048 8.82056 28.019 9.9824 28.019 11.3125C28.019 12.5625 27.8212 13.6842 27.4258 14.6778C27.0468 15.6553 26.4618 16.4326 25.6708 17.0095C24.8963 17.5704 23.9324 17.8508 22.7789 17.8508C21.9385 17.8508 21.2299 17.6906 20.6532 17.37C20.0764 17.0495 19.6068 16.6088 19.2443 16.048C18.8818 15.4871 18.5852 14.8381 18.3545 14.1009H17.9095C18.0084 14.5336 18.0908 14.9823 18.1567 15.447C18.2391 15.8957 18.305 16.3444 18.3545 16.7931C18.4039 17.2258 18.4286 17.6425 18.4286 18.0431V21.5286H15.3142ZM21.7655 15.3749C22.4081 15.3749 22.9519 15.2066 23.3968 14.8701C23.8417 14.5175 24.1795 14.0368 24.4102 13.4278C24.6409 12.8028 24.7563 12.0897 24.7563 11.2885C24.7563 10.4551 24.6327 9.734 24.3855 9.12504C24.1548 8.51608 23.8088 8.04334 23.3474 7.7068C22.886 7.37027 22.3422 7.20201 21.716 7.20201C21.1722 7.20201 20.6944 7.3222 20.2824 7.56258C19.8705 7.80296 19.5244 8.12346 19.2443 8.52409C18.9642 8.9087 18.7582 9.32536 18.6263 9.77407C18.4945 10.2228 18.4286 10.6635 18.4286 11.0962V11.5048C18.4286 11.8253 18.4698 12.1618 18.5522 12.5144C18.6511 12.8509 18.7911 13.1955 18.9724 13.548C19.1537 13.8846 19.3761 14.197 19.6398 14.4855C19.9034 14.7579 20.2165 14.9743 20.579 15.1345C20.9415 15.2948 21.337 15.3749 21.7655 15.3749Z"
+                fill="currentColor"
+              />
+              <path
+                d="M30.5879 17.5383V0.47139H33.727V4.38957C33.727 4.7261 33.7105 5.07065 33.6775 5.4232C33.6611 5.77576 33.6281 6.13633 33.5787 6.50491C33.5292 6.87349 33.4716 7.24207 33.4056 7.61065C33.3562 7.97923 33.2985 8.34782 33.2326 8.7164H33.7517C33.9824 7.85103 34.279 7.12188 34.6415 6.52895C35.004 5.91999 35.4654 5.45525 36.0257 5.13475C36.6024 4.81424 37.3028 4.65399 38.1267 4.65399C39.6262 4.65399 40.7467 5.1668 41.4882 6.19241C42.2298 7.20201 42.6005 8.74044 42.6005 10.8077V17.5383H39.4614V11.2404C39.4614 9.86221 39.2472 8.8446 38.8188 8.18756C38.4068 7.53053 37.7806 7.20201 36.9402 7.20201C36.2481 7.20201 35.6714 7.41034 35.21 7.82699C34.7486 8.22763 34.3943 8.76447 34.1472 9.43754C33.9 10.1106 33.7517 10.8718 33.7023 11.7211V17.5383H30.5879Z"
+                fill="currentColor"
+              />
+              <path
+                d="M51.4776 17.8508C50.4394 17.8508 49.5084 17.7066 48.6845 17.4181C47.8771 17.1297 47.1932 16.713 46.6329 16.1682C46.0727 15.6073 45.6443 14.9342 45.3476 14.149C45.051 13.3637 44.9027 12.4743 44.9027 11.4808C44.9027 10.4872 45.0428 9.57375 45.3229 8.74044C45.6195 7.90712 46.0397 7.18598 46.5835 6.57702C47.1273 5.96806 47.7864 5.49532 48.5609 5.15878C49.3519 4.82225 50.2499 4.65399 51.2551 4.65399C52.1944 4.65399 53.0348 4.80623 53.7763 5.11071C54.5178 5.41519 55.144 5.87191 55.6548 6.48087C56.1656 7.07381 56.5446 7.81898 56.7918 8.7164C57.039 9.59779 57.1214 10.6234 57.039 11.7933L46.9296 11.8654V10.1106L55.2346 10.0385L54.1471 11.024C54.2459 10.1106 54.1718 9.36542 53.9246 8.78851C53.6774 8.19558 53.3231 7.76289 52.8617 7.49046C52.4004 7.20201 51.873 7.05778 51.2798 7.05778C50.6042 7.05778 50.011 7.23406 49.5002 7.58661C48.9893 7.92315 48.5939 8.41993 48.3137 9.07697C48.0501 9.71798 47.9183 10.5032 47.9183 11.4327C47.9183 12.8269 48.2313 13.8685 48.8575 14.5576C49.5002 15.2467 50.3735 15.5912 51.4776 15.5912C51.9719 15.5912 52.3839 15.5352 52.7134 15.423C53.0595 15.2948 53.3479 15.1345 53.5786 14.9422C53.8092 14.7339 53.9905 14.5015 54.1223 14.2451C54.2706 13.9887 54.386 13.7163 54.4684 13.4278L57.1873 14.0288C57.0555 14.6217 56.8413 15.1505 56.5446 15.6153C56.248 16.08 55.8608 16.4806 55.3829 16.8172C54.9215 17.1537 54.3695 17.4101 53.7269 17.5864C53.0842 17.7627 52.3344 17.8508 51.4776 17.8508Z"
+                fill="currentColor"
+              />
+              <path
+                d="M59.6386 17.5383V4.96648H62.2339L62.1598 8.81255H62.6047C62.8354 7.86706 63.1402 7.08983 63.5192 6.48087C63.9147 5.87191 64.4173 5.41519 65.027 5.11071C65.6367 4.80623 66.3452 4.65399 67.1527 4.65399C68.6192 4.65399 69.7315 5.15878 70.4895 6.16838C71.264 7.17797 71.6513 8.74043 71.6513 10.8558V17.5383H68.5121V11.1683C68.5121 9.80612 68.2979 8.81255 67.8695 8.18756C67.4575 7.54655 66.8396 7.22605 66.0157 7.22605C65.3236 7.22605 64.7386 7.44239 64.2607 7.87507C63.7829 8.29173 63.4121 8.85261 63.1485 9.55772C62.9013 10.2468 62.7694 11.008 62.753 11.8413V17.5383H59.6386Z"
+                fill="currentColor"
+              />
+              <path
+                d="M80.4294 17.8508C79.1606 17.8508 78.0401 17.6024 77.0678 17.1056C76.0956 16.5928 75.3294 15.8476 74.7691 14.8701C74.2253 13.8765 73.9535 12.6586 73.9535 11.2163C73.9535 9.74201 74.2336 8.52409 74.7938 7.56258C75.3706 6.58503 76.1451 5.85588 77.1173 5.37513C78.0895 4.89437 79.1853 4.65399 80.4047 4.65399C81.6735 4.65399 82.7941 4.90238 83.7663 5.39916C84.7385 5.89595 85.5047 6.64112 86.065 7.63469C86.6253 8.61223 86.9054 9.83015 86.9054 11.2885C86.9054 12.7628 86.6253 13.9887 86.065 14.9663C85.5047 15.9438 84.7303 16.6729 83.7416 17.1537C82.7693 17.6184 81.6653 17.8508 80.4294 17.8508ZM80.553 15.5432C81.2451 15.5432 81.8301 15.3909 82.3079 15.0864C82.7858 14.7659 83.1483 14.2932 83.3955 13.6682C83.6592 13.0432 83.791 12.298 83.791 11.4327C83.791 10.5192 83.6509 9.74201 83.3708 9.101C83.1071 8.44397 82.7199 7.93917 82.2091 7.58661C81.7147 7.23406 81.0885 7.05778 80.3305 7.05778C79.6714 7.05778 79.0947 7.21803 78.6003 7.53854C78.106 7.84302 77.727 8.29974 77.4633 8.9087C77.2162 9.51766 77.0926 10.2708 77.0926 11.1683C77.0926 12.5785 77.3974 13.6602 78.0071 14.4134C78.6333 15.1666 79.4819 15.5432 80.553 15.5432Z"
+                fill="currentColor"
+              />
+              <path
+                d="M89.4617 17.5383V4.96648H92.0076L91.9335 8.81255H92.3784C92.6091 7.88308 92.9057 7.11387 93.2682 6.50491C93.6472 5.87992 94.1086 5.41519 94.6524 5.11071C95.1962 4.80623 95.8223 4.65399 96.5309 4.65399C97.3219 4.65399 97.9728 4.83027 98.4836 5.18282C98.9944 5.53538 99.3816 6.02415 99.6453 6.64914C99.9254 7.2581 100.098 7.97122 100.164 8.78851H100.56C100.774 7.85904 101.079 7.08983 101.474 6.48087C101.886 5.87191 102.381 5.41519 102.957 5.11071C103.551 4.80623 104.202 4.65399 104.91 4.65399C105.602 4.65399 106.212 4.7902 106.739 5.06263C107.267 5.33506 107.703 5.73569 108.049 6.26453C108.412 6.77734 108.675 7.42636 108.84 8.2116C109.021 8.99684 109.112 9.90227 109.112 10.9279V17.5383H105.973V11.3125C105.973 10.4151 105.891 9.6699 105.726 9.07697C105.577 8.48403 105.339 8.04334 105.009 7.75488C104.696 7.4504 104.284 7.29816 103.773 7.29816C103.196 7.29816 102.694 7.48245 102.265 7.85103C101.837 8.21961 101.499 8.74043 101.252 9.4135C101.005 10.0705 100.856 10.8237 100.807 11.6731V17.5383H97.7421V11.4567C97.7421 10.5273 97.6597 9.75804 97.4949 9.14908C97.3301 8.52409 97.0829 8.05936 96.7534 7.75488C96.4238 7.4504 96.0036 7.29816 95.4928 7.29816C94.8995 7.29816 94.3887 7.49046 93.9603 7.87507C93.5483 8.25968 93.2188 8.78851 92.9716 9.46157C92.7409 10.1346 92.6091 10.8878 92.5761 11.7211V17.5383H89.4617Z"
+                fill="currentColor"
+              />
+              <path
+                d="M118.003 17.8508C116.965 17.8508 116.034 17.7066 115.21 17.4181C114.403 17.1297 113.719 16.713 113.159 16.1682C112.598 15.6073 112.17 14.9342 111.873 14.149C111.577 13.3637 111.428 12.4743 111.428 11.4808C111.428 10.4872 111.568 9.57375 111.849 8.74044C112.145 7.90712 112.565 7.18598 113.109 6.57702C113.653 5.96806 114.312 5.49532 115.087 5.15878C115.878 4.82225 116.776 4.65399 117.781 4.65399C118.72 4.65399 119.56 4.80623 120.302 5.11071C121.043 5.41519 121.67 5.87191 122.18 6.48087C122.691 7.07381 123.07 7.81898 123.317 8.7164C123.565 9.59779 123.647 10.6234 123.565 11.7933L113.455 11.8654V10.1106L121.76 10.0385L120.673 11.024C120.772 10.1106 120.697 9.36542 120.45 8.78851C120.203 8.19558 119.849 7.76289 119.387 7.49046C118.926 7.20201 118.399 7.05778 117.805 7.05778C117.13 7.05778 116.537 7.23406 116.026 7.58661C115.515 7.92315 115.12 8.41993 114.839 9.07697C114.576 9.71798 114.444 10.5032 114.444 11.4327C114.444 12.8269 114.757 13.8685 115.383 14.5576C116.026 15.2467 116.899 15.5912 118.003 15.5912C118.498 15.5912 118.91 15.5352 119.239 15.423C119.585 15.2948 119.874 15.1345 120.104 14.9422C120.335 14.7339 120.516 14.5015 120.648 14.2451C120.796 13.9887 120.912 13.7163 120.994 13.4278L123.713 14.0288C123.581 14.6217 123.367 15.1505 123.07 15.6153C122.774 16.08 122.386 16.4806 121.909 16.8172C121.447 17.1537 120.895 17.4101 120.253 17.5864C119.61 17.7627 118.86 17.8508 118.003 17.8508Z"
+                fill="currentColor"
+              />
+              <path
+                d="M126.164 17.5383V4.96648H128.76L128.685 8.81255H129.13C129.361 7.86706 129.666 7.08983 130.045 6.48087C130.44 5.87191 130.943 5.41519 131.553 5.11071C132.162 4.80623 132.871 4.65399 133.678 4.65399C135.145 4.65399 136.257 5.15878 137.015 6.16838C137.79 7.17797 138.177 8.74043 138.177 10.8558V17.5383H135.038V11.1683C135.038 9.80612 134.824 8.81255 134.395 8.18756C133.983 7.54655 133.365 7.22605 132.541 7.22605C131.849 7.22605 131.264 7.44239 130.786 7.87507C130.309 8.29173 129.938 8.85261 129.674 9.55772C129.427 10.2468 129.295 11.008 129.279 11.8413V17.5383H126.164Z"
+                fill="currentColor"
+              />
+              <path
+                d="M146.955 17.8508C145.686 17.8508 144.566 17.6024 143.593 17.1056C142.621 16.5928 141.855 15.8476 141.295 14.8701C140.751 13.8765 140.479 12.6586 140.479 11.2163C140.479 9.74201 140.759 8.52409 141.319 7.56258C141.896 6.58503 142.671 5.85588 143.643 5.37513C144.615 4.89437 145.711 4.65399 146.93 4.65399C148.199 4.65399 149.32 4.90238 150.292 5.39916C151.264 5.89595 152.03 6.64112 152.591 7.63469C153.151 8.61223 153.431 9.83015 153.431 11.2885C153.431 12.7628 153.151 13.9887 152.591 14.9663C152.03 15.9438 151.256 16.6729 150.267 17.1537C149.295 17.6184 148.191 17.8508 146.955 17.8508ZM147.079 15.5432C147.771 15.5432 148.356 15.3909 148.834 15.0864C149.311 14.7659 149.674 14.2932 149.921 13.6682C150.185 13.0432 150.317 12.298 150.317 11.4327C150.317 10.5192 150.177 9.74201 149.896 9.101C149.633 8.44397 149.246 7.93917 148.735 7.58661C148.24 7.23406 147.614 7.05778 146.856 7.05778C146.197 7.05778 145.62 7.21803 145.126 7.53854C144.632 7.84302 144.253 8.29974 143.989 8.9087C143.742 9.51766 143.618 10.2708 143.618 11.1683C143.618 12.5785 143.923 13.6602 144.533 14.4134C145.159 15.1666 146.008 15.5432 147.079 15.5432Z"
+                fill="currentColor"
+              />
+              <path
+                d="M155.987 17.5383V4.96648H158.583L158.509 8.81255H158.953C159.184 7.86706 159.489 7.08983 159.868 6.48087C160.263 5.87191 160.766 5.41519 161.376 5.11071C161.985 4.80623 162.694 4.65399 163.501 4.65399C164.968 4.65399 166.08 5.15878 166.838 6.16838C167.613 7.17797 168 8.74043 168 10.8558V17.5383H164.861V11.1683C164.861 9.80612 164.647 8.81255 164.218 8.18756C163.806 7.54655 163.188 7.22605 162.364 7.22605C161.672 7.22605 161.087 7.44239 160.61 7.87507C160.132 8.29173 159.761 8.85261 159.497 9.55772C159.25 10.2468 159.118 11.008 159.102 11.8413V17.5383H155.987Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+
+          <nav>
+            <ul className="flex v--center h--center gap-40 gap-16-tablet">
+              <li className="menu-item-has-children">
+                <a className="" href={"/services"} target="_self">
+                  <span>
+                    <b>Services</b>
+                  </span>
+                </a>
+                <div className="sub-menu">
+                  <div className="fake_container">
+                    <div className="flex v--stretch h--between relative sub_menu_content">
+                      <div className="left main_sub_menu">
+                        <ul className="flex fd--column gap-24 fullw">
+                          <li className="active">
+                            <a
+                              className="btn btn--simple chevron h--between fullw decor-no"
+                              href={"/services"}
+                              target="_self"
+                            >
+                              <span>
+                                <b>Design</b>
+                              </span>
+                            </a>
+                            <div className="inner-menu">
+                              <div className="inner_flex">
+                                <ul className="flex fd--column gap-8">
+                                  <li>
+                                    <a className="title title--xs color--dark" href={"/services/web-app-design/"} target="_self">
+                                      <span><b>Web design</b></span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="title title--xs color--dark" href={"/services/mobile-app-design/"} target="_self">
+                                      <span><b>Mobile design</b></span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="title title--xs color--dark" href={"/services/website-design-services/"} target="_self">
+                                      <span><b>Website design</b></span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="title title--xs color--dark" href={"/services/website-redesign-services/"} target="_self">
+                                      <span><b>Website redesign</b></span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="title title--xs color--dark" href={"/services/branding-services/"} target="_self">
+                                      <span><b>Branding & identity</b></span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="title title--xs color--dark" href={"/services/design-prototype/"} target="_self">
+                                      <span><b>Design prototype</b></span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li className="">
+                            <a className="btn btn--simple chevron h--between fullw decor-no" href={"/services"} target="_self">
+                              <span><b>Development</b></span>
+                            </a>
+                            <div className="inner-menu">
+                              <div className="inner_flex">
+                                <ul className="flex fd--column gap-8">
+                                  <li><a className="title title--xs color--dark" href={"/services/web-development-services/"} target="_self"><span><b>Web development</b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/mobile-app-development-services/"} target="_self"><span><b>Mobile development</b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/website-development-agency/"} target="_self"><span><b>Website development </b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/ai-development-services"} target="_self"><span><b>AI development</b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/custom-software-development-company"} target="_self"><span><b>Custom software development</b></span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li className="">
+                            <a className="btn btn--simple chevron h--between fullw decor-no" href={"/services"} target="_self">
+                              <span><b>Research</b></span>
+                            </a>
+                            <div className="inner-menu">
+                              <div className="inner_flex">
+                                <ul className="flex fd--column gap-8">
+                                  <li><a className="title title--xs color--dark" href={"/services/product-discovery/"} target="_self"><span><b>Product discovery</b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/ux-design-audit/"} target="_self"><span><b>UX audit</b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/tech-workshop/"} target="_self"><span><b>Technical workshop</b></span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <ul className="flex fd--column gap-24 fullw">
+                          <li className="">
+                            <a className="btn btn--simple chevron h--between fullw decor-no" href={"/services"} target="_self">
+                              <span><b>Launch</b></span>
+                            </a>
+                            <div className="inner-menu">
+                              <div className="inner_flex">
+                                <ul className="flex fd--column gap-8">
+                                  <li><a className="title title--xs color--dark" href={"/services/design-prototype/"} target="_self"><span><b>Design prototype</b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/product-discovery/"} target="_self"><span><b>Product discovery</b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/rapid-mvp-development/"} target="_self"><span><b>Rapid MVP development</b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/custom-mvp-software-development/"} target="_self"><span><b>Custom MVP development</b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/ai-development-services"} target="_self"><span><b>AI development</b></span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li className="">
+                            <a className="btn btn--simple chevron h--between fullw decor-no" href={"/services"} target="_self">
+                              <span><b>Evolve</b></span>
+                            </a>
+                            <div className="inner-menu">
+                              <div className="inner_flex">
+                                <ul className="flex fd--column gap-8">
+                                  <li><a className="title title--xs color--dark" href={"/services/ux-design-audit/"} target="_self"><span><b>UX audit</b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/product-redesign/"} target="_self"><span><b>Product redesign</b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/web-app-design/"} target="_self"><span><b>Web app design</b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/web-development-services/"} target="_self"><span><b>Web app development </b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/mobile-app-design/"} target="_self"><span><b>Mobile app design</b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/mobile-app-development-services/"} target="_self"><span><b>Mobile app development </b></span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li className="">
+                            <a className="btn btn--simple chevron h--between fullw decor-no" href={"/services"} target="_self">
+                              <span><b>Rebrand</b></span>
+                            </a>
+                            <div className="inner-menu">
+                              <div className="inner_flex">
+                                <ul className="flex fd--column gap-8">
+                                  <li><a className="title title--xs color--dark" href={"/services/branding-and-identity-services/"} target="_self"><span><b>Branding & identity</b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/website-redesign-services/"} target="_self"><span><b>Website redesign</b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/website-development-agency/"} target="_self"><span><b>Website development</b></span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li className="">
+                            <a className="btn btn--simple chevron h--between fullw decor-no" href={"/services"} target="_self">
+                              <span><b>Extend</b></span>
+                            </a>
+                            <div className="inner-menu">
+                              <div className="inner_flex">
+                                <ul className="flex fd--column gap-8">
+                                  <li><a className="title title--xs color--dark" href={"/services/team-extension/"} target="_self"><span><b>Team extension</b></span></a></li>
+                                  <li><a className="title title--xs color--dark" href={"/services/dedicated-software-development-team/"} target="_self"><span><b>Dedicated team</b></span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="img_wrap">
+                        <img
+                          className="radius-12 fullw"
+                          src="/images/Screenshot-2025-03-03-at-22.27.30.webp"
+                          alt="Image - design system"
+                          loading="lazy"
+                          decoding="async"
+                          style={{ aspectRatio: 1.5260804769001 }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li className="menu-item-has-children">
+                <a className="" href="#" target="_self">
+                  <span><b>Industries</b></span>
+                </a>
+                <div className="sub-menu">
+                  <div className="fake_container">
+                    <div className="flex v--stretch h--between relative sub_menu_content">
+                      <div className="left main_sub_menu">
+                        <div className="inner bg--gray p-24 radius-12 fd--column flex m-12">
+                          <div className="title title--m color--dark">Ready to bring your idea to life?</div>
+                          <div className="btn-wrap pt-24 mt-auto">
+                            <a className="btn btn--orange arr hover--dark" href={`/contact-us`} target="_self">
+                              <span><b>Let’s talk</b></span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="center">
+                        <div className="inner_flex">
+                          <ul className="flex fd--column gap-8">
+                            <li><a className="title title--xs color--dark" href="/saas" target="_self"><span><b>Saas</b></span></a></li>
+                            <li><a className="title title--xs color--dark" href="/healthcare" target="_self"><span><b>Healthcare</b></span></a></li>
+                            <li><a className="title title--xs color--dark" href="/fintech" target="_self"><span><b>Fintech</b></span></a></li>
+                            <li><a className="title title--xs color--dark" href="/edtech" target="_self"><span><b>Edtech</b></span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="img_wrap">
+                        <img
+                          className="radius-12 fullw"
+                          src="/images/5bcd980e3b646718b62720550f308de8-2.webp"
+                          alt="Image - 5bcd980e3b646718b62720550f308de8-2"
+                          loading="lazy"
+                          decoding="async"
+                          style={{ aspectRatio: 1.3333333333333 }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li className="">
+                <a className="" href="/cases" target="_self">
+                  <span><b>Cases</b></span>
+                </a>
+              </li>
+
+              <li className="menu-item-has-children">
+                <a className="" href="#" target="_self">
+                  <span><b>Company</b></span>
+                </a>
+                <div className="sub-menu">
+                  <div className="fake_container">
+                    <div className="flex v--stretch h--between relative sub_menu_content">
+                      <div className="left main_sub_menu">
+                        <div className="inner bg--gray p-24 radius-12 fd--column flex m-12">
+                          <div className="title title--m color--dark">Ready to bring your idea to life?</div>
+                          <div className="btn-wrap pt-24 mt-auto">
+                            <a className="btn btn--orange arr hover--dark" href={`/contact-us`} target="_self">
+                              <span><b>Let’s talk</b></span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="center">
+                        <div className="inner_flex">
+                          <ul className="flex fd--column gap-8">
+                            <li><a className="title title--xs color--dark" href="/about-us" target="_self"><span><b>About us</b></span></a></li>
+                            <li><a className="title title--xs color--dark" href="/career" target="_self"><span><b>Careers</b></span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="img_wrap">
+                        <img
+                          className="radius-12 fullw"
+                          src="/images/odyssey-cover.webp"
+                          alt="Image - odyssey-cover"
+                          loading="lazy"
+                          decoding="async"
+                          style={{ aspectRatio: 1.3333333333333 }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li className="">
+                <a className="" href="/insights" target="_self">
+                  <span><b>Insights</b></span>
+                </a>
+              </li>
+              <li className="">
+                <a className="" href={`/contact-us`} target="_self">
+                  <span><b>Contacts</b></span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div className="main-btn-wrap">
+            <a className="btn btn--white arr arr-right hover--gray-light" href={`/contact-us`} target="_self">
+              <span><b>Get in touch</b></span>
+            </a>
+          </div>
+          <div className="gam" />
+        </div>
+      </div>
+    </header>
+  );
+}
