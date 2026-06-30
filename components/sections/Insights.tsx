@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { BlogPost } from '@/lib/blogData';
 
 function AuthorAvatar({ name }: { name: string; avatar?: string }) {
@@ -253,7 +254,7 @@ function ArticleCard({ article, onTagClick }: { article: BlogPost; onTagClick: (
   return (
     <div className="article_card isview slidetop">
       <Link href={`/blog/${article.slug}`} className="img-wrap ov-hidden radius-16 view">
-        <img src={article.coverImage} alt={article.title} decoding="async" />
+        <Image src={article.coverImage} alt={article.title} width={600} height={400} quality={50} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       </Link>
       <div className="article-authors-wrap mt-24">
         <span className="auth-wrap color--dark">
