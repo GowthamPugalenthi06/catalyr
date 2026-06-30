@@ -287,7 +287,7 @@ export default function EdtechPage() {
                             <div className="grid col-2 col-1-mob services_row  clipped">
                                                                                                                                             <div className="vertical_line dark grid col-2 col-1-mob span-2 span-1-mob clipped isview full fadein"><span></span><span></span><span></span></div>
                                         <div className="col flex p-32 fd--column v--start">
-                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/product-discovery/`} className="service-link"></a>
+                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/product-discovery/`} className="service-link"></a>
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     01                                                </div>
                                                 <div className="media_file">
@@ -301,12 +301,12 @@ export default function EdtechPage() {
                                                     </div>
                                                 </div>  
                                             <div className="btn-wrap flex mt-auto mt-28-mob isview slidetop">
-                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/product-discovery/`} className="btn btn--white arr"><span>Explore</span></a>
+                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/product-discovery/`} className="btn btn--white arr"><span>Explore</span></a>
                                             </div>
                                                                                     </div>
                                                                             <div className="vertical_line dark grid col-2 col-1-mob span-2 span-1-mob clipped isview full fadein mob-visible"><span></span><span></span><span></span></div>
                                         <div className="col flex p-32 fd--column v--start">
-                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/ux-design-audit/`} className="service-link"></a>
+                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/ux-design-audit/`} className="service-link"></a>
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     02                                                </div>
                                                 <div className="media_file">
@@ -320,12 +320,12 @@ export default function EdtechPage() {
                                                     </div>
                                                 </div>  
                                             <div className="btn-wrap flex mt-auto mt-28-mob isview slidetop">
-                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/ux-design-audit/`} className="btn btn--white arr"><span>Explore</span></a>
+                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/ux-design-audit/`} className="btn btn--white arr"><span>Explore</span></a>
                                             </div>
                                                                                     </div>
                                                                                                                                                 <div className="vertical_line dark grid col-2 col-1-mob span-2 span-1-mob clipped isview full fadein"><span></span><span></span><span></span></div>
                                         <div className="col flex p-32 fd--column v--start">
-                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/tech-workshop/`} className="service-link"></a>
+                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/tech-workshop/`} className="service-link"></a>
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     03                                                </div>
                                                 <div className="media_file">
@@ -339,7 +339,7 @@ export default function EdtechPage() {
                                                     </div>
                                                 </div>  
                                             <div className="btn-wrap flex mt-auto mt-28-mob isview slidetop">
-                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/tech-workshop/`} className="btn btn--white arr"><span>Explore</span></a>
+                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/tech-workshop/`} className="btn btn--white arr"><span>Explore</span></a>
                                             </div>
                                                                                     </div>
                                                                             <div className="vertical_line dark grid col-2 col-1-mob span-2 span-1-mob clipped isview full fadein mob-visible"><span></span><span></span><span></span></div>
@@ -355,7 +355,7 @@ export default function EdtechPage() {
                             <div className="grid col-2 col-1-mob services_row  clipped">
                                                                                                                                             <div className="vertical_line dark grid col-2 col-1-mob span-2 span-1-mob clipped isview full fadein"><span></span><span></span><span></span></div>
                                         <div className="col flex p-32 fd--column v--start">
-                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/design-prototype/`} className="service-link"></a>
+                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/design-prototype/`} className="service-link"></a>
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     01                                                </div>
                                                 <div className="media_file">
@@ -369,12 +369,12 @@ export default function EdtechPage() {
                                                     </div>
                                                 </div>  
                                             <div className="btn-wrap flex mt-auto mt-28-mob isview slidetop">
-                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/design-prototype/`} className="btn btn--white arr"><span>Explore</span></a>
+                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/design-prototype/`} className="btn btn--white arr"><span>Explore</span></a>
                                             </div>
                                                                                     </div>
                                                                             <div className="vertical_line dark grid col-2 col-1-mob span-2 span-1-mob clipped isview full fadein mob-visible"><span></span><span></span><span></span></div>
                                         <div className="col flex p-32 fd--column v--start">
-                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/website-design-services/`} className="service-link"></a>
+                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/website-design-services/`} className="service-link"></a>
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     02                                                </div>
                                                 <div className="media_file">
@@ -388,12 +388,12 @@ export default function EdtechPage() {
                                                     </div>
                                                 </div>  
                                             <div className="btn-wrap flex mt-auto mt-28-mob isview slidetop">
-                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/website-design-services/`} className="btn btn--white arr"><span>Explore</span></a>
+                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/website-design-services/`} className="btn btn--white arr"><span>Explore</span></a>
                                             </div>
                                                                                     </div>
                                                                                                                                                 <div className="vertical_line dark grid col-2 col-1-mob span-2 span-1-mob clipped isview full fadein"><span></span><span></span><span></span></div>
                                         <div className="col flex p-32 fd--column v--start">
-                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/web-app-design/`} className="service-link"></a>
+                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/web-app-design/`} className="service-link"></a>
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     03                                                </div>
                                                 <div className="media_file">
@@ -407,12 +407,12 @@ export default function EdtechPage() {
                                                     </div>
                                                 </div>  
                                             <div className="btn-wrap flex mt-auto mt-28-mob isview slidetop">
-                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/web-app-design/`} className="btn btn--white arr"><span>Explore</span></a>
+                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/web-app-design/`} className="btn btn--white arr"><span>Explore</span></a>
                                             </div>
                                                                                     </div>
                                                                             <div className="vertical_line dark grid col-2 col-1-mob span-2 span-1-mob clipped isview full fadein mob-visible"><span></span><span></span><span></span></div>
                                         <div className="col flex p-32 fd--column v--start">
-                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/mobile-app-design/`} className="service-link"></a>
+                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/mobile-app-design/`} className="service-link"></a>
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     04                                                </div>
                                                 <div className="media_file">
@@ -426,12 +426,12 @@ export default function EdtechPage() {
                                                     </div>
                                                 </div>  
                                             <div className="btn-wrap flex mt-auto mt-28-mob isview slidetop">
-                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/mobile-app-design/`} className="btn btn--white arr"><span>Explore</span></a>
+                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/mobile-app-design/`} className="btn btn--white arr"><span>Explore</span></a>
                                             </div>
                                                                                     </div>
                                                                                                                                                 <div className="vertical_line dark grid col-2 col-1-mob span-2 span-1-mob clipped isview full fadein"><span></span><span></span><span></span></div>
                                         <div className="col flex p-32 fd--column v--start">
-                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/website-redesign-services/`} className="service-link"></a>
+                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/website-redesign-services/`} className="service-link"></a>
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     05                                                </div>
                                                 <div className="media_file">
@@ -445,12 +445,12 @@ export default function EdtechPage() {
                                                     </div>
                                                 </div>  
                                             <div className="btn-wrap flex mt-auto mt-28-mob isview slidetop">
-                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/website-redesign-services/`} className="btn btn--white arr"><span>Explore</span></a>
+                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/website-redesign-services/`} className="btn btn--white arr"><span>Explore</span></a>
                                             </div>
                                                                                     </div>
                                                                             <div className="vertical_line dark grid col-2 col-1-mob span-2 span-1-mob clipped isview full fadein mob-visible"><span></span><span></span><span></span></div>
                                         <div className="col flex p-32 fd--column v--start">
-                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/branding-and-identity-services/`} className="service-link"></a>
+                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/branding-and-identity-services/`} className="service-link"></a>
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     06                                                </div>
                                                 <div className="media_file">
@@ -464,7 +464,7 @@ export default function EdtechPage() {
                                                     </div>
                                                 </div>  
                                             <div className="btn-wrap flex mt-auto mt-28-mob isview slidetop">
-                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/branding-and-identity-services/`} className="btn btn--white arr"><span>Explore</span></a>
+                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/branding-and-identity-services/`} className="btn btn--white arr"><span>Explore</span></a>
                                             </div>
                                                                                     </div>
                                                                                                 </div>
@@ -476,7 +476,7 @@ export default function EdtechPage() {
                             <div className="grid col-2 col-1-mob services_row  clipped">
                                                                                                                                             <div className="vertical_line dark grid col-2 col-1-mob span-2 span-1-mob clipped isview full fadein"><span></span><span></span><span></span></div>
                                         <div className="col flex p-32 fd--column v--start">
-                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/custom-mvp-software-development/`} className="service-link"></a>
+                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/custom-mvp-software-development/`} className="service-link"></a>
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     01                                                </div>
                                                 <div className="media_file">
@@ -490,12 +490,12 @@ export default function EdtechPage() {
                                                     </div>
                                                 </div>  
                                             <div className="btn-wrap flex mt-auto mt-28-mob isview slidetop">
-                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/custom-mvp-software-development/`} className="btn btn--white arr"><span>Explore</span></a>
+                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/custom-mvp-software-development/`} className="btn btn--white arr"><span>Explore</span></a>
                                             </div>
                                                                                     </div>
                                                                             <div className="vertical_line dark grid col-2 col-1-mob span-2 span-1-mob clipped isview full fadein mob-visible"><span></span><span></span><span></span></div>
                                         <div className="col flex p-32 fd--column v--start">
-                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/web-development-services/`} className="service-link"></a>
+                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/web-development-services/`} className="service-link"></a>
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     02                                                </div>
                                                 <div className="media_file">
@@ -509,12 +509,12 @@ export default function EdtechPage() {
                                                     </div>
                                                 </div>  
                                             <div className="btn-wrap flex mt-auto mt-28-mob isview slidetop">
-                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/web-development-services/`} className="btn btn--white arr"><span>Explore</span></a>
+                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/web-development-services/`} className="btn btn--white arr"><span>Explore</span></a>
                                             </div>
                                                                                     </div>
                                                                                                                                                 <div className="vertical_line dark grid col-2 col-1-mob span-2 span-1-mob clipped isview full fadein"><span></span><span></span><span></span></div>
                                         <div className="col flex p-32 fd--column v--start">
-                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/website-development-agency/`} className="service-link"></a>
+                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/website-development-agency/`} className="service-link"></a>
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     03                                                </div>
                                                 <div className="media_file">
@@ -528,12 +528,12 @@ export default function EdtechPage() {
                                                     </div>
                                                 </div>  
                                             <div className="btn-wrap flex mt-auto mt-28-mob isview slidetop">
-                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/website-development-agency/`} className="btn btn--white arr"><span>Explore</span></a>
+                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/website-development-agency/`} className="btn btn--white arr"><span>Explore</span></a>
                                             </div>
                                                                                     </div>
                                                                             <div className="vertical_line dark grid col-2 col-1-mob span-2 span-1-mob clipped isview full fadein mob-visible"><span></span><span></span><span></span></div>
                                         <div className="col flex p-32 fd--column v--start">
-                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/mobile-app-development-services/`} className="service-link"></a>
+                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/mobile-app-development-services/`} className="service-link"></a>
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     04                                                </div>
                                                 <div className="media_file">
@@ -547,12 +547,12 @@ export default function EdtechPage() {
                                                     </div>
                                                 </div>  
                                             <div className="btn-wrap flex mt-auto mt-28-mob isview slidetop">
-                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/mobile-app-development-services/`} className="btn btn--white arr"><span>Explore</span></a>
+                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/mobile-app-development-services/`} className="btn btn--white arr"><span>Explore</span></a>
                                             </div>
                                                                                     </div>
                                                                                                                                                 <div className="vertical_line dark grid col-2 col-1-mob span-2 span-1-mob clipped isview full fadein"><span></span><span></span><span></span></div>
                                         <div className="col flex p-32 fd--column v--start">
-                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/no-code-app-development/`} className="service-link"></a>
+                                            <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/no-code-app-development/`} className="service-link"></a>
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     05                                                </div>
                                                 <div className="media_file">
@@ -566,7 +566,7 @@ export default function EdtechPage() {
                                                     </div>
                                                 </div>  
                                             <div className="btn-wrap flex mt-auto mt-28-mob isview slidetop">
-                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/no-code-app-development/`} className="btn btn--white arr"><span>Explore</span></a>
+                                                <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/no-code-app-development/`} className="btn btn--white arr"><span>Explore</span></a>
                                             </div>
                                                                                     </div>
 
@@ -1651,7 +1651,7 @@ export default function EdtechPage() {
                                                             </div>
                         </div>
                         <div className="pl-32 pr-32 pl-12-mob pr-12-mob btn-wrap pt-32 isview slidetop">
-                            <a className="btn btn--simple arr" href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/dedicated-software-development-team/`} target="_self"><span><b>Get Your Dedicated Team</b></span></a>                        </div>
+                            <a className="btn btn--simple arr" href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/dedicated-software-development-team/`} target="_self"><span><b>Get Your Dedicated Team</b></span></a>                        </div>
                     </div>
                                         <div className="scroll_slide row-3" id="slide-3">
                         <div className="title main_title title--l pl-32 pr-32 pl-12-mob pr-12-mob isview slidetop new-animate"><span className="a-word"><span style={{ transitionDelay: '0s' }}>Augment</span></span> <span className="a-word"><span style={{ transitionDelay: '0.08s' }}>your</span></span> <span className="a-word"><span style={{ transitionDelay: '0.16s' }}>existing</span></span> <span className="a-word"><span style={{ transitionDelay: '0.24s' }}>team</span></span></div>
@@ -1686,7 +1686,7 @@ export default function EdtechPage() {
                                                             </div>
                         </div>
                         <div className="pl-32 pr-32 pl-12-mob pr-12-mob btn-wrap pt-32 isview slidetop">
-                            <a className="btn btn--simple arr" href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/team-extension/`} target="_self"><span><b>Hire Your Full-Cycle Team</b></span></a>                        </div>
+                            <a className="btn btn--simple arr" href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/team-extension/`} target="_self"><span><b>Hire Your Full-Cycle Team</b></span></a>                        </div>
                     </div>
                                     </div>
             </div>
@@ -1767,7 +1767,7 @@ export default function EdtechPage() {
                         <p>Launch a fast, scalable site that converts and supports product growth.</p>
                     </div>
                     <div className="btn-wrap mt-auto pt-48">
-                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/website-development/`} className="btn btn--simple dark arr"><span>Explore</span></a>
+                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/website-development/`} className="btn btn--simple dark arr"><span>Explore</span></a>
                     </div>
                 </div>
                                 <div className="col flex p-32 p-20-mob pt-28-mob pb-28-mob fd--column v--start col-2 isview slidetop">
@@ -1776,7 +1776,7 @@ export default function EdtechPage() {
                         <p>Create intuitive, performance-optimized mobile apps for iOS and Android.</p>
                     </div>
                     <div className="btn-wrap mt-auto pt-48">
-                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/mobile-app-development/`} className="btn btn--simple dark arr"><span>Explore</span></a>
+                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/mobile-app-development/`} className="btn btn--simple dark arr"><span>Explore</span></a>
                     </div>
                 </div>
                                 <div className="col flex p-32 p-20-mob pt-28-mob pb-28-mob fd--column v--start col-3 isview slidetop">
@@ -1785,7 +1785,7 @@ export default function EdtechPage() {
                         <p>Upgrade legacy interfaces with scalable, business-driven UX and Ul from a top-notch design agency.</p>
                     </div>
                     <div className="btn-wrap mt-auto pt-48">
-                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/product-strategy/`} className="btn btn--simple dark arr"><span>Explore</span></a>
+                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/services/product-strategy/`} className="btn btn--simple dark arr"><span>Explore</span></a>
                     </div>
                 </div>
                             </div>
