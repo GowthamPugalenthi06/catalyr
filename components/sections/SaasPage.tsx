@@ -1766,7 +1766,7 @@ export default function SaasPage() {
                         <p>Launch a fast, scalable site that converts and supports product growth.</p>
                     </div>
                     <div className="btn-wrap mt-auto pt-48">
-                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/website-development-agency/`} className="btn btn--simple dark arr"><span>Explore</span></a>
+                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/website-development/`} className="btn btn--simple dark arr"><span>Explore</span></a>
                     </div>
                 </div>
                                 <div className="col flex p-32 p-20-mob pt-28-mob pb-28-mob fd--column v--start col-2 isview slidetop">
@@ -1775,7 +1775,7 @@ export default function SaasPage() {
                         <p>Create intuitive, performance-optimized mobile apps for iOS and Android.</p>
                     </div>
                     <div className="btn-wrap mt-auto pt-48">
-                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/mobile-app-design/`} className="btn btn--simple dark arr"><span>Explore</span></a>
+                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/mobile-app-development/`} className="btn btn--simple dark arr"><span>Explore</span></a>
                     </div>
                 </div>
                                 <div className="col flex p-32 p-20-mob pt-28-mob pb-28-mob fd--column v--start col-3 isview slidetop">
@@ -1784,7 +1784,7 @@ export default function SaasPage() {
                         <p>Upgrade legacy interfaces with scalable, business-driven UX and Ul from a top-notch design agency.</p>
                     </div>
                     <div className="btn-wrap mt-auto pt-48">
-                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/product-redesign/`} className="btn btn--simple dark arr"><span>Explore</span></a>
+                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/product-strategy/`} className="btn btn--simple dark arr"><span>Explore</span></a>
                     </div>
                 </div>
                             </div>

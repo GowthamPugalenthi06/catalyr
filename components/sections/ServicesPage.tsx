@@ -881,7 +881,7 @@ export default function ServicesPage({ slug = 'web-development' }: { slug?: stri
                         <p>Get your MVP 50% faster with lean sprints and pre-built frameworks.</p>
                     </div>
                     <div className="btn-wrap mt-auto pt-48">
-                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/rapid-mvp-development/`} className="btn btn--simple dark arr"><span>Explore</span></a>
+                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/mvp-development/`} className="btn btn--simple dark arr"><span>Explore</span></a>
                     </div>
                 </div>
                                 <div className="col flex p-32 p-20-mob pt-28-mob pb-28-mob fd--column v--start col-2 isview slidetop">
@@ -890,7 +890,7 @@ export default function ServicesPage({ slug = 'web-development' }: { slug?: stri
                         <p>Upgrade legacy interfaces with scalable, business-driven UX and Ul from a top-notch design agency.</p>
                     </div>
                     <div className="btn-wrap mt-auto pt-48">
-                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/product-redesign/`} className="btn btn--simple dark arr"><span>Explore</span></a>
+                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/product-strategy/`} className="btn btn--simple dark arr"><span>Explore</span></a>
                     </div>
                 </div>
                                 <div className="col flex p-32 p-20-mob pt-28-mob pb-28-mob fd--column v--start col-3 isview slidetop">
@@ -899,7 +899,7 @@ export default function ServicesPage({ slug = 'web-development' }: { slug?: stri
                         <p>Custom web solutions, from complex platforms to interactive dashboards and scalable SaaS products, designed to boost functionality and drive growth.</p>
                     </div>
                     <div className="btn-wrap mt-auto pt-48">
-                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/web-development-services/`} className="btn btn--simple dark arr"><span>Explore</span></a>
+                        <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/service/web-development/`} className="btn btn--simple dark arr"><span>Explore</span></a>
                     </div>
                 </div>
                             </div>
