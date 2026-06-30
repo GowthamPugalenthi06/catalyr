@@ -1,268 +1,258 @@
-# Phenomenon Studio — Blog System
+# Catalyr — Product Development Agency Website
 
-> Full-stack blog platform with dynamic content management, built on Next.js 16.
-
----
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Architecture](#architecture)
-- [Getting Started](#getting-started)
-- [Blog System](#blog-system)
-- [Admin Panel](#admin-panel)
-- [API Reference](#api-reference)
-- [Folder Structure](#folder-structure)
-- [How It Works](#how-it-works)
+> Built with **Next.js 14 App Router** · Deployed at [catalyr.com](https://catalyr.com)
 
 ---
 
-## Overview
+## 🏗 Tech Stack
 
-This project extends the Phenomenon Studio website with a complete blog system that includes:
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 14 (App Router) |
+| Language | TypeScript |
+| Styling | CSS (legacy site CSS imported from `public/`) |
+| Fonts | System fonts via CSS variables |
+| Image Hosting | `/public/` (local) + Unsplash CDN (external stock) |
+| Blog Storage | JSON file (`lib/blogStorage.ts`) + static seed (`lib/blogData.ts`) |
+| Deployment | Node.js server / Vercel |
 
-- **Dynamic Blog Pages** — Individual blog posts rendered from data, matching the original design
-- **Insights Listing** — Filterable blog listing with category tabs
-- **Admin Panel** — Premium dark-themed CRUD interface for managing blog posts
-- **REST API** — Full CRUD API with file-based JSON persistence
+---
 
-## Architecture
+## 📁 Project Structure
 
 ```
-┌─────────────────────────────────────────────────────┐
-│                    Frontend                          │
-│  ┌──────────────┐  ┌───────────────┐  ┌──────────┐ │
-│  │ /insights    │  │ /blog/[slug]  │  │ /admin   │ │
-│  │ Blog listing │  │ Single post   │  │ CRUD UI  │ │
-│  └──────┬───────┘  └──────┬────────┘  └────┬─────┘ │
-│         │                 │                │        │
-│         └────────────┬────┘                │        │
-│                      │                     │        │
-│              ┌───────▼────────┐   ┌───────▼──────┐ │
-│              │ lib/blogData.ts│   │ /api/blogs/* │ │
-│              │ (static data)  │   │ (REST API)   │ │
-│              └────────────────┘   └──────┬───────┘ │
-│                                          │         │
-│                                 ┌────────▼───────┐ │
-│                                 │lib/blogStorage │ │
-│                                 │ (JSON file I/O)│ │
-│                                 └────────┬───────┘ │
-│                                          │         │
-│                                 ┌────────▼───────┐ │
-│                                 │ data/blogs.json│ │
-│                                 │ (persistence)  │ │
-│                                 └────────────────┘ │
-└─────────────────────────────────────────────────────┘
+next_version/
+├── app/                        # Next.js App Router pages
+│   ├── page.tsx                # Homepage
+│   ├── about/page.tsx          # About Us
+│   ├── work/page.tsx           # Portfolio / Work
+│   ├── career/page.tsx         # Careers
+│   ├── contact/page.tsx        # Contact
+│   ├── insights/page.tsx       # Blog / Insights
+│   ├── services/               # Service pages
+│   │   ├── saas-development/
+│   │   ├── web-development/
+│   │   ├── mobile-app-development/
+│   │   ├── mvp-development/
+│   │   ├── ui-ux-design/
+│   │   ├── product-strategy/
+│   │   ├── ai-solutions/
+│   │   └── automation-solutions/
+│   └── industries/             # Industry-specific pages
+│       ├── saas/               ✅ Active
+│       ├── healthcare/         ✅ Active
+│       ├── edtech/             ✅ Active
+│       ├── ecommerce/          ✅ Active (newly added)
+│       ├── real-estate/        ✅ Active (newly added)
+│       ├── logistics/          ✅ Active (newly added)
+│       └── fintech/            ❌ Returns 404 (removed)
+├── components/
+│   ├── Header.tsx              # Global navigation
+│   ├── Footer.tsx              # Global footer
+│   ├── AnimatedWords.tsx       # Word animation component
+│   └── sections/               # Page section components
+│       ├── Hero.tsx            # Homepage hero (crossfade images)
+│       ├── Services.tsx        # "What We Build" section
+│       ├── ProblemsWeSolve.tsx # "How We Work" section
+│       ├── BestCases.tsx       # Impact grid (8 cards)
+│       ├── IndustriesTabs.tsx  # Industries overview tab
+│       ├── Awards.tsx          # The Catalyr Edge section
+│       ├── Testimonials.tsx    # Core Values section
+│       ├── Team.tsx            # Team photo grid
+│       ├── Cases.tsx           # Work preview cards
+│       ├── CasesPage.tsx       # Full work page
+│       ├── CareerPage.tsx      # Career page
+│       ├── SaasPage.tsx        # SaaS industry page
+│       ├── HealthcarePage.tsx  # Healthcare industry page
+│       ├── EdtechPage.tsx      # EdTech industry page
+│       ├── EcommercePage.tsx   # E-Commerce industry page (NEW)
+│       ├── RealEstatePage.tsx  # Real Estate industry page (NEW)
+│       ├── LogisticsPage.tsx   # Logistics industry page (NEW)
+│       └── ServicesPage.tsx    # Dynamic service pages
+├── lib/
+│   ├── blogData.ts             # Blog seed data (7 posts)
+│   └── blogStorage.ts          # Blog read/write utilities
+├── public/
+│   ├── images/                 # Static images (logos, icons, avatars)
+│   ├── work/                   # Project mockup images (portfolio)
+│   └── stock/                  # Downloaded stock photos (see setup below)
+└── download_stock_images.sh    # Script to download all Unsplash images locally
 ```
 
-## Getting Started
+---
+
+## 🖼 Image Strategy
+
+The site uses **two types of images**:
+
+### 1. Project Mockups — `/public/work/`
+Used in portfolio sections, work page, and featured cases. These are actual screenshots/mockups of Catalyr's delivered projects.
+
+| File | Project |
+|---|---|
+| `branding.png` | Branding & identity project |
+| `ecom.png` | E-commerce storefront |
+| `ecomm2.png` | E-commerce variant |
+| `hrms-web.png` | HR Management System |
+| `journeyride.png` | JourneyRide app |
+| `ai2.png` | AI product |
+| `foodapp.png` | Food delivery app |
+
+### 2. Stock Photography — Unsplash CDN
+Used for contextual imagery (how we work steps, service cards, industry pages, blog covers). These reference external Unsplash URLs for development. For production, download locally using:
+
+```bash
+bash download_stock_images.sh
+```
+
+This saves all images to `/public/stock/`. After downloading, update image paths from `https://images.unsplash.com/...` to `/stock/<filename>.jpg`.
+
+---
+
+## 🏭 Industry Pages
+
+| Industry | Route | Status | Component |
+|---|---|---|---|
+| SaaS | `/industries/saas` | ✅ Active | `SaasPage.tsx` |
+| Healthcare | `/industries/healthcare` | ✅ Active | `HealthcarePage.tsx` |
+| EdTech | `/industries/edtech` | ✅ Active | `EdtechPage.tsx` |
+| **E-Commerce** | `/industries/ecommerce` | ✅ **NEW** | `EcommercePage.tsx` |
+| **Real Estate** | `/industries/real-estate` | ✅ **NEW** | `RealEstatePage.tsx` |
+| **Logistics** | `/industries/logistics` | ✅ **NEW** | `LogisticsPage.tsx` |
+| Fintech | `/industries/fintech` | ❌ Returns 404 | — |
+| Blockchain | — | ❌ Removed | — |
+
+---
+
+## ✍️ Blog / Insights
+
+Blog data lives in `lib/blogData.ts` as a static seed array (`BLOG_POSTS`). At runtime, `blogStorage.ts` reads/merges this with any persisted posts from the data directory.
+
+### Current Published Posts
+
+| # | Title | Tags | SEO Target |
+|---|---|---|---|
+| 1 | Corporate Website Development USA | Development | US market |
+| 2 | Design System: 30% Lower Costs | Business Intelligence, Design | Product teams |
+| 3 | Enterprise Web App Architecture | Development | Enterprise |
+| 4 | AI-Assisted Software Development 2026 | BI, Development | AI trend |
+| 5 | Total Cost of Ownership: Custom vs SaaS | Development | Buy vs build |
+| 6 | Brand Identity Services Guide 2026 | Design | Branding |
+| **7** | **Product Development Company in India** | **Development, BI** | **🎯 Primary SEO** |
+
+> **Blog #7** is the primary SEO article targeting the keyword _"product development company in India"_ with full structured content, FAQs, and Catalyr-specific detail. Published: June 26, 2026.
+
+---
+
+## 👥 Leadership Team
+
+| Name | Role | Contact |
+|---|---|---|
+| Gowtham Pugalenthi | Co-Founder & CEO | Partnership lead |
+| Ragul Babu | Co-Founder & CTO | Technical lead |
+| Himanshu Ranjan Saravanan | Co-Founder & Head of Partnerships | Project lead |
+
+---
+
+## 🎨 Design System
+
+- **Primary brand color**: Blue (`--accent-blue`)
+- **Dark background**: `#0A0A0A`
+- **Card radius**: `12px`
+- **Section spacing**: `200px` desktop / `100px` mobile
+- **Typography**: CSS variable font stack
+
+### Key CSS Classes
+
+| Class | Usage |
+|---|---|
+| `bg--dark` | Dark section backgrounds |
+| `bg--white` | Light section backgrounds |
+| `clipped-top / clipped-bottom` | Section clip masks |
+| `radius-80 radius-32-mob` | Large section border radius |
+| `next_block_sticky` | Sticky footer scroll effect |
+| `crossfade-wrapper` | Slow crossfade animation between 2 images |
+
+---
+
+## 🚀 Development
 
 ```bash
 # Install dependencies
 npm install
 
-# Run development server
+# Run dev server
 npm run dev
 
-# Open the site
-open http://localhost:3000
+# Build for production
+npm run build
 
-# Open the admin panel
-open http://localhost:3000/admin
-
-# Open the blog listing
-open http://localhost:3000/insights
+# Download stock images (run once before deploy)
+bash download_stock_images.sh
 ```
-
-## Blog System
-
-### Blog Listing (`/insights`)
-
-The Insights page displays all published blog posts with:
-- Category filtering (All, Analytics, Business Intelligence, Design, Development, News)
-- Clickable tags for inline filtering
-- Article cards linking to individual blog pages
-- Responsive 2-column grid
-
-### Single Blog Page (`/blog/[slug]`)
-
-Each blog post page includes:
-- **Hero Section** — Dark background with breadcrumbs, tags, title, author info
-- **Article Content** — Summary sidebar + full HTML article body
-- **Share Block** — LinkedIn, Facebook, Twitter, Copy URL
-- **CTA Banner** — Call-to-action with contact link
-- **FAQ Accordion** — Expandable Q&A section (if FAQs are provided)
-- **Related Posts** — Two related articles based on shared tags
-- **Contact Form** — Reused from the existing site
-
-### Available Blog Posts
-
-| Slug | Title |
-|------|-------|
-| `website-development-company-usa` | Corporate Website Development USA |
-| `design-system-lower-costs-faster-delivery` | Design System: 30% Lower Costs |
-| `enterprise-web-app-development-architecture` | Enterprise Web App Architecture |
-| `ai-assisted-software-development-2026` | AI-Assisted Software Development |
-| `total-cost-ownership-custom-software` | Total Cost of Ownership |
-| `brand-identity-services-guide-2026` | Brand Identity Services Guide |
-
-## Admin Panel
-
-Access the admin panel at **`/admin`**.
-
-### Features
-
-| Feature | Description |
-|---------|-------------|
-| **Dashboard** | Overview with stats (total posts, published, drafts, authors) |
-| **Blog List** | Searchable, filterable table with all blog posts |
-| **Create Post** | Two-column form with title, slug, content editor, cover image, tags |
-| **Edit Post** | Pre-filled form for updating existing posts |
-| **Delete Post** | Confirmation modal before deletion |
-| **Status Toggle** | Click status badge to toggle Published/Draft |
-| **Search & Filter** | Real-time search by title/author + status filter |
-| **Toast Notifications** | Success/error feedback for all actions |
-
-### Admin Routes
-
-| Route | Purpose |
-|-------|---------|
-| `/admin` | Dashboard with blog list |
-| `/admin/blog/new` | Create new blog post |
-| `/admin/blog/[id]/edit` | Edit existing blog post |
-
-### Blog Form Fields
-
-- **Title** — Blog post title (required)
-- **Slug** — URL-friendly identifier (auto-generated from title)
-- **Summary** — Brief description for listing cards (required)
-- **Content** — Full article content in HTML format
-- **Cover Image** — Upload file or enter URL path
-- **Author Name** — Post author
-- **Author Avatar** — Avatar image URL
-- **Date** — Publication date
-- **Read Time** — Estimated reading time
-- **Tags** — Category tags (add custom or select from quick-add)
-- **Status** — Draft or Published
-
-## API Reference
-
-### Base URL: `/api/blogs`
-
-#### List All Blogs
-```
-GET /api/blogs
-Response: { success: true, data: BlogPost[] }
-```
-
-#### Create Blog
-```
-POST /api/blogs
-Body: {
-  title: string,
-  slug: string,
-  summary: string,
-  content?: string,
-  coverImage?: string,
-  authorName?: string,
-  authorAvatar?: string,
-  date?: string,
-  readTime?: string,
-  tags?: string[],
-  status?: "published" | "draft"
-}
-Response: { success: true, data: BlogPost }
-```
-
-#### Get Single Blog
-```
-GET /api/blogs/[id]
-Response: { success: true, data: BlogPost }
-```
-
-#### Update Blog
-```
-PUT /api/blogs/[id]
-Body: Partial<BlogPost fields>
-Response: { success: true, data: BlogPost }
-```
-
-#### Delete Blog
-```
-DELETE /api/blogs/[id]
-Response: { success: true, message: "Blog deleted" }
-```
-
-## Folder Structure
-
-```
-next_version/
-├── app/
-│   ├── admin/                    # Admin panel
-│   │   ├── admin.css             # Admin dark theme styles
-│   │   ├── layout.tsx            # Admin layout with sidebar
-│   │   ├── page.tsx              # Dashboard with blog list
-│   │   └── blog/
-│   │       ├── new/
-│   │       │   └── page.tsx      # Create new post
-│   │       └── [id]/
-│   │           └── edit/
-│   │               └── page.tsx  # Edit existing post
-│   ├── api/
-│   │   └── blogs/
-│   │       ├── route.ts          # GET (list) & POST (create)
-│   │       └── [id]/
-│   │           └── route.ts      # GET, PUT, DELETE
-│   ├── blog/
-│   │   └── [slug]/
-│   │       └── page.tsx          # Dynamic blog post page
-│   ├── insights/
-│   │   └── page.tsx              # Blog listing page
-│   └── layout.tsx                # Root layout
-├── components/
-│   ├── SiteChrome.tsx            # Conditional Header/Footer wrapper
-│   └── sections/
-│       ├── BlogArticle.tsx       # Single blog page component
-│       └── Insights.tsx          # Blog listing component
-├── lib/
-│   ├── blogData.ts               # Blog types, sample data, helpers
-│   └── blogStorage.ts           # File-based JSON CRUD operations
-├── data/
-│   └── blogs.json                # Persisted blog data (auto-created)
-└── public/
-    └── images/                   # Blog images & assets
-```
-
-## How It Works
-
-### Adding a New Blog Post
-
-1. Go to `/admin`
-2. Click **"New Post"**
-3. Fill in the form fields (title, content, tags, etc.)
-4. Click **"Publish"** or **"Save Draft"**
-5. The post appears on `/insights` (if published) and at `/blog/[slug]`
-
-### Editing a Blog Post
-
-1. Go to `/admin`
-2. Click the **edit icon** (✏️) on any post row
-3. Modify the fields
-4. Click **"Save Changes"** or **"Update & Publish"**
-
-### Deleting a Blog Post
-
-1. Go to `/admin`
-2. Click the **delete icon** (🗑️) on any post row
-3. Confirm deletion in the modal
-
-### Data Flow
-
-1. **Frontend** reads from `lib/blogData.ts` (static imports for SSG/ISR)
-2. **Admin panel** currently uses client-side state (ready for API integration)
-3. **API routes** use `lib/blogStorage.ts` to read/write `data/blogs.json`
-4. The JSON file is auto-seeded from `blogData.ts` on first API call
 
 ---
 
-*Built with Next.js 16, React 19, and TypeScript.*
+## ✅ Completed Tasks (Session Summary)
+
+### Visual Standardization
+- [x] Replaced all legacy `<video>` tags site-wide with images
+- [x] Homepage Hero: crossfade between `ecomm2.png` and `branding.png`
+- [x] "How We Work" section: 6 Unsplash contextual photos (team, code, launch)
+- [x] "What We Build" section: 12 unique Unsplash images across 3 service categories
+- [x] BestCases impact grid: expanded to **8 cards** with unique icons
+
+### New Industry Pages
+- [x] Created `/industries/ecommerce` → `EcommercePage.tsx`
+- [x] Created `/industries/real-estate` → `RealEstatePage.tsx`
+- [x] Created `/industries/logistics` → `LogisticsPage.tsx`
+- [x] All pages include: hero, challenges grid (6 items), solutions grid, CTA
+
+### Career Page
+- [x] "OUR KEY STRENGTH" section updated with Catalyr's actual founders
+- [x] Row 1: Gowtham Pugalenthi (CEO) — vision, execution, client accountability
+- [x] Row 2: Ragul Babu (CTO) — engineering, architecture, AI
+- [x] Row 3: Himanshu Ranjan Saravanan (Partnerships) — client trust, scope
+
+### Content Updates
+- [x] `Testimonials.tsx` (Core Values): Refreshed with Catalyr-specific, client-facing language
+- [x] `Awards.tsx`: Updated with Catalyr Edge positioning and correct CTA links
+
+### Blog / SEO
+- [x] Added Blog #7: **"Product Development Company in India"** — full-length, FAQ-rich, Catalyr-branded SEO article targeting global search traffic
+
+### Config
+- [x] `next.config.ts`: Added Unsplash to `images.remotePatterns` for external image rendering
+
+---
+
+## ⚠️ Known Issues & Next Steps
+
+1. **Stock image download**: Images currently use Unsplash CDN URLs. Run `bash download_stock_images.sh` to download locally to `/public/stock/`, then update all `https://images.unsplash.com/...` URLs to `/stock/<filename>.jpg` for offline/production use.
+
+2. **Fintech route**: `/industries/fintech` intentionally returns `404`. Do not re-enable.
+
+3. **Industries tab component** (`IndustriesTabs.tsx`): Verify the tabs for E-Commerce, Real Estate, and Logistics link correctly to the new routes.
+
+4. **Blog image #7**: Uses an Unsplash external URL. Replace with a locally stored image after running the download script.
+
+5. **Contact form**: Has location-based currency switching for budget ranges. Ensure the form backend handles the `location` field if leads are being stored.
+
+---
+
+## 🌐 SEO Coverage
+
+| Page | Primary Keyword | Status |
+|---|---|---|
+| Homepage | Product development agency India | ✅ |
+| /industries/saas | SaaS development company | ✅ |
+| /industries/healthcare | Healthcare app development | ✅ |
+| /industries/edtech | EdTech platform development | ✅ |
+| /industries/ecommerce | E-commerce development India | ✅ |
+| /industries/real-estate | Real estate software India | ✅ |
+| /industries/logistics | Logistics software development | ✅ |
+| /insights (blog #7) | Product development company India | 🎯 Primary |
+
+---
+
+*Last updated: June 26, 2026*

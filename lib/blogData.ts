@@ -39,223 +39,167 @@ export type BlogPost = {
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: "1",
-    slug: "website-development-company-usa",
-    title:
-      "Corporate Website Development USA: What Enterprises Actually Need (vs. What Agencies Promise)",
-    summary:
-      "Discover what corporate website development companies in the USA actually deliver — from brand strategy and UX to custom code. Learn about pricing, timelines, and how to choose the right agency in 2026.",
+    slug: "custom-saas-development-guide-2026",
+    title: "The Ultimate Guide to Custom SaaS Development in 2026: Cost, Timeline & Features",
+    summary: "Everything you need to know about custom SaaS development in 2026. Discover how product engineering agencies approach scalable architectures, average costs, timelines, and feature prioritization for high-growth startups.",
     content: `
-<p><b>Key insights:</b></p>
-<ul>
-<li><span style="font-weight: 400">Enterprises lose measurable revenue when development and design are split between separate vendors — miscommunication at the handoff is where most timelines collapse.</span></li>
-<li><span style="font-weight: 400">Phenomenon Studio has shipped hundreds of digital products for clients in healthcare, fintech, SaaS, and e-commerce, with $500M+ raised by supported companies.</span></li>
-<li><span style="font-weight: 400">Custom corporate website development in the USA typically runs $15,000–$80,000+ depending on scope, team size, and whether discovery is included; a Webflow build for a mid-market company usually takes 6–10 weeks.</span></li>
-<li><span style="font-weight: 400">The agencies that deliver on time are those running design and engineering under one roof, with a named project lead accountable for both.</span></li>
-</ul>
-<p><span style="font-weight: 400"> By Nazarii Tkachyk | Fullstack Developer | June, 2026</span></p>
-<h2>What a web development company actually does for an enterprise client</h2>
-<p><span style="font-weight: 400">Most corporate websites fail not at launch but at the brief. A company sends a request for a 'professional, modern website' and receives a polished Figma file from one team, which then gets handed to developers who were not in the room when the design decisions were made. Three months later, the site looks slightly different from the prototype and behaves nothing like it was intended to.</span></p>
-<p><span style="font-weight: 400">A web development company handling corporate work should own the entire chain: discovery, information architecture, UX design, visual design, front-end build, CMS configuration, QA, and launch. When those functions are separated across vendors, the gaps between them accumulate into delays and cost overruns.</span></p>
-<p><span style="font-weight: 400">For an enterprise client, the practical deliverables look like this: a site that performs on Core Web Vitals, integrates cleanly with the existing CRM and analytics stack, passes accessibility audits, and can be updated by an internal marketing team without developer involvement. That last requirement eliminates most templated builds immediately.</span></p>
-<p><span style="font-weight: 400">According to Google, pages that meet Core Web Vitals thresholds see up to 24% lower abandonment rates compared to pages that fail those thresholds. (Google Search Central, 2023)</span></p>
-<h2>Agency for website development: what separates the ones that deliver</h2>
-<p><span style="font-weight: 400">The question every operator should ask before signing a contract with an agency for website development is not 'Can you build this?' Every agency says yes. The question is: who owns the decision when the designer and the developer disagree?</span></p>
-<p><span style="font-weight: 400">In agencies where design and development are genuinely integrated, that disagreement surfaces in an internal standup and gets resolved before it reaches the client. In agencies where the two functions are siloed or subcontracted, it surfaces as a scope change request two weeks before launch.</span></p>
-<p><b>The structure that produces reliable delivery:</b></p>
-<ul>
-<li><span style="font-weight: 400">One named project lead who attends every stakeholder call and is accountable for both design quality and technical implementation.</span></li>
-<li><span style="font-weight: 400">A discovery phase before any visual work begins, used to validate the information architecture and identify integration requirements.</span></li>
-<li><span style="font-weight: 400">Weekly review cycles where working builds, not static mockups, are presented to the client.</span></li>
-<li><span style="font-weight: 400">A defined handoff protocol that includes browser testing, CMS documentation, and a go-live checklist.</span></li>
-</ul>
-<h2>Website design and development agency: the full-cycle case for keeping it together</h2>
-<p><span style="font-weight: 400">There is a version of corporate website development that runs smoothly, and a version that produces three rounds of revisions after development has started. The difference is almost always whether the website design and development agency involved treats those two functions as one continuous process or as two sequential deliverables.</span></p>
-<h2>Website development and design companies: how to evaluate them before you sign</h2>
-<p><span style="font-weight: 400">Hiring the wrong website development and design companies is a $30,000–$80,000 mistake that takes about six months to fully understand. By the time it is clear the project is off-track, the deposit is spent, the timeline has slipped, and the internal stakeholders who championed the project are explaining delays to leadership.</span></p>
-<h2>Common mistakes when hiring a website development outsourcing company</h2>
-<p><span style="font-weight: 400">Website development outsourcing has a specific failure mode that domestic hiring does not: the misalignment between what was specified in a brief and what was interpreted by a team working in a different context.</span></p>
-<p><b>The most expensive mistakes:</b></p>
-<ul>
-<li><b>Skipping discovery and going straight to design</b><span style="font-weight: 400">. The resulting site is built around assumptions about the audience that were never validated.</span></li>
-<li><b>Choosing a vendor based on the cheapest quote</b><span style="font-weight: 400">. A $12,000 quote for a corporate website is a signal, not a bargain.</span></li>
-<li><b>Separating design and development into sequential contracts.</b><span style="font-weight: 400"> The handoff between these two phases is where scope creep, delay, and quality degradation most reliably occur.</span></li>
-<li><b>Accepting a project plan with no milestone builds</b><span style="font-weight: 400">. If the first time you see working code is at the final review, you have no visibility into whether the build matches the design.</span></li>
-<li><b>Ignoring post-launch needs.</b><span style="font-weight: 400"> A corporate website requires ongoing content updates, performance monitoring, and occasional feature additions.</span></li>
-</ul>
+      <h2>The Shift in SaaS Development in 2026</h2>
+      <p>As the cloud-native ecosystem matures, the expectations for SaaS applications have evolved. Customers now demand millisecond latency, enterprise-grade security by default, and seamless third-party integrations from Day 1. Building a custom SaaS platform requires more than just web development; it demands comprehensive <strong>product engineering</strong>.</p>
+      
+      <h2>Cost and Timeline Expectations</h2>
+      <p>A frequent question founders ask is: <em>"How much does custom SaaS development cost?"</em> While costs vary based on complexity, a fully featured SaaS MVP typically ranges from <strong>$40,000 to $120,000</strong>, taking anywhere between <strong>3 to 6 months</strong> to launch. Working with a dedicated product engineering agency like Catalyr ensures predictable timelines, clear communication, and architecture that scales from your first 100 to your first 100,000 users.</p>
+      
+      <h2>Core Features Every Modern SaaS Needs</h2>
+      <ul>
+        <li><strong>Multi-tenant Architecture:</strong> Secure data isolation and scalability.</li>
+        <li><strong>Role-Based Access Control (RBAC):</strong> Essential for B2B applications.</li>
+        <li><strong>Automated Billing & Subscriptions:</strong> Seamless Stripe or Paddle integrations.</li>
+        <li><strong>API-First Design:</strong> Allowing your users to integrate your platform with their existing workflows.</li>
+      </ul>
+      
+      <h2>Why Partner with Catalyr?</h2>
+      <p>At Catalyr, we specialize in building high-performance SaaS applications tailored to your business model. Our team handles everything from initial UX/UI design to robust backend architecture and cloud deployment.</p>
     `,
-    coverImage: "/images/blog_dev_usa.png",
+    coverImage: "/work/saas-development.png",
     author: {
-      name: "Nazarii Tkachyk",
-      avatar: "/images/telegram-cloud-photo-size-2-5253719888026007023-y.jpg.webp",
-      url: "#",
+      name: "Catalyr Engineering Team",
+      avatar: "/work/icon.png",
+      url: "/about-us",
     },
-    date: "Jun 12, 2026",
-    readTime: "8 min read",
-    tags: [{ name: "Development", id: "development" }],
+    date: "Jun 20, 2026",
+    readTime: "6 min read",
+    tags: [
+      { name: "SaaS", id: "saas" },
+      { name: "Development", id: "development" }
+    ],
     faqs: [
-      {
-        question: "What does a web development company in the United States do?",
-        answer:
-          "A US-based web development company manages the full process of planning, designing, building, and launching a corporate website. For enterprise clients, that typically includes discovery workshops, UX design, visual design, front-end and back-end development, CMS setup, integrations with CRM and analytics tools, QA, and post-launch support.",
-      },
-      {
-        question: "How much does it cost to hire a web development firm in the United States?",
-        answer:
-          "Corporate website development in the USA ranges from $15,000 for a compact marketing site to $120,000+ for an enterprise platform with complex integrations and a full content strategy. A mid-market company looking for a 10–20 page corporate site with CMS and basic integrations should budget $30,000–$60,000 and a 6–10 week timeline.",
-      },
-      {
-        question: "How do I choose the right web development agency in the US?",
-        answer:
-          "Start by asking for named client references, not just a portfolio. Confirm that the team presenting the proposal is the team that will build the project. Require that a discovery phase is included or offered before any design work starts.",
-      },
-      {
-        question: "Which industries do US web development firms serve?",
-        answer:
-          "Most credible US web development firms serve healthcare, SaaS, fintech, professional services, e-commerce, and media. Regulated industries like healthcare require specific expertise: HIPAA compliance, accessibility standards, and integration with clinical or patient-record systems.",
-      },
-      {
-        question: "What are red flags when hiring a US web development firm?",
-        answer:
-          "The clearest red flags: a portfolio with no named clients and no project outcomes, a quote that is significantly below market rate without a clear explanation of what is excluded, a project plan that goes directly from contract to design without a discovery phase, no named project lead assigned at contract time, and no post-launch support offering.",
-      },
-      {
-        question: "What is the typical timeline for a corporate website development project?",
-        answer:
-          "A standard corporate website development timeline runs 6–12 weeks from discovery to launch. A Webflow build for a 10–15 page corporate site typically takes 6–8 weeks. A full enterprise platform with custom integrations, a large content migration, and a new design system can run 12–20 weeks.",
-      },
+      { question: "How long does it take to build a SaaS MVP?", answer: "Typically 3 to 6 months, depending on feature complexity and integration requirements." },
+      { question: "What tech stack is best for SaaS development?", answer: "React/Next.js for the frontend and Node.js or Python for the backend are industry standards in 2026 for highly scalable SaaS platforms." }
     ],
     status: "published",
-    createdAt: "2026-06-12T00:00:00Z",
-    updatedAt: "2026-06-12T11:45:59Z",
+    createdAt: "2026-06-20T00:00:00Z",
+    updatedAt: "2026-06-20T00:00:00Z",
   },
   {
     id: "2",
-    slug: "design-system-lower-costs-faster-delivery",
-    title:
-      "With a design system: 30% lower costs, 50% faster delivery. Still skipping it?",
-    summary:
-      "Discover how a design system can cut development costs by 30%, accelerate time-to-market by 50%, improve product consistency, and support scalable growth.",
-    content: `<p>Design systems are not just a design tool — they are a business accelerator. Companies that invest in design systems see measurable returns in development speed, product consistency, and team alignment.</p>
-<h2>What is a Design System?</h2>
-<p>A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications. It includes UI components, design tokens, documentation, and guidelines.</p>
-<h2>The Business Case</h2>
-<p>According to multiple case studies, organizations that implement design systems report 30% lower development costs and 50% faster time-to-market for new features and products.</p>`,
-    coverImage: "/images/blog_design_system.png",
+    slug: "choose-product-engineering-partner",
+    title: "How to Choose the Right Product Engineering Partner for Your Startup",
+    summary: "Not all software agencies are created equal. Learn the critical differences between traditional outsourcing and hiring a true product engineering partner to build your startup's core technology.",
+    content: `
+      <h2>Outsourcing vs. Product Engineering</h2>
+      <p>The traditional IT outsourcing model is broken for startups. Hiring developers to blindly follow a spec sheet leads to feature bloat, technical debt, and products that fail to find market fit. A <strong>product engineering partner</strong> acts as an extension of your team, challenging assumptions, prioritizing features, and focusing on business outcomes rather than just output.</p>
+      
+      <h2>What to Look For in a Tech Partner</h2>
+      <ul>
+        <li><strong>Domain Expertise:</strong> Have they built products in your industry? (e.g., Healthcare, EdTech, Logistics).</li>
+        <li><strong>End-to-End Capabilities:</strong> Can they handle UX/UI design, architecture, frontend/backend development, and DevOps?</li>
+        <li><strong>Transparent Communication:</strong> Do they use modern collaboration tools and Agile methodologies?</li>
+        <li><strong>Post-Launch Support:</strong> Do they offer SLAs, maintenance, and iteration cycles post-launch?</li>
+      </ul>
+      
+      <h2>The Cost of Bad Technical Decisions</h2>
+      <p>A cheap initial quote often results in rebuilding the product within 12 months. Partnering with a premium product engineering team minimizes technical debt and ensures your application is built on scalable, secure foundations.</p>
+      <p>Catalyr brings a unique blend of strategic business intelligence and elite engineering talent to ensure your product succeeds in competitive markets.</p>
+    `,
+    coverImage: "/work/product-engineering.png",
     author: {
-      name: "Ruslan Vashchenko",
-      avatar: "/images/telegram-cloud-document-2-5300745544623214761.jpg.webp",
-      url: "#",
+      name: "Catalyr Strategy Team",
+      avatar: "/work/icon.png",
+      url: "/about-us",
     },
-    date: "Jun 11, 2026",
-    readTime: "10 min read",
+    date: "Jun 15, 2026",
+    readTime: "7 min read",
     tags: [
       { name: "Business Intelligence", id: "business-intelligence" },
-      { name: "Design", id: "design" },
+      { name: "Strategy", id: "strategy" }
     ],
-    faqs: [],
+    faqs: [
+      { question: "What is product engineering?", answer: "Product engineering involves the entire process of designing, developing, testing, and deploying a software product, with a strong focus on user experience and business value." }
+    ],
     status: "published",
-    createdAt: "2026-06-11T00:00:00Z",
-    updatedAt: "2026-06-11T00:00:00Z",
+    createdAt: "2026-06-15T00:00:00Z",
+    updatedAt: "2026-06-15T00:00:00Z",
   },
   {
     id: "3",
-    slug: "enterprise-web-app-development-architecture",
-    title:
-      "Enterprise web app development: architecture decisions that scale to 1M+ users",
-    summary:
-      "Enterprise web app development for product teams that need more than a vendor on a contract. Phenomenon is a web app development firm that handles enterprise app development services from architecture through launch.",
-    content: `<p>Building enterprise web applications that scale requires making the right architectural decisions from day one. This article covers the key considerations for teams building products that need to serve over a million users.</p>
-<h2>Architecture Fundamentals</h2>
-<p>The foundation of any scalable web application starts with choosing the right architecture pattern. Whether it's microservices, serverless, or a modular monolith, each approach has trade-offs that directly impact your team's ability to ship features and maintain the system over time.</p>`,
-    coverImage: "/images/blog_enterprise_architecture.png",
+    slug: "healthcare-app-development-best-practices",
+    title: "Healthcare App Development: Compliance, UX & Security Best Practices",
+    summary: "Building software for the healthcare industry requires a delicate balance of strict compliance (HIPAA/GDPR) and exceptional user experience. Explore the best practices for modern healthcare application development.",
+    content: `
+      <h2>The Compliance Challenge</h2>
+      <p>Healthcare software development is inherently complex due to strict regulatory frameworks like <strong>HIPAA</strong> in the US and <strong>GDPR</strong> in Europe. Security cannot be an afterthought; it must be embedded at the architectural level. This includes end-to-end encryption, audit logging, and secure data storage protocols.</p>
+      
+      <h2>Prioritizing Patient and Provider UX</h2>
+      <p>Historically, healthcare software has been notorious for poor usability. In 2026, the focus has shifted entirely. A great healthcare app must provide intuitive interfaces for patients and streamlined workflows for medical professionals to prevent burnout.</p>
+      
+      <h2>Key Components of Modern Healthcare Apps</h2>
+      <ul>
+        <li><strong>Telehealth Integration:</strong> High-quality, secure video conferencing capabilities.</li>
+        <li><strong>Interoperability:</strong> Seamless integration with existing EMR/EHR systems (HL7/FHIR standards).</li>
+        <li><strong>Accessibility:</strong> Ensuring the app is usable by individuals with varying degrees of digital literacy and physical ability.</li>
+      </ul>
+      
+      <p>Catalyr has extensive experience navigating the complexities of healthcare product engineering, delivering compliant, secure, and user-friendly medical software solutions.</p>
+    `,
+    coverImage: "/work/healthcare-development.png",
     author: {
-      name: "Polina Chebanova",
-      avatar: "/images/polina.jpg.webp",
-      url: "#",
+      name: "Catalyr Engineering Team",
+      avatar: "/work/icon.png",
+      url: "/about-us",
     },
-    date: "May 31, 2026",
-    readTime: "7 min read",
-    tags: [{ name: "Development", id: "development" }],
-    faqs: [],
+    date: "Jun 10, 2026",
+    readTime: "8 min read",
+    tags: [
+      { name: "Healthcare", id: "healthcare" },
+      { name: "Development", id: "development" }
+    ],
+    faqs: [
+      { question: "What is HIPAA compliance in software?", answer: "It ensures that Protected Health Information (PHI) is securely stored, transmitted, and accessed only by authorized personnel." }
+    ],
     status: "published",
-    createdAt: "2026-05-31T00:00:00Z",
-    updatedAt: "2026-05-31T00:00:00Z",
+    createdAt: "2026-06-10T00:00:00Z",
+    updatedAt: "2026-06-10T00:00:00Z",
   },
   {
     id: "4",
-    slug: "ai-assisted-software-development-2026",
-    title:
-      "AI-assisted software development in 2026: why coding 40% faster doesn't mean 40% cheaper",
-    summary:
-      "AI Software Development Services engineered by a team with deep Python, AWS and computer-vision expertise. Our custom AI application development services accelerate MVPs by 50% and improve user workflows by 2x.",
-    content: `<p>AI-assisted development tools have revolutionized how software teams work, but the economics aren't as straightforward as the headlines suggest. Coding faster doesn't automatically translate to lower costs.</p>
-<h2>The Productivity Paradox</h2>
-<p>While AI tools can accelerate code generation by 40%, the overall cost reduction is typically only 15-20%. The reason? Code generation is only one part of the software development lifecycle.</p>`,
-    coverImage: "/images/blog_ai_development.png",
+    slug: "digital-transformation-logistics-software",
+    title: "Digital Transformation in Logistics: Building Scalable Supply Chain Software",
+    summary: "Logistics and supply chain management are undergoing massive digital transformations. Learn how custom logistics software development is optimizing operations, reducing costs, and enabling real-time tracking.",
+    content: `
+      <h2>Modernizing the Supply Chain</h2>
+      <p>The logistics sector is rapidly moving away from legacy systems and spreadsheets toward real-time, cloud-native platforms. Digital transformation in logistics is no longer a luxury; it's a requirement to remain competitive.</p>
+      
+      <h2>Core Benefits of Custom Logistics Software</h2>
+      <ul>
+        <li><strong>Real-Time Visibility:</strong> Track shipments, fleets, and inventory with precision accuracy.</li>
+        <li><strong>Automated Workflows:</strong> Reduce manual entry errors and streamline order processing.</li>
+        <li><strong>Predictive Analytics:</strong> Utilize AI to forecast demand, optimize routes, and prevent supply chain bottlenecks.</li>
+      </ul>
+      
+      <h2>Why Off-The-Shelf Doesn't Always Work</h2>
+      <p>Every logistics company has unique operational workflows. Off-the-shelf software often forces businesses to change their proven processes to fit the software. <strong>Custom logistics product development</strong> molds the software to fit your exact operational needs, providing a massive competitive advantage.</p>
+      
+      <p>At Catalyr, we engineer scalable supply chain solutions that drive efficiency, lower operational costs, and future-proof logistics businesses for the modern era.</p>
+    `,
+    coverImage: "/work/logistics-development.png",
     author: {
-      name: "Nazarii Tkachyk",
-      avatar: "/images/telegram-cloud-photo-size-2-5253719888026007023-y.jpg.webp",
-      url: "#",
+      name: "Catalyr Strategy Team",
+      avatar: "/work/icon.png",
+      url: "/about-us",
     },
-    date: "May 31, 2026",
-    readTime: "8 min read",
+    date: "Jun 05, 2026",
+    readTime: "5 min read",
     tags: [
-      { name: "Business Intelligence", id: "business-intelligence" },
-      { name: "Development", id: "development" },
+      { name: "Logistics", id: "logistics" },
+      { name: "Business Intelligence", id: "business-intelligence" }
     ],
-    faqs: [],
+    faqs: [
+      { question: "How does custom software improve logistics?", answer: "It provides tailored workflows, seamless integrations with existing hardware, and real-time data analytics tailored to the company's specific supply chain model." }
+    ],
     status: "published",
-    createdAt: "2026-05-31T00:00:00Z",
-    updatedAt: "2026-05-31T00:00:00Z",
-  },
-  {
-    id: "5",
-    slug: "total-cost-ownership-custom-software",
-    title:
-      "Total cost of ownership for custom software: 3-year financial model vs. SaaS subscriptions",
-    summary:
-      "Total Cost of Ownership for Custom Software for growing startups. A trusted custom software development services company provides custom development solutions that minimize technical debt and maximize ROI.",
-    content: `<p>When evaluating custom software vs. SaaS, the total cost of ownership over three years tells a very different story than the initial price tag.</p>
-<h2>Year 1: The Investment Phase</h2>
-<p>Custom software requires a larger upfront investment, but the ROI curve begins to shift in year two as SaaS subscription costs compound and customization limitations become apparent.</p>`,
-    coverImage: "/images/Case-preview-.webp",
-    author: {
-      name: "Anatolii Sakhno",
-      avatar: "/images/ksenia.jpg.webp",
-      url: "#",
-    },
-    date: "May 31, 2026",
-    readTime: "8 min read",
-    tags: [{ name: "Development", id: "development" }],
-    faqs: [],
-    status: "published",
-    createdAt: "2026-05-31T00:00:00Z",
-    updatedAt: "2026-05-31T00:00:00Z",
-  },
-  {
-    id: "6",
-    slug: "brand-identity-services-guide-2026",
-    title:
-      "Brand identity services: complete guide for startups & enterprises [2026]",
-    summary:
-      "Discover how brand identity services help startups and enterprises build scalable brands. Learn about brand strategy, visual identity, logo design, brand guidelines, pricing, and branding trends in 2026.",
-    content: `<p>Brand identity is more than a logo — it's the complete system of visual and verbal elements that define how a company presents itself to the world.</p>
-<h2>What Brand Identity Services Include</h2>
-<p>A comprehensive brand identity engagement covers brand strategy, visual identity design, logo systems, typography, color palettes, brand guidelines, and application across all touchpoints.</p>`,
-    coverImage: "/images/blog_ai_development.png",
-    author: {
-      name: "Dmytro Kirsanov",
-      avatar: "/images/telegram-cloud-document-2-5300745544623214765-1.jpg.webp",
-      url: "#",
-    },
-    date: "May 31, 2026",
-    readTime: "7 min read",
-    tags: [{ name: "Design", id: "design" }],
-    faqs: [],
-    status: "published",
-    createdAt: "2026-05-31T00:00:00Z",
-    updatedAt: "2026-05-31T00:00:00Z",
-  },
+    createdAt: "2026-06-05T00:00:00Z",
+    updatedAt: "2026-06-05T00:00:00Z",
+  }
 ];
 
 // ─── Helper Functions ─────────────────────────────────────────────────────────
@@ -291,9 +235,10 @@ export function getRelatedBlogs(currentSlug: string, limit = 2): BlogPost[] {
 
 export const CATEGORIES = [
   { id: "all", label: "All" },
-  { id: "analytics", label: "Analytics" },
-  { id: "business-intelligence", label: "Business Intelligence" },
-  { id: "design", label: "Design" },
+  { id: "saas", label: "SaaS" },
+  { id: "healthcare", label: "Healthcare" },
+  { id: "logistics", label: "Logistics" },
   { id: "development", label: "Development" },
-  { id: "news", label: "News" },
+  { id: "business-intelligence", label: "Business Intelligence" },
+  { id: "strategy", label: "Strategy" },
 ];

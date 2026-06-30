@@ -1,10 +1,10 @@
 import AnimatedWords from "@/components/AnimatedWords";
 
-const SVC = "https://phenomenonstudio.com";
+const SVC = process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000";
 
 type Pane = {
   id: number;
-  video: string;
+  image: string;
   titleWords: string[];
   challenges: string[];
   solutions: string[];
@@ -14,7 +14,7 @@ type Pane = {
 const PANES: Pane[] = [
   {
     id: 1,
-    video: "/media/tinyvid_optimized_1_c3e89d72e9ca2837d9e85643956c8544.mp4",
+    image: "/images/blog_design_system.png",
     titleWords: ["Scalable", "platforms", "for", "growth-focused", "teams"],
     challenges: [
       "High churn from poor and fragmented UX\n",
@@ -26,11 +26,11 @@ const PANES: Pane[] = [
       "Modular UX and design systems to scale features faster\n",
       "Clean billing and plan management UX to improve conversion",
     ],
-    href: `/saas`,
+    href: `/industries/saas`,
   },
   {
     id: 2,
-    video: "/media/tinyvid_optimized_2_original-7d5a927fb8e1aed94b2f0dadb537fe63.mp4",
+    image: "/images/blog_enterprise_architecture.png",
     titleWords: ["HIPAA-compliant", "design", "and", "development", "for", "health", "tech", "products"],
     challenges: [
       "UX complexity in health tracking, patient records, and telehealth\n",
@@ -42,11 +42,11 @@ const PANES: Pane[] = [
       "Secure infrastructure aligned with regulatory standards\n",
       "Clean, professional Ul that builds user trust",
     ],
-    href: `/healthcare`,
+    href: `/industries/healthcare`,
   },
   {
     id: 3,
-    video: "/media/tinyvid_optimized_5_original-c138f335ff5d89bfd76a54cb9b1b76f4.mp4",
+    image: "/images/team-workspace.png",
     titleWords: ["Digital", "learning", "platforms", "that", "engage", "and", "scale"],
     challenges: [
       "Low engagement in self-paced learning environments\n",
@@ -58,31 +58,65 @@ const PANES: Pane[] = [
       "Adaptive Ul for different learning needs and devices\n",
       "Cloud-based, scalable architecture for education at scale",
     ],
-    href: `/edtech`,
+    href: `/industries/edtech`,
   },
   {
     id: 4,
-    video: "/media/tinyvid_optimized_3_original-73b35d49f86d187eea5f51868f628bd4.mp4",
-    titleWords: ["Secure,", "compliant", "digital", "products", "for", "modern", "finance"],
+    image: "/images/team-collaboration.png",
+    titleWords: ["High-converting", "ecommerce", "experiences", "that", "drive", "sales"],
     challenges: [
-      "KYC, AML, and global compliance requirements\n",
-      "Drop-offs during complex onboarding and verification flows\n",
-      "Real-time integrations with payment and exchange systems",
+      "High cart abandonment rates\n",
+      "Cluttered product discovery and poor navigation\n",
+      "Friction in the checkout process",
     ],
     solutions: [
-      "Frictionless onboarding and verification UX\n",
-      "Secure Ul for transactions and money movement\n",
-      "API-driven architecture built for performance and scale",
+      "Optimized UX flows to maximize conversion rates\n",
+      "Intuitive search and categorization for fast product discovery\n",
+      "Seamless, one-click checkout experiences",
     ],
-    href: `/fintech`,
+    href: `/industries/ecommerce`,
   },
+  {
+    id: 5,
+    image: "/images/team-coding.png",
+    titleWords: ["Modern", "property", "platforms", "for", "the", "real", "estate", "industry"],
+    challenges: [
+      "Complex property search and filtering\n",
+      "Poorly managed agent-client communication\n",
+      "Fragmented data across multiple listings",
+    ],
+    solutions: [
+      "Advanced map-based search and filtering UI\n",
+      "Integrated messaging and CRM dashboards\n",
+      "Unified data visualization for property metrics",
+    ],
+    href: `/industries/real-estate`,
+  },
+  {
+    id: 6,
+    image: "/images/blog_ai_development.png",
+    titleWords: ["Logistics", "and", "supply", "chain", "management", "dashboards"],
+    challenges: [
+      "Lack of real-time visibility into operations\n",
+      "Inefficient routing and dispatch management\n",
+      "Overwhelming complexity in data reporting",
+    ],
+    solutions: [
+      "Real-time tracking and intuitive map interfaces\n",
+      "Streamlined workflows for dispatchers and drivers\n",
+      "Clear, actionable analytics dashboards",
+    ],
+    href: `/industries/logistics`,
+  }
 ];
 
 const TABS = [
   { id: 1, label: "SaaS" },
   { id: 2, label: "Healthcare" },
   { id: 3, label: "EdTech" },
-  { id: 4, label: "FinTech" },
+  { id: 4, label: "E-Commerce" },
+  { id: 5, label: "Real Estate" },
+  { id: 6, label: "Logistics" },
 ];
 
 export default function IndustriesTabs() {
@@ -124,16 +158,12 @@ export default function IndustriesTabs() {
             >
               <div className="grid col-2 col-1-mob gap-32">
                 <div className="col animated-media-wrapper isview fadein">
-                    <video
-                      src={pane.video}
-                      preload="none"
+                    <img
+                      src={pane.image}
                       loading="lazy"
                       className="fullw radius-12 animated-media"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      poster=""
+                      style={{ aspectRatio: 1.33, objectFit: 'cover' }}
+                      alt=""
                     />
                 </div>
                 <div className="col">

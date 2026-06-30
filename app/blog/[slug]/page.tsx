@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (!post) return { title: "Blog Post Not Found" };
 
     return {
-      title: `${post.title} | Phenomenon Blog`,
+      title: `${post.title} | Catalyr Blog`,
       description: post.summary,
       openGraph: {
         title: post.title,

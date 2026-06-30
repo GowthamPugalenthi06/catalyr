@@ -1,4 +1,7 @@
-const SVC = "https://phenomenonstudio.com";
+import { Fragment } from "react";
+import { copyTeamAssets } from "@/lib/copyTeamAssets";
+
+const SVC = process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000";
 
 type TeamCol = {
   cls: string;
@@ -8,19 +11,20 @@ type TeamCol = {
 };
 
 const COLS: TeamCol[] = [
-  { cls: "col isview slidetop   pc-visible", img: "telegram-cloud-photo-size-2-5253719888026007023-y.jpg.webp", trd: "trd00", aspect: 0.82323232323232 },
+  { cls: "col isview slidetop   pc-visible", img: "/images/downloaded/photo-1522071820081-009f0129c71c.jpg", trd: "trd00", aspect: 1.0 },
   { cls: "col isview slidetop  pc-visible pc-visible", img: null },
-  { cls: "col isview slidetop   pc-visible span-2 span-1-mob", img: "IMG_0477-e1776164064781.jpg.webp", trd: "trd02", aspect: 1.7057569296375 },
-  { cls: "col isview slidetop", img: "telegram-cloud-document-2-5300745544623214761.jpg.webp", trd: "trd03", aspect: 0.82323232323232 },
-  { cls: "col isview slidetop   pc-visible", img: "image.jpg.webp", trd: "trd04", aspect: 0.82323232323232 },
+  { cls: "col isview slidetop   pc-visible span-2 span-1-mob", img: "/images/downloaded/photo-1531403009284-440f080d1e12.jpg", trd: "trd02", aspect: 1.0 },
+  { cls: "col isview slidetop", img: "/images/downloaded/photo-1542744173-8e7e53415bb0.jpg", trd: "trd03", aspect: 1.0 },
+  { cls: "col isview slidetop   pc-visible", img: "/images/downloaded/photo-1517245386807-bb43f82c33c4.jpg", trd: "trd04", aspect: 1.0 },
   { cls: "col isview slidetop  pc-visible pc-visible", img: null },
-  { cls: "col isview slidetop   pc-visible", img: "telegram-cloud-document-2-5300745544623214765-1.jpg.webp", trd: "trd06", aspect: 0.82323232323232 },
+  { cls: "col isview slidetop   pc-visible", img: "/images/downloaded/photo-1497366216548-37526070297c.jpg", trd: "trd06", aspect: 1.0 },
   { cls: "col isview slidetop  pc-visible pc-visible", img: null },
-  { cls: "col isview slidetop   pc-visible", img: "IMG_4435-2-e1776164116574.jpg.webp", trd: "trd08", aspect: 0.75 },
-  { cls: "col isview slidetop", img: "IMG_0478.jpg.webp", trd: "trd09", aspect: 0.82323232323232 },
+  { cls: "col isview slidetop   pc-visible", img: "/images/downloaded/photo-1522071820081-009f0129c71c.jpg", trd: "trd08", aspect: 1.0 },
+  { cls: "col isview slidetop", img: "/images/downloaded/photo-1531403009284-440f080d1e12.jpg", trd: "trd09", aspect: 1.0 },
 ];
 
 export default function Team() {
+  copyTeamAssets();
   return (
     <section className="our_team pt-200 pt-100-mob pb-200 pb-64-mob">
       <div className="container">
@@ -37,10 +41,9 @@ export default function Team() {
           <span><span className="a-word"><span style={{ transitionDelay: "0.48s" }}>success</span></span></span>
         </div>
         <div className="txt txt--l color--dark-secondary mw760 mt-48 mt-24-mob isview slidetop trd02">
-          Established in 2019, Phenomenon Studio was built with one goal—to become a long-term product design and
+          Established in January 2026, Catalyr was built with one goal—to become a long-term product design and
           development partner for companies looking to launch, scale, and innovate. Our team of strategists,
-          designers, developers, and product experts spans Canada, the U.S., Ukraine, Poland, Estonia, and
-          Switzerland, bringing global expertise to every project.
+          designers, developers, and product experts based in Salem, India, brings focused expertise and global standards to every project.
         </div>
         <div className="team_grid_wrap mt-100 mt-64-tablet">
           <div className="grid col-4 gap-20 col-1-mob">
@@ -50,7 +53,7 @@ export default function Team() {
                   {c.img && (
                     <img
                       className={`radius-12 animated-media ${c.trd}`}
-                      src={`/images/${c.img}`}
+                      src={c.img?.startsWith("http") || c.img?.startsWith("/") ? c.img : `/images/${c.img}`}
                       alt="Product Design and Development Agency"
                       loading="lazy"
                       decoding="async"
@@ -64,7 +67,7 @@ export default function Team() {
               <div className="inner color--dark radius-12 bg--gray bg--orange-mob flex fd--column v--start clipped-right-mob">
                 <div className="title title--l">70+ team members</div>
                 <div className="btn-wrap mt-auto pt-24">
-                  <a href="/about-us" target="_self" className="btn btn--simple dark arr">
+                  <a href="/about" target="_self" className="btn btn--simple dark arr">
                     <span><b>Learn more</b></span>
                   </a>
                 </div>

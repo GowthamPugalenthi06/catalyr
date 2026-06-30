@@ -12,8 +12,8 @@
   --admin-text: #f0f0f2;
   --admin-text-secondary: #8a8a96;
   --admin-text-muted: #5a5a66;
-  --admin-accent: #ff7a00;
-  --admin-accent-hover: #ff9933;
+  --admin-accent: #003a99;
+  --admin-accent-hover: #0056e0;
   --admin-danger: #ef4444;
   --admin-danger-hover: #dc2626;
   --admin-success: #22c55e;
@@ -82,7 +82,7 @@
 .admin-sidebar-brand-badge {
   font-size: 10px;
   font-weight: 700;
-  background: rgba(255, 122, 0, 0.15);
+  background: rgba(0, 58, 153, 0.15);
   color: var(--admin-accent);
   padding: 3px 8px;
   border-radius: 4px;
@@ -154,7 +154,7 @@
 }
 
 .admin-nav-link.active .admin-nav-link-badge {
-  background: rgba(255, 122, 0, 0.15);
+  background: rgba(0, 58, 153, 0.15);
   color: var(--admin-accent);
 }
 
@@ -477,7 +477,7 @@
 .admin-textarea:focus,
 .admin-select:focus {
   border-color: var(--admin-accent);
-  box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.1);
+  box-shadow: 0 0 0 3px rgba(0, 58, 153, 0.1);
 }
 
 .admin-input::placeholder,
@@ -552,6 +552,8 @@
 
 /* ─── File Upload ─────────────────────────────────────────────────────────── */
 .admin-upload-zone {
+  display: block;
+  width: 100%;
   border: 2px dashed var(--admin-border);
   border-radius: var(--admin-radius);
   padding: 40px;
@@ -563,7 +565,7 @@
 
 .admin-upload-zone:hover {
   border-color: var(--admin-accent);
-  background: rgba(255, 122, 0, 0.02);
+  background: rgba(0, 58, 153, 0.02);
 }
 
 .admin-upload-zone input {
@@ -585,18 +587,23 @@
   color: var(--admin-accent);
 }
 
+.admin-upload-zone.has-image {
+  padding: 0;
+  border: 1px solid var(--admin-border);
+  overflow: hidden;
+}
+
 .admin-upload-preview {
   position: relative;
-  margin-top: 16px;
-  border-radius: var(--admin-radius-sm);
-  overflow: hidden;
-  max-width: 300px;
+  width: 100%;
 }
 
 .admin-upload-preview img {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
+  border-radius: calc(var(--admin-radius) - 1px);
 }
 
 /* ─── Modal ───────────────────────────────────────────────────────────────── */
@@ -662,7 +669,7 @@
 
 .admin-search input:focus {
   border-color: var(--admin-accent);
-  box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.1);
+  box-shadow: 0 0 0 3px rgba(0, 58, 153, 0.1);
 }
 
 .admin-search svg {

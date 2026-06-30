@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "Product design & development company specializing in data-driven solutions and business-centric digital products. - Projects",
   description:
     "We use fact- and research-based methodologies whilst partnering closely with clients to deliver their end-goal vision.",
-  alternates: { canonical: "https://phenomenonstudio.com/projects/" },
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/work/` },
   openGraph: {
     locale: "en_US",
     type: "article",
@@ -18,12 +18,12 @@ export const metadata: Metadata = {
       "Product design & development company specializing in data-driven solutions and business-centric digital products. - Projects",
     description:
       "We use fact- and research-based methodologies whilst partnering closely with clients to deliver their end-goal vision.",
-    url: "https://phenomenonstudio.com/projects/",
-    siteName: "Phenomenon",
+    url: `${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/work/`,
+    siteName: "Catalyr",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@phenomenonstud1",
+    site: "@catalyrstud1",
   },
 };
 
@@ -63,9 +63,11 @@ function copyMissingImages() {
 export default function CasesRoute() {
   copyMissingImages();
   return (
-    <main className="next_block_sticky">
-      <CasesPage />
+    <>
+      <main>
+        <CasesPage />
+      </main>
       <ContactForm />
-    </main>
+    </>
   );
 }

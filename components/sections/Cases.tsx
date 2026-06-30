@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import AnimatedWords from "@/components/AnimatedWords";
 
-const SVC = "https://phenomenonstudio.com";
+const SVC = process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000";
 
 type CaseCardProps = {
   href: string;
@@ -24,11 +24,10 @@ function CaseCard(p: CaseCardProps) {
     <div className="grid col-2 col-1-mob gap-32 gap-0-mob case_card">
       <div className="col flex v--start h--start animated-media-wrapper isview fadein">
         <a href={p.href} className="media_wrap radius-12 ov-hidden animated-media">
-          <picture>
-            <source srcSet={`/images/${p.pictureLg}`} media="(min-width: 1440px)" />
-            <source srcSet={`/images/${p.pictureLg}`} media="(max-width: 1440px)" />
-            <img className="fullw radius-12" src={`/images/${p.pictureMob}`} loading="lazy" decoding="async" alt={p.alt} />
-          </picture>
+          <div className="crossfade-wrapper">
+            <img className="crossfade-img-1" src={p.pictureLg.startsWith('http') || p.pictureLg.startsWith('/') ? p.pictureLg : `/work/${p.pictureLg}`} loading="lazy" decoding="async" alt={p.alt} />
+            <img className="crossfade-img-2" src={p.pictureMob.startsWith('http') || p.pictureMob.startsWith('/') ? p.pictureMob : `/work/${p.pictureMob}`} loading="lazy" decoding="async" alt={p.alt} />
+          </div>
         </a>
       </div>
       <div className="col pt-0 pt-32-mob pb-0 pb-0-mob flex fd--column h--center">
@@ -42,7 +41,7 @@ function CaseCard(p: CaseCardProps) {
         <div className="mt-20 mt-16-mob tags flex v--center h--start h--wrap gap-8">
           <span className="tag">{p.tagName}</span>
           <span className="tag">
-            <img className="" src={`/images/${p.flag}`} alt="Product Design and Development Agency" loading="lazy" decoding="async" />
+            <img className="" src={p.flag.startsWith("/") || p.flag.startsWith("http") ? p.flag : `/images/${p.flag}`} alt="Product Design and Development Agency" loading="lazy" decoding="async" />
             {p.country}
           </span>
         </div>
@@ -89,106 +88,65 @@ export default function Cases() {
   return (
     <section className="cases_section pt-200 pt-100-mob pb-200 pb-100-mob bg--white">
       <div className="container">
-        <div className="txt txt--caption-m color--dark-light uppercase fw-600 isview slidetop scramble">Featured cases</div>
+        <div className="txt txt--caption-m color--dark-light uppercase fw-600 isview slidetop scramble">Our Work</div>
         <div className="mt-24 mt-16-mob mw1040 title title--xl isview slidetop new-animate trd02 inner-inherit">
-          <span className="a-word"><span style={{ transitionDelay: "0s" }}>Discover</span></span>{" "}
-          <span className="a-word"><span style={{ transitionDelay: "0.08s" }}>how</span></span>{" "}
-          <span className="a-word"><span style={{ transitionDelay: "0.16s" }}>we’re</span></span>{" "}
-          <span className="a-word"><span style={{ transitionDelay: "0.24s" }}>driving</span></span>{" "}
-          <span className="a-word"><span style={{ transitionDelay: "0.32s" }}>change</span></span>{" "}
-          <span className="a-word"><span style={{ transitionDelay: "0.4s" }}>through</span></span>{" "}
-          <span className="a-word"><span style={{ transitionDelay: "0.48s" }}>innovative</span></span>{" "}
-          <span className="a-word"><span style={{ transitionDelay: "0.56s" }}>projects,</span></span>{" "}
-          <span className="a-word"><span style={{ transitionDelay: "0.64s" }}>strong</span></span>{" "}
-          <span className="a-word"><span style={{ transitionDelay: "0.72s" }}>partnerships,</span></span>{" "}
-          <span className="a-word"><span style={{ transitionDelay: "0.8s" }}>and</span></span>{" "}
-          <span><span className="a-word"><span style={{ transitionDelay: "0.88s" }}>measurable</span></span>{" "}
-          <span className="a-word"><span style={{ transitionDelay: "0.96s" }}>outcomes</span></span></span>
+          <span className="a-word"><span style={{ transitionDelay: "0s" }}>Products</span></span>{" "}
+          <span className="a-word"><span style={{ transitionDelay: "0.08s" }}>We've</span></span>{" "}
+          <span className="a-word"><span style={{ transitionDelay: "0.16s" }}>Built.</span></span>{" "}
+          <span className="a-word"><span style={{ transitionDelay: "0.24s" }}>Results</span></span>{" "}
+          <span className="a-word"><span style={{ transitionDelay: "0.32s" }}>We've</span></span>{" "}
+          <span className="a-word"><span style={{ transitionDelay: "0.4s" }}>Delivered.</span></span>
         </div>
         <div className="txt txt--l color--dark mt-24 isview slidetop trd02 mw680" />
         <div className="cases_wrap grid gap-60 gap-48-mob mt-100 mt-48-mob scrollable">
           <CaseCard
-            href={`${SVC}/projects/isora-governance-risk-and-compliance-assessment-platform`}
-            pictureLg="Case-Preview-5.png.webp"
-            pictureMob="Case-Preview-mob.png.webp"
-            alt="Isora – optimizing governance, risk & compliance for top institutions - image cover"
-            hashtags={["UX Audit", "Product redesign", "Web development", "Team extention"]}
-            tagName="SaltyCloud"
+            href=""
+            pictureLg="/images/downloaded/photo-1551288049-bebda4e38f71.jpg"
+            pictureMob="/images/downloaded/photo-1551288049-bebda4e38f71.jpg"
+            alt="HRMS SaaS Platform"
+            hashtags={["SaaS", "HRMS", "Web development"]}
+            tagName="HRMS"
             flag="fi_4628635.svg"
-            country="Texas, USA"
-            techStack="React, Python, AWS"
-            timeline="12 months, ongoing"
-            results={["2x faster user workflows\n", "50% shorter time-to-market\n", "Nominated for UX Design Award 2024"]}
-            title={<AnimatedWords words={["Isora", "–", "optimizing", "governance,", "risk", "&", "compliance", "for", "top", "institutions"]} />}
-          />
-
-          <CaseCard
-            href={`${SVC}/projects/mywisdom-a-digital-platform-for-safer-more-connected-aging`}
-            pictureLg="Case-preview-10.png.webp"
-            pictureMob="Case-preview-1.png.webp"
-            alt="MyWisdom — a digital platform for safer, more connected aging - image cover"
-            hashtags={["Product redesign", "Mobile app development"]}
-            tagName="MyWisdom"
-            flag="fi_4628635_1.svg"
-            country="USA"
-            techStack="Flutter, Java, Spring Boot, Python, WebSocket, Computer Vision, AWS, PostgreSQL, Redis, Docker, Swagger, Liquibase"
-            timeline="5 month"
-            results={["$1.3M raised in pre-seed funding\n", "Strategic partnership with Samsung\n", "UX Design Award nomination"]}
-            title={<AnimatedWords words={["MyWisdom", "—", "a", "digital", "platform", "for", "safer,", "more", "connected", "aging"]} />}
-          />
-
-          <CaseCard
-            href={`${SVC}/projects/klickex-how-a-fintech-redesign-boosted-conversion-by-35-and-grew-users-by-3k-monthly`}
-            pictureLg="Case-preview-2-2.png.webp"
-            pictureMob="Picture-2-2.png.webp"
-            alt="KlickEx – frictionless cross-border payments for the Pacific Island communities - image cover"
-            hashtags={["UX audit", "Product redesign", "web development"]}
-            tagName="Nomupay"
-            flag="Clip-path-group.svg"
-            country="New Zealand"
-            techStack="Next.js, TypeScript, React Redux"
+            country="Global"
+            techStack="React, Node.js, PostgreSQL"
             timeline="6 months"
-            results={['+35% "Add Money" conversion rate\n', '+30% "Money Transfer" completion rate\n', "Raised $1M in additional funding within 6 months"]}
-            title={
-              <>
-                <span className="a-word"><span style={{ transitionDelay: "0s" }}>KlickEx</span></span>{" "}
-                <span className="a-word"><span style={{ transitionDelay: "0.08s" }}>–</span></span>{" "}
-                <span className="a-word"><span style={{ transitionDelay: "0.16s" }}>frictionless</span></span>{" "}
-                <span className="a-word"><span style={{ transitionDelay: "0.24s" }}>cross-</span></span>
-                <wbr />
-                <span className="a-word"><span style={{ transitionDelay: "0.32s" }}>border</span></span>{" "}
-                <span className="a-word"><span style={{ transitionDelay: "0.4s" }}>payments</span></span>{" "}
-                <span className="a-word"><span style={{ transitionDelay: "0.48s" }}>for</span></span>{" "}
-                <span className="a-word"><span style={{ transitionDelay: "0.56s" }}>the</span></span>{" "}
-                <span className="a-word"><span style={{ transitionDelay: "0.64s" }}>Pacific</span></span>{" "}
-                <span className="a-word"><span style={{ transitionDelay: "0.72s" }}>Island</span></span>{" "}
-                <span className="a-word"><span style={{ transitionDelay: "0.8s" }}>communities</span></span>
-              </>
-            }
-          >
-            <div className="mt-32 mt-48-mob mb--8-mob quote bg--gray radius-16">
-              <div className="top flex auth_wrap v--center h--start gap-16">
-                <img className="" src="/images/Case-preview-.webp" alt="Product Design and Development Agency" loading="lazy" decoding="async" style={{ aspectRatio: 1.1428571428571 }} />
-                <div className="bio">
-                  <div className="txt txt--s gap-0">
-                    <p>Izek Lal</p>
-                    <span>Country manager</span>
-                  </div>
-                </div>
-              </div>
-              <div className="txt mt-30 mt-20-mob txt--l">
-                <p>
-                  We have seen a significant improvement in terms of mobile friendliness and the general flow of the
-                  system. I believe this has contributed significantly to the growth of our business. Many thanks,
-                  Phenomenon.
-                </p>
-              </div>
-            </div>
-          </CaseCard>
+            results={["Streamlined onboarding\n", "Automated payroll\n", "High scalability"]}
+            title={<AnimatedWords words={["HRMS", "SaaS", "—", "scalable", "human", "resource", "management"]} />}
+          />
+
+          <CaseCard
+            href=""
+            pictureLg="/images/downloaded/photo-1512941937669-90a1b58e7e9c.jpg"
+            pictureMob="/images/downloaded/photo-1512941937669-90a1b58e7e9c.jpg"
+            alt="HRMS Mobile App"
+            hashtags={["Mobile app", "HRMS"]}
+            tagName="HRMS"
+            flag="fi_4628635_1.svg"
+            country="Global"
+            techStack="React Native, Node.js"
+            timeline="4 months"
+            results={["10k+ downloads\n", "Seamless tracking\n", "High user retention"]}
+            title={<AnimatedWords words={["HRMS", "Mobile", "App", "—", "employee", "management", "on", "the", "go"]} />}
+          />
+
+          <CaseCard
+            href=""
+            pictureLg="/images/downloaded/photo-1556742049-0cfed4f6a45d.jpg"
+            pictureMob="/images/downloaded/photo-1556742049-0cfed4f6a45d.jpg"
+            alt="E-Commerce Web"
+            hashtags={["E-Commerce", "Web development"]}
+            tagName="E-Commerce"
+            flag="image-3.svg"
+            country="Global"
+            techStack="Next.js, Tailwind, Stripe"
+            timeline="3 months"
+            results={["+45% conversion rate\n", "Integrated payments\n", "Blazing fast speeds"]}
+            title={<AnimatedWords words={["E-Commerce", "Web", "Platform", "—", "high-conversion", "digital", "storefront"]} />}
+          />
         </div>
         <div className="mt-80 mt-40-mob text--center flex h--center isview slidetop">
-          <a className="btn btn--simple dark arr" href="/cases" target="_self">
-            <span><b>Explore All Cases</b></span>
+          <a className="btn btn--simple dark arr" href="/work" target="_self">
+            <span><b>Explore Our Work</b></span>
           </a>
         </div>
       </div>

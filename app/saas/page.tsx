@@ -3,17 +3,15 @@ import SaasPage from "@/components/sections/SaasPage";
 import { copySaasAssets } from "@/lib/copySaasAssets";
 
 export const metadata: Metadata = {
-  title: "SaaS Design Agency | UI/UX Specialists for SaaS Products - Phenomenon Studio",
+  title: "SaaS Design Agency | UI/UX Specialists for SaaS Products - Catalyr",
   description:
-    "🟠SaaS Design Agency by Phenomenon Studio: Experts in SaaS website design and UX design for SaaS platforms. We create conversion-focused SaaS designs that enhance usability and accelerate growth.",
-  alternates: { canonical: "https://phenomenonstudio.com/saas/" },
+    "🟠SaaS Design Agency by Catalyr: Experts in SaaS website design and UX design for SaaS platforms. We create conversion-focused SaaS designs that enhance usability and accelerate growth.",
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/saas/` },
 };
 
 export default function SaasRoute() {
   copySaasAssets();
   return (
-    <main className="next_block_sticky">
-      <SaasPage />
-    </main>
+    <SaasPage />
   );
 }

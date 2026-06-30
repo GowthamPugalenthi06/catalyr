@@ -3,59 +3,41 @@ import React from 'react';
 export default function CareerPage() {
   return (
     <main>
-      <section className="hero bg--dark clipped-bottom next_block_sticky">
+      <section className="hero bg--dark">
         <div className="container color--white">
           <div className="txt txt--caption-m color--white-secondary uppercase fw-600 mb-24 mb-16-mob isview slidetop scramble">Career</div>
           <div className="nobr-mob title title--xl mw1040 isview slidetop new-animate trd02">
             <span className="a-word"><span style={{ transitionDelay: '0s' }}>Build</span></span> <span className="a-word"><span style={{ transitionDelay: '0.08s' }}>phenomenal</span></span> <span className="a-word"><span style={{ transitionDelay: '0.16s' }}>products.</span></span>
             <br />
-            <span className="a-word"><span style={{ transitionDelay: '0.24s' }}>Join</span></span> <span className="a-word"><span style={{ transitionDelay: '0.32s' }}>Phenomenon</span></span> <span className="a-word"><span style={{ transitionDelay: '0.4s' }}>Studio.</span></span>
+            <span className="a-word"><span style={{ transitionDelay: '0.24s' }}>Join</span></span> <span className="a-word"><span style={{ transitionDelay: '0.32s' }}>Catalyr</span></span> <span className="a-word"><span style={{ transitionDelay: '0.4s' }}>Studio.</span></span>
           </div>
           <div className="txt txt--l mt-48 mw706 isview slidetop trd02 color--white-secondary inner-inherit">
             <div>If you have a quality-first mindset and want to build products that matter, bring your expertise and curiosity to our team. Here, you'll have the space and ownership to turn your best ideas into reality!</div>
           </div>
           <div className="mt-24 mt-24-mob isview slidetop">
-            <a className="btn btn--lg-desk btn--orange hover--white" href="https://phenomenonstudio.hurma.work/public-vacancies" target="_blank" rel="noreferrer"><span><b>Explore Open Vacancies</b></span></a>
+            <div className="btn btn--lg-desk btn--white-light" style={{ pointerEvents: 'none' }}><span><b>Hiring Coming Soon</b></span></div>
           </div>
           <div className="mt-60 pt-32">
             <div className="txt scramble txt--caption-m color--white-light text--left mb-24 uppercase fw-600 isview fadein inner-inherit">
-              <div>Phenomenon in facts and numbers </div>
+              <div>Catalyr in facts and numbers </div>
             </div>
-            <div className="values_wrap grid col-3 col-2-mob clip_1 isview slidetop">
+            <div className="values_wrap grid col-3 col-1-mob clip_1 isview slidetop">
               <div className="col flex v--center h--center fd--column">
-                <div className="title--l color--white">5+</div>
+                <div className="title--l color--white">2026</div>
                 <div className="txt color--white-light txt--s minh-2lh minh-3lh-mob">
-                  <p>locations across Europe &amp; North America</p>
+                  <p>founded</p>
                 </div>
               </div>
               <div className="col flex v--center h--center fd--column">
-                <div className="title--l color--white">120+</div>
+                <div className="title--l color--white">100%</div>
                 <div className="txt color--white-light txt--s minh-2lh minh-3lh-mob">
-                  <p>launched products </p>
+                  <p>remote team</p>
                 </div>
               </div>
               <div className="col flex v--center h--center fd--column">
-                <div className="title--l color--white">$500M+</div>
+                <div className="title--l color--white">Elite</div>
                 <div className="txt color--white-light txt--s minh-2lh minh-3lh-mob">
-                  <p>raised by our clients</p>
-                </div>
-              </div>
-              <div className="col flex v--center h--center fd--column">
-                <div className="title--l color--white">6+</div>
-                <div className="txt color--white-light txt--s minh-2lh minh-3lh-mob">
-                  <p>years in the market</p>
-                </div>
-              </div>
-              <div className="col flex v--center h--center fd--column">
-                <div className="title--l color--white">70+</div>
-                <div className="txt color--white-light txt--s minh-2lh minh-3lh-mob">
-                  <p>professionals on board</p>
-                </div>
-              </div>
-              <div className="col flex v--center h--center fd--column">
-                <div className="title--l color--white">40+</div>
-                <div className="txt color--white-light txt--s minh-2lh minh-3lh-mob">
-                  <p>industry-recognized awards</p>
+                  <p>small, focused squad</p>
                 </div>
               </div>
             </div>
@@ -70,8 +52,8 @@ export default function CareerPage() {
             <span className="a-word"><span style={{ transitionDelay: '0s' }}>Started</span></span> <span className="a-word"><span style={{ transitionDelay: '0.08s' }}>by</span></span> <span className="a-word"><span style={{ transitionDelay: '0.16s' }}>designers</span></span> <span className="a-word"><span style={{ transitionDelay: '0.24s' }}>who</span></span> <span className="a-word"><span style={{ transitionDelay: '0.32s' }}>sweat</span></span> <span className="a-word"><span style={{ transitionDelay: '0.4s' }}>every</span></span> <span className="a-word"><span style={{ transitionDelay: '0.48s' }}>pixel</span></span>
           </div>
           <div className="color--dark-secondary txt txt--l mt-48 mw-674 mt-32-mob isview slidetop trd02 inner-inherit">
-            <p>Phenomenon Studio was founded in 2019 as a small group of designers obsessed with grounding exquisite design in clear logic while infusing high-end aesthetics into every pixel.</p>
-            <p>Today, we’re an award-winning product design and development agency of 70+ incredibly talented people collaborating with global startups and SMEs that demand excellence in work, quality in execution, and maturity in operations – the same qualities we look for when we hire.</p>
+            <p>Catalyr was founded in 2026 as an elite group of engineers and designers obsessed with grounding exquisite design in clear logic while infusing high-end aesthetics into every pixel.</p>
+            <p>Today, we intentionally remain a small, focused team working entirely remotely. We collaborate with ambitious startups and fast-growing brands that demand excellence in work, quality in execution, and maturity in operations – the same qualities we look for when we hire.</p>
           </div>
         </div>
         <div className="row mt-100 mt-64-mob">
@@ -79,37 +61,16 @@ export default function CareerPage() {
             <div className="vertical_line dark grid col-3 col-1-mob span-3 span-1-mob clipped isview full fadein"><span></span><span></span><span></span></div>
             <div className="column flex fd--column">
               <div className="txt txt--l mb-32">We have a very close-knit team. There’s no judgment here - you can always ask for help, and that’s something I truly value.</div>
-              <div className="mt-auto flex v--center gap-16">
-                <div className="icon icon--xxs"><img className="" src="/images/av-5.png.webp" alt="Image - av" loading="lazy" decoding="async" style={{ aspectRatio: 1 }} /></div>
-                <div className="info">
-                  <div className="txt txt--s">Valeria Varlamova</div>
-                  <div className="txt txt--s color--dark-secondary">Project Manager</div>
-                </div>
-              </div>
             </div>
 
             <div className="vertical_line dark grid col-3 col-1-mob span-3 span-1-mob clipped isview full fadein mob-visible"><span></span><span></span><span></span></div>
             <div className="column flex fd--column">
               <div className="txt txt--l mb-32">You can feel inspiration and support from everyone on the team. My biggest source of motivation comes from the team as a whole - like one living, breathing organism.</div>
-              <div className="mt-auto flex v--center gap-16">
-                <div className="icon icon--xxs"><img className="" src="/images/av-1-1.png.webp" alt="Image - av-1" loading="lazy" decoding="async" style={{ aspectRatio: 1 }} /></div>
-                <div className="info">
-                  <div className="txt txt--s">Serhii Feshchyk</div>
-                  <div className="txt txt--s color--dark-secondary">UI/UX Designer</div>
-                </div>
-              </div>
             </div>
 
             <div className="vertical_line dark grid col-3 col-1-mob span-3 span-1-mob clipped isview full fadein mob-visible"><span></span><span></span><span></span></div>
             <div className="column flex fd--column">
               <div className="txt txt--l mb-32">Almost everyone I work closely with inspires me in their own way. Everyone values their work, and what unites us is openness. Each person adds something unique that helps our processes grow and the team stay supported.</div>
-              <div className="mt-auto flex v--center gap-16">
-                <div className="icon icon--xxs"><img className="" src="/images/av-2-1.png.webp" alt="Image - av-2" loading="lazy" decoding="async" style={{ aspectRatio: 1 }} /></div>
-                <div className="info">
-                  <div className="txt txt--s">Olga Apanasenko</div>
-                  <div className="txt txt--s color--dark-secondary">Sales Operations</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -282,17 +243,16 @@ export default function CareerPage() {
 
       <section className="space"></section>
 
-      <section className="how_we_do_it_section next_block_sticky pt-200 pb-200 pt-100-mob pb-100-mob bg--dark clipped-bottom clipped-top radius-80 radius-32-mob problems_rows_checker reviews-section-checher">
+      <section className="how_we_do_it_section pt-200 pb-200 pt-100-mob pb-100-mob bg--dark clipped-top radius-80 radius-32-mob problems_rows_checker reviews-section-checher">
         <div className="container color--white">
           <div className="txt txt--caption-m color--white-light uppercase fw-600">OUR KEY STRENGTH</div>
           <div className="mt-24 mt-16-mob color--white mw1040 title title--xl isview slidetop new-animate">
-            <span className="a-word"><span style={{ transitionDelay: '0s' }}>We</span></span> <span className="a-word"><span style={{ transitionDelay: '0.08s' }}>build</span></span> <span className="a-word"><span style={{ transitionDelay: '0.16s' }}>leaders</span></span> <span className="a-word"><span style={{ transitionDelay: '0.24s' }}>from</span></span> <span className="a-word"><span style={{ transitionDelay: '0.32s' }}>within</span></span> <span className="a-word"><span style={{ transitionDelay: '0.4s' }}>-</span></span>
+            <span className="a-word"><span style={{ transitionDelay: '0s' }}>A</span></span> <span className="a-word"><span style={{ transitionDelay: '0.08s' }}>team</span></span> <span className="a-word"><span style={{ transitionDelay: '0.16s' }}>that</span></span> <span className="a-word"><span style={{ transitionDelay: '0.24s' }}>ships,</span></span>
             <br />
-            <span className="a-word"><span style={{ transitionDelay: '0.48s' }}>for</span></span> <span className="a-word"><span style={{ transitionDelay: '0.56s' }}>a</span></span> <span className="a-word"><span style={{ transitionDelay: '0.64s' }}>reason</span></span>
+            <span className="a-word"><span style={{ transitionDelay: '0.32s' }}>not</span></span> <span className="a-word"><span style={{ transitionDelay: '0.4s' }}>just</span></span> <span className="a-word"><span style={{ transitionDelay: '0.48s' }}>talks</span></span>
           </div>
           <div className="color--white-secondary txt txt--l mt-48 mw706 isview slidetop trd02 inner-inherit">
-            <div>Many of our Team Leads and Heads have grown within the company. <br />
-            That means when you join, you'll learn from people who understand the work, the culture, and what it takes to advance, and who are invested in helping you get there. You'll have mentorship from your first day and an individual growth plan after probation.</div>
+            <div>Catalyr&apos;s strength is its founding team — a group of builders and operators who have been in the trenches of product development since day one. We don&apos;t manage from a distance; we stay close to the work, the client, and the craft.</div>
           </div>
           <div className="mt-100 mt-40-mob problems without_bg">
             <div className="row sticky row-1 bg--dark problems--col-2">
@@ -301,29 +261,29 @@ export default function CareerPage() {
                   <div className="flex v--start h--between vertical_scroll_slider">
                     <div className="left pr-24 pr-0-mob">
                       <div className="txt txt--l">
-                        <p>Vadym Stebakov – from front-end engineer to lead front-end engineer</p>
+                        <p>Gowtham Pugalenthi — Co-Founder &amp; CEO of Catalyr</p>
                       </div>
                     </div>
                     <div className="center flex fd--column v--start">
                       <div className="txt txt--lead inner-inherit">
-                        <div><p>Vadym joined as a front-end developer in 2021 and, in four years, became lead front-end developer, now the person teammates rely on for strong architecture decisions, clear thinking, and calm technical leadership.</p></div>
+                        <div><p>Gowtham co-founded Catalyr with a clear vision: build the most execution-focused product studio in India. He leads client strategy and overall product direction — staying close to every engagement to ensure quality, speed, and outcomes that exceed what was promised. His hands-on approach is what sets Catalyr apart.</p></div>
                       </div>
                       <div className="quote p-28 mt-64 mt-24-mob p-20-mob bg--dark-gray fullw">
                         <div className="flex v--center heading-row">
                           <div className="icon icon--xxs">
-                            <img className="" src="/images/av-3-1.png.webp" alt="Image - av-3" loading="lazy" decoding="async" style={{ aspectRatio: 1 }} />
+                            <img className="" src="https://ui-avatars.com/api/?name=Himanshu&background=eaeaea&color=333" alt="Image - av-3" loading="lazy" decoding="async" style={{ aspectRatio: 1 }} />
                           </div>
                           <div className="info">
-                            <div className="txt txt--s color--white name">Unknown Capybara</div>
-                            <div className="txt txt--s color--white-secondary position">someone from Phenomenon</div>
+                            <div className="txt txt--s color--white name">Himanshu Ranjan Saravanan</div>
+                            <div className="txt txt--s color--white-secondary position">Co-Founder, Catalyr</div>
                           </div>
                         </div>
-                        <div className="txt txt--l mt-30 color--white">Vadym always brings something valuable to the table - a new idea, an example to remember, or a way to look at a task differently. He stays ahead of the tech curve and mentored me when I joined, which gave my skills and confidence a huge boost. It's simply great to work with him on the same project.</div>
+                        <div className="txt txt--l mt-30 color--white">Working alongside Gowtham is the clearest signal you&apos;re in good hands. He doesn&apos;t just delegate — he gets into the details. That&apos;s what makes Catalyr&apos;s work different from every other agency.</div>
                       </div>
                     </div>
                     <div className="right animated-media-wrapper isview fadein">
                       <div className="radius-12 animated-media">
-                        <img className="cover br--12 fullw" src="/images/Frame-1686557780.png.webp" alt="Image - Frame 1686557780" loading="lazy" decoding="async" style={{ aspectRatio: 0.69154228855721 }} />
+                        <img className="cover br--12 fullw" src="/images/downloaded/photo-1552664730-d307ca884978.jpg" alt="Team collaboration" loading="lazy" decoding="async" style={{ aspectRatio: 0.69, objectFit: "cover", borderRadius: "12px" }} />
                       </div>
                     </div>
                   </div>
@@ -337,29 +297,29 @@ export default function CareerPage() {
                   <div className="flex v--start h--between vertical_scroll_slider">
                     <div className="left pr-24 pr-0-mob">
                       <div className="txt txt--l">
-                        <p>Artem Izmalkov — from senior product designer to lead product</p>
+                        <p>Ragul Babu — Co-Founder &amp; CTO of Catalyr</p>
                       </div>
                     </div>
                     <div className="center flex fd--column v--start">
                       <div className="txt txt--lead inner-inherit">
-                        <div><p>Artem joined as a senior product designer in 2022 and, in two years, became a lead product designer, bringing structured thinking, strong visual judgment, and mentorship that shapes the team’s design quality.</p></div>
+                        <div><p>Ragul is the technical backbone of Catalyr. As CTO, he oversees all technical architecture, infrastructure, and engineering practices. His deep expertise ensures that every product we build is not just beautiful, but highly scalable, secure, and built on rock-solid foundations.</p></div>
                       </div>
                       <div className="quote p-28 mt-64 mt-24-mob p-20-mob bg--dark-gray fullw">
                         <div className="flex v--center heading-row">
                           <div className="icon icon--xxs">
-                            <img className="" src="/images/av-4-1.png.webp" alt="Image - av-4" loading="lazy" decoding="async" style={{ aspectRatio: 1 }} />
+                            <img className="" src="https://ui-avatars.com/api/?name=Gowtham&background=eaeaea&color=333" alt="Image - av-4" loading="lazy" decoding="async" style={{ aspectRatio: 1 }} />
                           </div>
                           <div className="info">
-                            <div className="txt txt--s color--white name">Unidentified Raccoon</div>
-                            <div className="txt txt--s color--white-secondary position">someone from Phenomenon</div>
+                            <div className="txt txt--s color--white name">Gowtham Pugalenthi</div>
+                            <div className="txt txt--s color--white-secondary position">CEO, Catalyr</div>
                           </div>
                         </div>
-                        <div className="txt txt--l mt-30 color--white">Artem is my team lead - someone who always sets a high bar and makes you want to match it. After every conversation with him, I want to work even better and say 'that's the level!' a bit more often. He inspires me with how he thinks, how he sees design in a broader context, always supports and gives well-reasoned, actionable feedback.</div>
+                        <div className="txt txt--l mt-30 color--white">Ragul&apos;s technical judgment is what gives us confidence to promise things most agencies won&apos;t. He doesn&apos;t just write code — he builds systems that last. Every architecture decision is grounded in practicality and long-term thinking.</div>
                       </div>
                     </div>
                     <div className="right animated-media-wrapper isview fadein">
                       <div className="radius-12 animated-media">
-                        <img className="cover br--12 fullw" src="/images/Frame-1686557781.png.webp" alt="Image - Frame 1686557781" loading="lazy" decoding="async" style={{ aspectRatio: 0.69154228855721 }} />
+                        <img className="cover br--12 fullw" src="/images/downloaded/photo-1517694712202-14dd9538aa97.jpg" alt="Developer at work" loading="lazy" decoding="async" style={{ aspectRatio: 0.69, objectFit: "cover", borderRadius: "12px" }} />
                       </div>
                     </div>
                   </div>
@@ -373,29 +333,29 @@ export default function CareerPage() {
                   <div className="flex v--start h--between vertical_scroll_slider">
                     <div className="left pr-24 pr-0-mob">
                       <div className="txt txt--l">
-                        <p>Alyona Ostroverkh — from UX/UI designer to lead UX/UI designer</p>
+                        <p>Himanshu Ranjan Saravanan — Co-Founder &amp; Head of Partnerships</p>
                       </div>
                     </div>
                     <div className="center flex fd--column v--start">
                       <div className="txt txt--lead inner-inherit">
-                        <div><p>Alyona joined Phenomenon Studio in 2021 as a UX/UI Designer and, after several years shaping complex interfaces and mentoring teammates, grew into the Lead UX/UI Designer role in 2024.</p></div>
+                        <div><p>Himanshu drives Catalyr&apos;s partnerships, client relationships, and business development. He is the bridge between our capabilities and the clients who need them — ensuring every project starts with clarity and ends with a result the client is proud to ship to their users.</p></div>
                       </div>
                       <div className="quote p-28 mt-64 mt-24-mob p-20-mob bg--dark-gray fullw">
                         <div className="flex v--center heading-row">
                           <div className="icon icon--xxs">
-                            <img className="" src="/images/av-3-1.png.webp" alt="Image - av-3" loading="lazy" decoding="async" style={{ aspectRatio: 1 }} />
+                            <img className="" src="https://ui-avatars.com/api/?name=Ragul&background=eaeaea&color=333" alt="Image - av-3" loading="lazy" decoding="async" style={{ aspectRatio: 1 }} />
                           </div>
                           <div className="info">
-                            <div className="txt txt--s color--white name">Unidentified Cat</div>
-                            <div className="txt txt--s color--white-secondary position">someone from Phenomenon</div>
+                            <div className="txt txt--s color--white name">Ragul Babu</div>
+                            <div className="txt txt--s color--white-secondary position">CTO, Catalyr</div>
                           </div>
                         </div>
-                        <div className="txt txt--l mt-30 color--white">Alyona is my team lead and mentor — a brilliant professional and a truly inspiring woman. Her voice is always calm, she knows how to stay focused, think strategically, and support you at the same time.</div>
+                        <div className="txt txt--l mt-30 color--white">Himanshu has a rare ability to understand what a client actually needs — not just what they say they want. He sets expectations clearly, protects project scope, and builds trust from the very first call. Clients love working with him.</div>
                       </div>
                     </div>
                     <div className="right animated-media-wrapper isview fadein">
                       <div className="radius-12 animated-media">
-                        <img className="cover br--12 fullw" src="/images/Frame-1686557782.png.webp" alt="Image - Frame 1686557782" loading="lazy" decoding="async" style={{ aspectRatio: 0.69154228855721 }} />
+                        <img className="cover br--12 fullw" src="/images/downloaded/photo-1552581234-26160f608093.jpg" alt="Partnership meeting" loading="lazy" decoding="async" style={{ aspectRatio: 0.69, objectFit: "cover", borderRadius: "12px" }} />
                       </div>
                     </div>
                   </div>
@@ -462,16 +422,6 @@ export default function CareerPage() {
                 </div>
               </div>
 
-              <div className="vertical_line grid col-3 col-1-mob span-3 span-1-mob clipped isview full fadein mob-visible"><span></span><span></span><span></span></div>
-              <div className="col flex p-32 pb-40 p-20-mob pt-28-mob pb-28-mob fd--column v--start">
-                <img className="" src="/images/asterisk-svgrepo-com-2-4-1.svg" alt="Icon" loading="lazy" decoding="async" />
-                <div className="pt-48 mt-auto">
-                  <div className="title title--xs color--dark">Access to <br />IT Loyalty Club</div>
-                  <div className="txt txt--m mt-8 mt-4-mob color--dark-secondary">
-                    <p>Discounts at cafés, in stores, on various services, and more. Basically, things you'd use anyway, just cheaper. Small perks add up.</p>
-                  </div>
-                </div>
-              </div>
 
               <div className="vertical_line grid col-3 col-1-mob span-3 span-1-mob clipped isview full fadein mob-visible"><span></span><span></span><span></span></div>
               <div className="col flex p-32 pb-40 p-20-mob pt-28-mob pb-28-mob fd--column v--start">
@@ -484,7 +434,7 @@ export default function CareerPage() {
                 </div>
               </div>
 
-              <div className="vertical_line grid col-3 col-1-mob span-3 span-1-mob clipped isview full fadein"><span></span><span></span><span></span></div>
+              <div className="vertical_line grid col-3 col-1-mob span-3 span-1-mob clipped isview full fadein mob-visible"><span></span><span></span><span></span></div>
               <div className="col flex p-32 pb-40 p-20-mob pt-28-mob pb-28-mob fd--column v--start">
                 <img className="" src="/images/asterisk-svgrepo-com-2-6-1.svg" alt="Icon" loading="lazy" decoding="async" />
                 <div className="pt-48 mt-auto">
@@ -495,7 +445,7 @@ export default function CareerPage() {
                 </div>
               </div>
 
-              <div className="vertical_line grid col-3 col-1-mob span-3 span-1-mob clipped isview full fadein mob-visible"><span></span><span></span><span></span></div>
+              <div className="vertical_line grid col-3 col-1-mob span-3 span-1-mob clipped isview full fadein"><span></span><span></span><span></span></div>
               <div className="col flex p-32 pb-40 p-20-mob pt-28-mob pb-28-mob fd--column v--start">
                 <img className="" src="/images/asterisk-svgrepo-com-2-7.svg" alt="Icon" loading="lazy" decoding="async" />
                 <div className="pt-48 mt-auto">
@@ -517,7 +467,7 @@ export default function CareerPage() {
                 </div>
               </div>
 
-              <div className="vertical_line grid col-3 col-1-mob span-3 span-1-mob clipped isview full fadein"><span></span><span></span><span></span></div>
+              <div className="vertical_line grid col-3 col-1-mob span-3 span-1-mob clipped isview full fadein mob-visible"><span></span><span></span><span></span></div>
               <div className="col flex p-32 pb-40 p-20-mob pt-28-mob pb-28-mob fd--column v--start">
                 <img className="" src="/images/asterisk-svgrepo-com-2-9.svg" alt="Icon" loading="lazy" decoding="async" />
                 <div className="pt-48 mt-auto">
@@ -532,17 +482,19 @@ export default function CareerPage() {
         </div>
       </section>
 
-      <section className="cta mb-200 mb-100-mob bg--white">
-        <div className="container">
+      <section className="cta pt-200 pb-200 pt-100-mob pb-100-mob bg--white">
+        <div className="container color--dark">
           <div className="cta_content">
-            <span className="icon icon--2xl">
-              <img className="fullw" src="/images/Mockups-finaliation.png.webp" alt="Image - Mockups finaliation" loading="lazy" decoding="async" style={{ aspectRatio: 1 }} />
-            </span>
+            <div className="txt txt--l mb-32 text--center" style={{ maxWidth: '700px', margin: '0 auto 32px auto', color: '#000', position: 'relative', zIndex: 10 }}>
+              We are building a culture of excellence, ownership, and deep focus.<br />
+              If you are passionate about crafting exceptional digital experiences,<br />
+              stay tuned. We will be opening up new roles very soon.
+            </div>
             <div className="title title--xl title--with-mark mt-24 mt-20-mob text--center isview slidetop new-animate">
               <span className="a-word"><span style={{ transitionDelay: '0s' }}>Ready</span></span> <span className="a-word"><span style={{ transitionDelay: '0.08s' }}>to</span></span> <span className="a-word"><span style={{ transitionDelay: '0.16s' }}>join</span></span> <span className="a-word"><span style={{ transitionDelay: '0.24s' }}>us?</span></span>
             </div>
             <div className="mt-48 mt-20-mob flex v--center h--center isview slidetop">
-              <a className="btn btn--orange arr arr-right hover--dark btn--lg-desk" href="https://phenomenonstudio.hurma.work/public-vacancies" target="_blank" rel="noreferrer"><span><b>Explore Open Vacancies</b></span></a>
+              <div className="btn btn--orange btn--lg-desk" style={{ pointerEvents: 'none' }}><span><b>Hiring Coming Soon</b></span></div>
             </div>
           </div>
         </div>

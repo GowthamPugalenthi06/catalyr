@@ -111,15 +111,33 @@ export default function EditBlogPost({ params }: { params: Promise<{ id: string 
     }
   };
 
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
       const reader = new FileReader();
       reader.onload = () => {
         setCoverPreview(reader.result as string);
-        setForm((prev) => ({ ...prev, coverImage: `/images/uploads/${file.name}` }));
       };
       reader.readAsDataURL(file);
+
+      const formData = new FormData();
+      formData.append("file", file);
+
+      try {
+        const res = await fetch("/api/upload", {
+          method: "POST",
+          body: formData,
+        });
+        const data = await res.json();
+        if (data.success) {
+          setForm((prev) => ({ ...prev, coverImage: data.url }));
+          showToast("Image uploaded successfully", "success");
+        } else {
+          showToast(data.error || "Failed to upload image", "error");
+        }
+      } catch (err) {
+        showToast("Error uploading image", "error");
+      }
     }
   };
 

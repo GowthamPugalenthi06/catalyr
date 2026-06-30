@@ -21,7 +21,7 @@ export function SiteChrome({
   siteScripts,
 }: SiteChromeProps) {
   const pathname = usePathname();
-  const isAdmin = pathname.startsWith("/admin");
+  const isAdmin = pathname.startsWith("/admin") || pathname.startsWith("/login");
 
   if (isAdmin) {
     // Admin pages: render children directly without site header/footer
@@ -35,18 +35,6 @@ export function SiteChrome({
         {header}
         {mobileMenu}
 
-        <div className="favicons-wrap" style={{ display: "none" }}>
-          <img src="/images/logo_00000.png.webp" alt="" />
-          <img src="/images/logo_00001.png.webp" alt="" />
-          <img src="/images/logo_00002.png.webp" alt="" />
-          <img src="/images/logo_00003.png.webp" alt="" />
-          <img src="/images/logo_00004.png.webp" alt="" />
-          <img src="/images/logo_00005.png.webp" alt="" />
-          <img src="/images/logo_00006.png.webp" alt="" />
-          <img src="/images/logo_00007.png" alt="" />
-          <img src="/images/logo_00008.png.webp" alt="" />
-          <img src="/images/logo_00009.png.webp" alt="" />
-        </div>
 
         {children}
 

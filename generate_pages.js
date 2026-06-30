@@ -17,7 +17,6 @@ function processFile(source, dest, name, lowercaseName) {
 // pages
 const pages = [
   { name: 'Healthcare', lower: 'healthcare' },
-  { name: 'Fintech', lower: 'fintech' },
   { name: 'Edtech', lower: 'edtech' }
 ];
 

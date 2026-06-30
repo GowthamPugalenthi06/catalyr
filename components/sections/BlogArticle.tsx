@@ -5,11 +5,39 @@ import Link from "next/link";
 import type { BlogPost } from "@/lib/blogData";
 import { getRelatedBlogs } from "@/lib/blogData";
 
+function AuthorAvatar({ name }: { name: string; avatar?: string }) {
+  const initials = name
+    ? name.substring(0, 2).toUpperCase()
+    : "U";
+
+  return (
+    <div 
+      className="avatar avatar-23 alignnone"
+      style={{
+        width: '23px',
+        height: '23px',
+        backgroundColor: '#f3f4f6',
+        color: '#111827',
+        borderRadius: '50%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: '10px',
+        fontWeight: 'bold',
+        textTransform: 'uppercase'
+      }}
+      title={name}
+    >
+      {initials}
+    </div>
+  );
+}
+
 /* ─── Sub-components ────────────────────────────────────────────────────────── */
 
 function BlogHero({ post }: { post: BlogPost }) {
   return (
-    <section className="hero bg--dark clipped-bottom next_block_sticky article-hero">
+    <section className="hero bg--dark article-hero">
       <div className="container color--white">
         {/* Breadcrumbs */}
         <nav className="breadcrumbs" aria-label="breadcrumb">
@@ -48,13 +76,7 @@ function BlogHero({ post }: { post: BlogPost }) {
         <div className="article-authors-wrap mt-48 mt-24-mob">
           <span className="auth-wrap color--dark">
             <div className="auth-avatars">
-              <img
-                src={post.author.avatar}
-                width="23"
-                height="23"
-                alt={post.author.name}
-                className="avatar avatar-23 wp-user-avatar wp-user-avatar-23 alignnone photo"
-              />
+              <AuthorAvatar name={post.author.name} avatar={post.author.avatar} />
             </div>
             <span className="auth-name txt--caption-m fw-600">
               {post.author.name}
@@ -104,86 +126,8 @@ function BlogContent({ post }: { post: BlogPost }) {
           </div>
         </div>
 
-        {/* Share block */}
-        <div className="article_content_wrap flex v--stretch h--between mt-64 mt-48-mob">
-          <div className="right flex fd--column gap-64 gap-48-mob">
-            <div className="divider"></div>
-            <ShareBlock slug={post.slug} title={post.title} />
-          </div>
-        </div>
       </div>
     </section>
-  );
-}
-
-function ShareBlock({ slug, title }: { slug: string; title: string }) {
-  const [copied, setCopied] = useState(false);
-  const [postUrl, setPostUrl] = useState("");
-
-  useEffect(() => {
-    setPostUrl(`${window.location.origin}/blog/${slug}`);
-  }, [slug]);
-
-  const handleCopy = () => {
-    if (typeof window !== "undefined" && navigator.clipboard) {
-      navigator.clipboard.writeText(postUrl).then(() => {
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
-      });
-    }
-  };
-
-  return (
-    <div className="share-block isview slidetop mt-auto">
-      <div className="txt txt--l">
-        <p>Share this article with friends</p>
-      </div>
-      <div className="share-buttons mt-24">
-        <div className="socs-wrap">
-          <div className="socs flex f--center h--start gap-8">
-            <a
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`}
-              className="linkedin"
-            >
-              <img src="/images/linkedin.svg" alt="LinkedIn" width="20" height="20" />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(postUrl)}`}
-              className="facebook"
-            >
-              <img src="/images/facebook.svg" alt="Facebook" width="20" height="20" />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              href={`http://www.twitter.com/intent/tweet?url=${encodeURIComponent(postUrl)}&text=${encodeURIComponent(title)}`}
-              className="twitter"
-            >
-              <img src="/images/twitter.svg" alt="Twitter" width="20" height="20" />
-            </a>
-            <b className="copy_wrap">
-              <button
-                onClick={handleCopy}
-                className="copy copyme"
-                style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}
-                title={copied ? "Copied!" : "Copy link"}
-              >
-                <img src="/images/copy.svg" alt="Copy" width="20" height="20" style={{ filter: 'invert(1)' }} />
-              </button>
-            </b>
-            {copied && (
-              <span className="txt txt--caption-m color--dark-secondary" style={{ marginLeft: 8 }}>
-                Copied!
-              </span>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
   );
 }
 
@@ -192,15 +136,7 @@ function BlogCTA() {
     <section className="cta bg--white">
       <div className="container">
         <div className="cta_content">
-          <span className="icon icon--2xl">
-            <img
-              className="fullw"
-              src="/images/sparkle.svg"
-              alt="CTA icon"
-              loading="lazy"
-              decoding="async"
-            />
-          </span>
+         
           <div className="title title--m title--with-mark mt-24 mt-20-mob text--center isview slidetop new-animate">
             Wondering about the price? We&apos;ll help you find the best solution!
           </div>
@@ -260,9 +196,13 @@ function BlogFAQ({ faqs }: { faqs: BlogPost["faqs"] }) {
                 <div className="right">
                   <button
                     className="btn btn--simple down dark"
-                    onClick={() =>
-                      setOpenIndex(openIndex === idx ? null : idx)
-                    }
+                    onClick={() => {
+                      setOpenIndex(openIndex === idx ? null : idx);
+                      setTimeout(() => {
+                        window.dispatchEvent(new Event('resize'));
+                        window.dispatchEvent(new Event('scroll'));
+                      }, 300);
+                    }}
                   >
                     <span className="visible-text">
                       {openIndex === idx ? "Less" : "More"}
@@ -326,13 +266,7 @@ function BlogRelated({ currentSlug, relatedPosts }: { currentSlug: string; relat
                 <div className="article-authors-wrap mt-24">
                   <span className="auth-wrap color--dark">
                     <div className="auth-avatars">
-                      <img
-                        src={post.author.avatar}
-                        width="23"
-                        height="23"
-                        alt={post.author.name}
-                        className="avatar avatar-23 wp-user-avatar wp-user-avatar-23 alignnone photo"
-                      />
+                      <AuthorAvatar name={post.author.name} avatar={post.author.avatar} />
                     </div>
                     <span className="auth-name txt--caption-m fw-600">
                       {post.author.name}
@@ -379,16 +313,19 @@ function BlogRelated({ currentSlug, relatedPosts }: { currentSlug: string; relat
   );
 }
 
-/* ─── Main BlogArticle Component ─────────────────────────────────────────────── */
+import ContactForm from "./ContactForm";
 
 export default function BlogArticle({ post, relatedPosts }: { post: BlogPost; relatedPosts?: BlogPost[] }) {
   return (
-    <main className="next_block_sticky">
-      <BlogHero post={post} />
-      <BlogContent post={post} />
-      <BlogCTA />
-      <BlogFAQ faqs={post.faqs} />
-      <BlogRelated currentSlug={post.slug} relatedPosts={relatedPosts} />
-    </main>
+    <>
+      <main>
+        <BlogHero post={post} />
+        <BlogContent post={post} />
+        <BlogCTA />
+        <BlogFAQ faqs={post.faqs} />
+        <BlogRelated currentSlug={post.slug} relatedPosts={relatedPosts} />
+      </main>
+      <ContactForm />
+    </>
   );
 }

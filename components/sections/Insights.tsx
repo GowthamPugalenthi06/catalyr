@@ -4,6 +4,34 @@ import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import type { BlogPost } from '@/lib/blogData';
 
+function AuthorAvatar({ name }: { name: string; avatar?: string }) {
+  const initials = name
+    ? name.substring(0, 2).toUpperCase()
+    : "U";
+
+  return (
+    <div 
+      className="avatar avatar-23 alignnone"
+      style={{
+        width: '23px',
+        height: '23px',
+        backgroundColor: '#f3f4f6',
+        color: '#111827',
+        borderRadius: '50%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: '10px',
+        fontWeight: 'bold',
+        textTransform: 'uppercase'
+      }}
+      title={name}
+    >
+      {initials}
+    </div>
+  );
+}
+
 export default function Insights({ initialBlogs }: { initialBlogs?: BlogPost[] }) {
   const [activeTab, setActiveTab] = useState("all");
   const [posts, setPosts] = useState<BlogPost[]>(initialBlogs || []);
@@ -35,8 +63,12 @@ export default function Insights({ initialBlogs }: { initialBlogs?: BlogPost[] }
     }
   }, []);
 
-  // Derive categories dynamically from posts
   const dynamicCategories = useMemo(() => {
+    const activeTags = new Set<string>();
+    posts.forEach(post => {
+      post.tags.forEach(tag => activeTags.add(tag.id));
+    });
+
     const categoriesMap = new Map<string, string>();
     categoriesMap.set("all", "All");
 
@@ -48,7 +80,12 @@ export default function Insights({ initialBlogs }: { initialBlogs?: BlogPost[] }
       { id: "development", label: "Development" },
       { id: "news", label: "News" }
     ];
-    coreCategories.forEach(cat => categoriesMap.set(cat.id, cat.label));
+    
+    coreCategories.forEach(cat => {
+      if (activeTags.has(cat.id)) {
+        categoriesMap.set(cat.id, cat.label);
+      }
+    });
 
     // Dynamically append any new tags present in published posts
     posts.forEach(post => {
@@ -221,7 +258,7 @@ function ArticleCard({ article, onTagClick }: { article: BlogPost; onTagClick: (
       <div className="article-authors-wrap mt-24">
         <span className="auth-wrap color--dark">
           <div className="auth-avatars">
-            <img src={article.author.avatar} width="23" height="23" alt={article.author.name} className="avatar avatar-23 wp-user-avatar wp-user-avatar-23 alignnone photo" />
+            <AuthorAvatar name={article.author.name} avatar={article.author.avatar} />
           </div>
           <span className="auth-name txt--caption-m fw-600">{article.author.name}</span>
         </span>

@@ -10,7 +10,6 @@ export async function GET() {
 
     const pages = [
       { name: 'Healthcare', path: 'healthcare', exact: 'Healthcare', lower: 'healthcare', upper: 'HEALTHCARE' },
-      { name: 'Fintech', path: 'fintech', exact: 'Fintech', lower: 'fintech', upper: 'FINTECH' },
       { name: 'Edtech', path: 'edtech', exact: 'Edtech', lower: 'edtech', upper: 'EDTECH' },
     ];
 

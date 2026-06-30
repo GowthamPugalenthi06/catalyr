@@ -1,57 +1,88 @@
-type Benefit = { eyebrow: string; lead: string; body: string };
+import { Fragment } from "react";
+
+type Benefit = { id: string; row: number; title: string; desc: string };
 
 const BENEFITS: Benefit[] = [
   {
-    eyebrow: "Design that meets regulation",
-    lead: "HIPAA- and GDPR-certified expertise for Healthcare and beyond.",
-    body: "Since 2019, we’ve gained HIPAA and GDPR certifications and industry recognition, delivering hundreds of products in Healthcare, SaaS, FinTech, and EdTech — where compliance and UX go hand in hand.",
+    id: "slide-1",
+    row: 1,
+    title: "End-to-End Ownership",
+    desc: "One unified team from strategy to launch. Total accountability for the final outcome. No handoffs, no coordination gaps, no excuses.",
   },
   {
-    eyebrow: "Design that lasts beyond trends",
-    lead: "We don’t chase fads. We build digital products that stay relevant.",
-    body: "Our work looks sharp today and stays usable tomorrow — designed around long-term value, not short-term gimmicks. Scalable systems, brand consistency, and smart UX that grows with your product.",
+    id: "slide-2",
+    row: 2,
+    title: "AI-Native by Default",
+    desc: "AI is integrated where it creates real leverage. Focus on eliminating friction, not creating noise. Deeply embedded agentic workflows that feel magical.",
   },
   {
-    eyebrow: "Design that’s developer-ready",
-    lead: "We design for implementation, not handoff. ",
-    body: "Every component is built with devs in mind: design tokens, accessibility, reusability, and real-world constraints. We collaborate with your team, reuse existing elements, and stay involved until everything’s live.",
+    id: "slide-3",
+    row: 3,
+    title: "Founder-Friendly Process",
+    desc: "Fixed-price scopes with absolute transparency. Weekly live demos of actual working software. Honest timelines with no surprises.",
   },
   {
-    eyebrow: "Local presence. Global delivery",
-    lead: "Work directly with the doers — not a chain of account managers.",
-    body: "Collaborate with UX strategists in North America, while our senior design and development teams in Europe deliver fast, consistent results. We integrate into your tools and workflow, working as part of your team — from a single embedded designer to a full product squad.",
+    id: "slide-4",
+    row: 4,
+    title: "Built to Scale",
+    desc: "Architecture decisions that hold at 100x the load. Clean, maintainable, and documented codebases. Building for where you're going, not just where you are.",
+  },
+  {
+    id: "slide-5",
+    row: 5,
+    title: "You Own Everything",
+    desc: "Full source code and IP ownership transfer. Comprehensive documentation for your internal team. A clean handoff process when you're ready to take over.",
   },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="services_section bg--white pb-200 pb-100-mob">
+    <section className="serv_base checker-header services_section pt-200 pb-200 pt-100-mob pb-100-mob bg--dark clipped-top radius-80 radius-32-mob">
       <div className="container">
-        <div className="txt txt--caption-m color--dark-light uppercase fw-600 isview slidetop scramble">
-          <h2>Why choose us?</h2>
+        <div className="txt txt--caption-m color--white-light uppercase fw-600 isview slidetop inner-inherit scramble">
+          <div>
+            <h2>Why Catalyr</h2>
+          </div>
         </div>
-        <div className="title title--xl mt-24 mt-16-mob color--dark mw1040 isview slidetop new-animate trd02 inner-inherit">
-          <span className="a-word"><span style={{ transitionDelay: "0s" }}>Your</span></span>{" "}
-          <span className="a-word"><span style={{ transitionDelay: "0.08s" }}>success</span></span>{" "}
-          <span className="a-word"><span style={{ transitionDelay: "0.16s" }}>is</span></span>{" "}
-          <span className="a-word"><span style={{ transitionDelay: "0.24s" }}>our</span></span>{" "}
-          <span><span className="a-word"><span style={{ transitionDelay: "0.32s" }}>priority</span></span></span>
+        <div className="mt-24 mt-16-mob color--white mw1040 title title--xl isview new-animate trd02 inner-inherit">
+          <span className="a-word"><span style={{ transitionDelay: "0s" }}>Most</span></span>{" "}
+          <span className="a-word"><span style={{ transitionDelay: "0.08s" }}>Agencies</span></span>{" "}
+          <span className="a-word"><span style={{ transitionDelay: "0.16s" }}>Build.</span></span>{" "}
+          <span className="a-word"><span style={{ transitionDelay: "0.24s" }}>Catalyr</span></span>{" "}
+          <span><span className="a-word"><span style={{ transitionDelay: "0.32s" }}>Partners.</span></span></span>
         </div>
-        <div className="mt-40 mt-32-mob grid col-2 col-1-mob gap-12 benefits_container">
-          {BENEFITS.map((b) => (
-            <div
-              key={b.eyebrow}
-              className="col relative radius-12 p-40 p-20-mob ov-hidden flex fd--column h--between v--start isview slidetop bg--gray"
-            >
-              <div className="txt txt--control-m uppercase color--dark-secondary fw-600 font2">{b.eyebrow}</div>
-              <div className="txt txt--lead mt-12 mb-auto color--dark">{b.lead}</div>
-              <div className="txt txt--m mt-80 mt-32-mob color--dark-light pb-8 pb-0-mob">
-                <p>{b.body}</p>
-              </div>
+        
+        <div className="mt-100 mt-32-mob">
+          <div className="pt-32 pt-0-mob pb-32 pb-0-mob flex v--start h--between scroll_slider flex--block-mob">
+            <div className="left flex fd--column flex--block-mob disable-scrollbar bg--dark">
+              <ul className="flex fd--column gap-4 isview slidetop">
+                {BENEFITS.map((b) => (
+                  <li key={b.id} className="title title--xs services_section_link">
+                    <a href={`#${b.id}`} data-id={b.row}>{b.title}</a>
+                  </li>
+                ))}
+              </ul>
             </div>
-          ))}
+            <div className="right color--white gap-100 flex fd--column gap-80-mob mt-40-mob pt-8-mob isview fadein">
+              {BENEFITS.map((b) => (
+                <div key={b.id} className={`scroll_slide row-${b.row}`} id={b.id}>
+                  <div className="title main_title title--xl pl-32 pr-32 pl-12-mob pr-12-mob isview new-animate color--white-light opacity-30">
+                    0{b.row}
+                  </div>
+                  <div className="title main_title title--m pl-32 pr-32 pl-12-mob pr-12-mob isview new-animate mt-12">
+                    {b.title}
+                  </div>
+                  <div className="txt txt--l color--white-light pl-32 pr-32 pl-12-mob pr-12-mob mt-24">
+                    {b.desc}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
+
+

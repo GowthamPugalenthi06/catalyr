@@ -32,3 +32,82 @@ body {
 img:is([sizes="auto" i], [sizes^="auto," i]) {
   contain-intrinsic-size: 3000px 1500px;
 }
+
+/* Rebrand Orange to Blue */
+.btn--orange, .bg--orange {
+  background-color: #003a99 !important;
+  border-color: #003a99 !important;
+  color: #fff !important;
+}
+.btn--orange:hover, .bg--orange:hover {
+  background-color: #002b73 !important;
+  border-color: #002b73 !important;
+}
+.color--orange {
+  color: #003a99 !important;
+}
+.hover--orange:hover {
+  background-color: #003a99 !important;
+  border-color: #003a99 !important;
+  color: #fff !important;
+}
+.btn.hover--orange:hover {
+  background-color: #003a99 !important;
+  border-color: #003a99 !important;
+  color: #fff !important;
+}
+
+/* Removed footer overrides to restore parallax effect */
+
+/* Pure CSS Parallax Footer Implementation (Fixed Reveal) */
+main {
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+  /* Optional: Ensure main covers the body background cleanly */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Create the reveal gap on the last element before the footer */
+#app > *:nth-last-child(2) {
+  margin-bottom: var(--footer-height, 0);
+  position: relative;
+  z-index: 2;
+}
+
+.contact_form_section {
+  position: relative;
+  z-index: 2;
+}
+
+footer {
+  position: fixed !important;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1 !important;
+}
+
+/* Image Crossfade Animation */
+.crossfade-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.334;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.crossfade-img-1, .crossfade-img-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.crossfade-img-2 {
+  animation: crossfade-simple 4s infinite alternate ease-in-out;
+}
+@keyframes crossfade-simple {
+   0%, 30% { opacity: 0; }
+   70%, 100% { opacity: 1; }
+}

@@ -4,18 +4,20 @@ import ContactForm from "@/components/sections/ContactForm";
 import { copyAboutAssets } from "@/lib/copyAboutAssets";
 
 export const metadata: Metadata = {
-  title: "About Us | Product Design and Development Agency - Phenomenon",
+  title: "About Us | Product Design and Development Agency - Catalyr",
   description:
-    "Learn about Phenomenon Studio, a product design and development agency. Discover our team, our values, and how we collaborate to deliver digital products.",
-  alternates: { canonical: "https://phenomenonstudio.com/about-us/" },
+    "Learn about Catalyr, a product design and development agency. Discover our team, our values, and how we collaborate to deliver digital products.",
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/about-us/` },
 };
 
 export default function AboutRoute() {
   copyAboutAssets();
   return (
-    <main className="next_block_sticky">
-      <AboutPage />
+    <>
+      <main>
+        <AboutPage />
+      </main>
       <ContactForm />
-    </main>
+    </>
   );
 }

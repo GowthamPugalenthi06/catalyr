@@ -97,9 +97,12 @@ function boot(w: Record<string, unknown>) {
             },
           },
         },
-        // Backend is mocked: validate visually, then no-op instead of POSTing.
+        // Backend is mocked: validate visually, then trigger React submit.
         onFormSubmit: (_container: unknown, ev?: Event) => {
           if (ev && typeof ev.preventDefault === "function") ev.preventDefault();
+          if (typeof window !== "undefined" && (window as any).triggerContactSubmit) {
+             (window as any).triggerContactSubmit();
+          }
         },
       });
     }

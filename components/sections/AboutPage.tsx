@@ -274,17 +274,17 @@ const TestimonialVideo = ({ src, poster }: { src: string; poster: string }) => {
 // Data sets
 
 const LEADERSHIP_MEMBERS: TeamMember[] = [
-  { id: 1, name: "Polina C.", role: "co-founder", image: "/images/Profile-Picture-Container-4.png.webp", video: "/media/video_polina-1.mp4" },
-  { id: 2, name: "Valerii F.", role: "co-founder", image: "/images/Profile-Picture-Container.png.webp", video: "/media/zoom-1.mp4" },
-  { id: 3, name: "Yuliia A.", role: "CEO", image: "/images/Profile-Picture-Container-9-2.png.webp", video: "/media/Video-Project-29-1.mp4" },
-  { id: 4, name: "Ruslan V.", role: "head of design", image: "/images/Profile-Picture-Container-44.png.webp", video: "/media/video-1.mov" },
-  { id: 5, name: "Alina S.", role: "operations director", image: "/images/Profile-Picture-Container-26.png.webp", video: "/media/video1365762158-1.mp4" },
-  { id: 6, name: "Anatoliy S.", role: "head of development", image: "/images/Profile-Picture-Container-23.png.webp", video: "/media/video1747026778-1.mp4" },
-  { id: 7, name: "Denis R.", role: "head of IT engineering and business analysis", image: "/images/Profile-Picture-Container-8.png.webp", video: "/media/norm-1.mov" },
-  { id: 8, name: "Dmitriy K.", role: "head of art", image: "/images/Profile-Picture-Container-28.png.webp", video: "/media/Video-Project-30-1.mp4" },
-  { id: 9, name: "Alena O.", role: "promo team lead", image: "/images/Profile-Picture-Container-25.png.webp", video: "/media/Кино-26.01.2026-в-11.27-1.mov" },
+  { id: 1, name: "Gowtham Pugalenthi", role: "Founder & CEO", image: "https://ui-avatars.com/api/?name=Gowtham&background=eaeaea&color=333" },
+  { id: 2, name: "Ragul Babu", role: "Co-Founder & CDO", image: "https://ui-avatars.com/api/?name=Ragul&background=eaeaea&color=333" },
+  { id: 3, name: "Himanshu Ranjan Saravanan", role: "Co-Founder & CTO", image: "https://ui-avatars.com/api/?name=Himanshu&background=eaeaea&color=333" },
+  { id: 4, name: "Ruslan V.", role: "head of design", image: "/images/Profile-Picture-Container-44.png.webp" },
+  { id: 5, name: "Alina S.", role: "operations director", image: "/images/Profile-Picture-Container-26.png.webp" },
+  { id: 6, name: "Anatoliy S.", role: "head of development", image: "/images/Profile-Picture-Container-23.png.webp" },
+  { id: 7, name: "Denis R.", role: "head of IT engineering and business analysis", image: "/images/Profile-Picture-Container-8.png.webp" },
+  { id: 8, name: "Dmitriy K.", role: "head of art", image: "/images/Profile-Picture-Container-28.png.webp" },
+  { id: 9, name: "Alena O.", role: "promo team lead", image: "/images/Profile-Picture-Container-25.png.webp" },
   { id: 10, name: "Artem I.", role: "product team lead", image: "/images/Profile-Picture-Container-65.png.webp", video: "/media/IMG_2141-1.mov" },
-  { id: 11, name: "Anastasia D.", role: "account executive", image: "/images/Profile-Picture-Container-3.png_1.webp", video: "/media/video-phenomenon-1-1.mov" },
+  { id: 11, name: "Anastasia D.", role: "account executive", image: "/images/Profile-Picture-Container-3.png_1.webp", video: "/media/video-catalyr-1-1.mov" },
   { id: 12, name: "Ksenia S.", role: "account executive", image: "/images/Profile-Picture-Container.png_1.webp", video: "/media/Video-Project-18-1.mp4" },
   { id: 13, name: "Oleksandr K.", role: "marketing manager", image: "/images/Profile-Picture-Container-1.png_1.webp", video: "/media/Фільм-1-19-26-о-3.45 пп-1.mov" },
   { id: 14, name: "Iryna R.", role: "PM lead", image: "/images/Profile-Picture-Container-31.png.webp", video: "/media/zoom.us-Zoom-Meeting-30-April-2026-1.mp4" },
@@ -349,24 +349,22 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero bg--dark clipped-bottom next_block_sticky">
+      <section className="hero bg--dark">
         <div className="container color--white">
           <div className="txt txt--caption-m color--white-secondary uppercase fw-600 mb-24 mb-16-mob isview slidetop">
             <h1>Product Design and development Agency</h1>
           </div>
           <div className="nobr-mob title title--xl mw1040 isview slidetop new-animate trd02">
-            <span>From</span> <span>a</span> <span>four-person</span> <span>startup</span> <span>studio</span>{" "}
-            <span>to</span> <span>a</span> <span>70+</span> <span>talent</span> <span>team</span>{" "}
-            <span>designing</span> <span>across</span> <span>industries</span> <span>and</span> <span>continents</span>
+            <span>An</span> <span>elite</span> <span>product</span> <span>studio</span> <span>dedicated</span>{" "}
+            <span>to</span> <span>crafting</span> <span>exceptional</span> <span>digital</span>{" "}
+            <span>experiences</span> <span>and</span> <span>scalable</span> <span>software.</span>
           </div>
           <div className="txt txt--l mt-48 mw706 isview slidetop trd02 color--white-secondary inner-inherit">
             <div>
-              Phenomenon Studio began with late nights on Upwork, often chasing projects until 3 - 4 a.m. First clients
-              came - and stayed. The work scaled. So did the team. What’s never changed: high standards, deep thinking,
-              and a shared drive to do things right.
+              Catalyr was born out of a desire to build things right. We intentionally remain a boutique studio, focusing on deep partnerships with ambitious brands rather than chasing volume. What drives us: high standards, deep thinking, and a shared commitment to delivering excellence.
             </div>
           </div>
-          <div className="mt-24 flex v--center h--start gap-8 fd--column-mob isview slidetop trd04">
+          <div className="mt-24 flex v--center h--start gap-8 fd--column-mob isview slidetop trd04 pb-100">
             <a className="btn btn--orange hover--white btn--lg-desk arr arr-right" href="#contact-form" target="_self">
               <span>
                 <b>Let’s talk</b>
@@ -374,7 +372,7 @@ export default function AboutPage() {
             </a>
             <a
               className="btn btn--white-light arr arr-right hover--white btn--lg-desk"
-              href="/projects"
+              href="/work"
               target="_self"
             >
               <span>
@@ -382,6 +380,8 @@ export default function AboutPage() {
               </span>
             </a>
           </div>
+          {/* Numbers block commented out for boutique focus */}
+          {false && (
           <div className="mt-60 pt-32">
             <div className="txt txt--caption-m color--white-secondary text--left mb-24 uppercase fw-600 isview fadein inner-inherit">
               <div>OUR PRODUCT DESIGN AGENCY IN NUMBERS</div>
@@ -413,6 +413,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+          )}
         </div>
       </section>
 
@@ -444,12 +445,15 @@ export default function AboutPage() {
                       <div className="text-block">
                         <div className="visible-text">
                           <div className="txt txt--lead">
-                            Our company was founded in 2019 by Valerii Filimonov and Polina Chebanova, both with a background in product design but different perspectives.
+                            Catalyr was founded by Gowtham Pugalenthi, Ragul Babu, and Himanshu Ranjan Saravanan, uniting distinct expertise in software engineering, product design, and scalable infrastructure.
                           </div>
                         </div>
                         <div className="hidden-text">
                           <div className="txt txt--lead">
-                            Valerii came from e-commerce and early-stage startups, driven by systems thinking and user flows. Polina led cross-functional teams at design studios in Ukraine and the UK, refining how interfaces look, feel, and behave.
+                            Gowtham drives the strategic product vision, Ragul leads the design and user experience architecture, and Himanshu oversees the technical execution and robust infrastructure. Together, they built Catalyr to be the ultimate growth partner for ambitious brands.
+                          </div>
+                          <div className="mt-40">
+                            <img src="/images/downloaded/photo-1522071820081-009f0129c71c.jpg" alt="Team" className="radius-12 fullw" style={{ aspectRatio: '16/9', objectFit: 'cover' }} />
                           </div>
                         </div>
                       </div>
@@ -474,23 +478,19 @@ export default function AboutPage() {
                   <div className="heading-row flex v--center gap-16">
                     <div className="icon icon--xxs">
                       <img
-                        src="/images/Rectangle-34624326.png_1.webp"
-                        alt="Valerii Filimonov"
+                        src="https://ui-avatars.com/api/?name=Gowtham&background=eaeaea&color=333"
+                        alt="Gowtham Pugalenthi"
                         loading="lazy"
-                        style={{ aspectRatio: 1 }}
+                        style={{ aspectRatio: 1, borderRadius: '50%' }}
                       />
                     </div>
                     <div className="info">
-                      <div className="txt txt--s">Valerii Filimonov</div>
-                      <div className="txt txt--s dark-secondary">co-founder</div>
+                      <div className="txt txt--s">Gowtham Pugalenthi</div>
+                      <div className="txt txt--s dark-secondary">Founder & CEO</div>
                     </div>
                   </div>
                   <div className="txt txt--l mt-30">
-                    I saw that for many designers, beauty mattered more than logic. I wanted to create something
-                    grounded—with people who think deeply.
-                  </div>
-                  <div className="audio-file mt-30">
-                    <audio className="audio-player" controls src="/media/Valerii-comment.mp3"></audio>
+                    "We didn’t just want to build another agency. We wanted to build a true technology partner—an elite team that founders can trust to engineer their most critical products from the ground up."
                   </div>
                 </div>
               </div>
@@ -508,10 +508,10 @@ export default function AboutPage() {
                 <div className="animated-media-wrapper isview slidetop">
                   <img
                     className="radius-12 animated-media trd00"
-                    src="/images/IMG_0477-e1776164064781.jpg.webp"
-                    alt="Team gallery"
+                    src="/images/downloaded/photo-1522071820081-009f0129c71c.jpg"
+                    alt="Team collaboration"
                     loading="lazy"
-                    style={{ aspectRatio: 1.7057 }}
+                    style={{ aspectRatio: 1.7057, objectFit: 'cover' }}
                   />
                 </div>
               </div>
@@ -522,10 +522,10 @@ export default function AboutPage() {
                 <div className="animated-media-wrapper isview slidetop">
                   <img
                     className="radius-12 animated-media trd02"
-                    src="/images/telegram-cloud-document-2-5300745544623214765-1.jpg.webp"
-                    alt="Team gallery"
+                    src="/images/downloaded/photo-1517048676732-d65bc937f952.jpg"
+                    alt="Team meeting"
                     loading="lazy"
-                    style={{ aspectRatio: 0.8232 }}
+                    style={{ aspectRatio: 0.8232, objectFit: 'cover' }}
                   />
                 </div>
               </div>
@@ -533,10 +533,10 @@ export default function AboutPage() {
                 <div className="animated-media-wrapper isview slidetop">
                   <img
                     className="radius-12 animated-media trd03"
-                    src="/images/telegram-cloud-document-2-5300745544623214761.jpg.webp"
-                    alt="Team gallery"
+                    src="/images/downloaded/photo-1542744173-8e7e53415bb0.jpg"
+                    alt="Whiteboard session"
                     loading="lazy"
-                    style={{ aspectRatio: 0.8232 }}
+                    style={{ aspectRatio: 0.8232, objectFit: 'cover' }}
                   />
                 </div>
               </div>
@@ -547,10 +547,10 @@ export default function AboutPage() {
                 <div className="animated-media-wrapper isview slidetop">
                   <img
                     className="radius-12 animated-media trd05"
-                    src="/images/IMG_0478.jpg.webp"
-                    alt="Team gallery"
+                    src="/images/downloaded/photo-1552664730-d307ca884978.jpg"
+                    alt="Project discussion"
                     loading="lazy"
-                    style={{ aspectRatio: 0.8232 }}
+                    style={{ aspectRatio: 0.8232, objectFit: 'cover' }}
                   />
                 </div>
               </div>
@@ -558,10 +558,10 @@ export default function AboutPage() {
                 <div className="animated-media-wrapper isview slidetop">
                   <img
                     className="radius-12 animated-media trd06"
-                    src="/images/telegram-cloud-photo-size-2-5253719888026007023-y.jpg.webp"
-                    alt="Team gallery"
+                    src="/images/downloaded/photo-1600880292203-757bb62b4baf.jpg"
+                    alt="Office collaboration"
                     loading="lazy"
-                    style={{ aspectRatio: 0.8232 }}
+                    style={{ aspectRatio: 0.8232, objectFit: 'cover' }}
                   />
                 </div>
               </div>
@@ -579,8 +579,8 @@ export default function AboutPage() {
             </div>
             <div className="visible-heading">
               <div className="mt-24 mt-16-mob title title--xl nobr-mob isview slidetop new-animate trd02">
-                <span>What</span> <span>we've</span> <span>gained</span> <span>together</span> <span>since</span>{" "}
-                <span className="year">2019</span>
+                <span>Our</span> <span>commitment</span> <span>starting</span> <span>in</span>{" "}
+                <span className="year">2026</span>
               </div>
             </div>
 
@@ -593,9 +593,21 @@ export default function AboutPage() {
               </div>
               <div className="col p-32 p-24-mob">
                 <div className="title title--l text--center h--center">
-                  <AnimatedCounter value={78} />
+                  <AnimatedCounter value={2026} />
                 </div>
-                <div className="txt txt--s mt-2 text--center color--dark-secondary">team members on board</div>
+                <div className="txt txt--s mt-2 text--center color--dark-secondary">year founded</div>
+              </div>
+              <div className="vertical_line grid col-4 col-2-mob span-4 span-1-mob clipped isview full fadein mob-visible">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div className="col p-32 p-24-mob">
+                <div className="title title--l text--center h--center" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                  <AnimatedCounter value={100} /><span style={{ marginLeft: '4px' }}>%</span>
+                </div>
+                <div className="txt txt--s mt-2 text--center color--dark-secondary">focus on quality</div>
               </div>
               <div className="vertical_line grid col-4 col-2-mob span-4 span-1-mob clipped isview full fadein mob-visible">
                 <span></span>
@@ -605,9 +617,9 @@ export default function AboutPage() {
               </div>
               <div className="col p-32 p-24-mob">
                 <div className="title title--l text--center h--center">
-                  <AnimatedCounter value={601} />
+                  <AnimatedCounter value={3} />
                 </div>
-                <div className="txt txt--s mt-2 text--center color--dark-secondary">projects successfully delivered</div>
+                <div className="txt txt--s mt-2 text--center color--dark-secondary">expert founders</div>
               </div>
               <div className="vertical_line grid col-4 col-2-mob span-4 span-1-mob clipped isview full fadein mob-visible">
                 <span></span>
@@ -617,21 +629,9 @@ export default function AboutPage() {
               </div>
               <div className="col p-32 p-24-mob">
                 <div className="title title--l text--center h--center">
-                  <AnimatedCounter value={298} />
+                  <AnimatedCounter value={0} />
                 </div>
-                <div className="txt txt--s mt-2 text--center color--dark-secondary">satisfied clients</div>
-              </div>
-              <div className="vertical_line grid col-4 col-2-mob span-4 span-1-mob clipped isview full fadein mob-visible">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <div className="col p-32 p-24-mob">
-                <div className="title title--l text--center h--center">
-                  <AnimatedCounter value={46} />
-                </div>
-                <div className="txt txt--s mt-2 text--center color--dark-secondary">industry awards won</div>
+                <div className="txt txt--s mt-2 text--center color--dark-secondary">compromises on design</div>
               </div>
             </div>
 
@@ -680,19 +680,30 @@ export default function AboutPage() {
                 <div className="quote mt-64 p-28 radius-16 bg--gray">
                   <div className="heading-row flex v--center gap-16">
                     <div className="icon icon--xxs">
-                      <img src="/images/av.png.webp" alt="Polina Chebanova" loading="lazy" style={{ aspectRatio: 1 }} />
+                      <img src="https://ui-avatars.com/api/?name=Ragul&background=eaeaea&color=333" alt="Ragul Babu" loading="lazy" style={{ aspectRatio: 1, borderRadius: '50%' }} />
                     </div>
                     <div className="info">
-                      <div className="txt txt--s">Polina Chebanova</div>
-                      <div className="txt txt--s dark-secondary">co-founder</div>
+                      <div className="txt txt--s">Ragul Babu</div>
+                      <div className="txt txt--s dark-secondary">Co-Founder & CDO</div>
                     </div>
                   </div>
                   <div className="txt txt--l mt-30">
-                    We never aimed to grow fast. The goal was to build something better—and people who felt the same
-                    kept joining us.
+                    "Great products aren't just functional; they are deeply empathetic to the user. Every pixel we design is obsessively crafted to reduce friction and drive scalable growth."
                   </div>
-                  <div className="audio-file mt-30">
-                    <audio className="audio-player" controls src="/media/2026-02-10-13.04.49.mp3"></audio>
+                </div>
+                
+                <div className="quote mt-40 p-28 radius-16 bg--gray">
+                  <div className="heading-row flex v--center gap-16">
+                    <div className="icon icon--xxs">
+                      <img src="https://ui-avatars.com/api/?name=Himanshu&background=eaeaea&color=333" alt="Himanshu Ranjan Saravanan" loading="lazy" style={{ aspectRatio: 1, borderRadius: '50%' }} />
+                    </div>
+                    <div className="info">
+                      <div className="txt txt--s">Himanshu Ranjan Saravanan</div>
+                      <div className="txt txt--s dark-secondary">Co-Founder & CTO</div>
+                    </div>
+                  </div>
+                  <div className="txt txt--l mt-30">
+                    "The backbone of any successful digital product is its architecture. We engineer systems that don't just work today, but are designed to withstand the stress of massive future scale."
                   </div>
                 </div>
               </div>
@@ -701,119 +712,6 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* Best Cases client log grid */}
-      <section className="best_cases pt-100 pt-64-mob ov-hidden">
-        <div className="grid col-4 cols_wrap clip_all_sides isview slidetop pt-1">
-          <div className="vertical_line grid col-4 col-1-mob span-4 span-1-mob clipped isview full fadein">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div className="col p-24 bg--white flex v--center h--center">
-            <img src="/images/logo1.svg" alt="logo1" loading="lazy" />
-          </div>
-          <div className="vertical_line grid col-4 col-1-mob span-4 span-1-mob clipped isview full fadein mob-visible">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div className="col p-24 bg--white flex v--center h--center">
-            <img src="/images/logo8.svg" alt="logo8" loading="lazy" />
-          </div>
-          <div className="vertical_line grid col-4 col-1-mob span-4 span-1-mob clipped isview full fadein mob-visible">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div className="col p-24 bg--white flex v--center h--center">
-            <img src="/images/logo5.svg" alt="logo5" loading="lazy" />
-          </div>
-          <div className="vertical_line grid col-4 col-1-mob span-4 span-1-mob clipped isview full fadein mob-visible">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div className="col p-24 bg--white flex v--center h--center">
-            <img src="/images/logo2.svg" alt="logo2" loading="lazy" />
-          </div>
-          <div className="vertical_line grid col-4 col-1-mob span-4 span-1-mob clipped isview full fadein">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div className="col p-24 bg--white flex v--center h--center">
-            <img src="/images/logo4.svg" alt="logo4" loading="lazy" />
-          </div>
-          <div className="vertical_line grid col-4 col-1-mob span-4 span-1-mob clipped isview full fadein mob-visible">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div className="col p-24 bg--white flex v--center h--center">
-            <img src="/images/logo3.svg" alt="logo3" loading="lazy" />
-          </div>
-          <div className="vertical_line grid col-4 col-1-mob span-4 span-1-mob clipped isview full fadein mob-visible">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div className="col p-24 bg--white flex v--center h--center">
-            <img src="/images/logo6.svg" alt="logo6" loading="lazy" />
-          </div>
-          <div className="vertical_line grid col-4 col-1-mob span-4 span-1-mob clipped isview full fadein mob-visible">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div className="col p-24 bg--white flex v--center h--center">
-            <img src="/images/Wisdom.svg" alt="Wisdom" loading="lazy" />
-          </div>
-          <div className="vertical_line grid col-4 col-1-mob span-4 span-1-mob clipped isview full fadein">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div className="col p-24 bg--white flex v--center h--center">
-            <img src="/images/HORMN.svg" alt="HORMN" loading="lazy" />
-          </div>
-          <div className="vertical_line grid col-4 col-1-mob span-4 span-1-mob clipped isview full fadein mob-visible">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div className="col p-24 bg--white flex v--center h--center">
-            <img src="/images/Pragmatike.svg" alt="Pragmatike" loading="lazy" />
-          </div>
-          <div className="vertical_line grid col-4 col-1-mob span-4 span-1-mob clipped isview full fadein mob-visible">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div className="col p-24 bg--white flex v--center h--center">
-            <img src="/images/PrettyPatty.svg" alt="PrettyPatty" loading="lazy" />
-          </div>
-          <div className="vertical_line grid col-4 col-1-mob span-4 span-1-mob clipped isview full fadein mob-visible">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div className="col p-24 bg--white flex v--center h--center">
-            <img src="/images/Zebeyond.svg" alt="Zebeyond" loading="lazy" />
-          </div>
-        </div>
-      </section>
 
       {/* Worldwide Section */}
       <section className="locations_section pt-200 pt-100-mob pb-200 pb-100-mob awards-sticky-checker">
@@ -860,7 +758,6 @@ export default function AboutPage() {
               </div>
               <div className="right">
                 <picture className="image">
-                  <source srcSet="/images/Frame-2131329712-1.svg" media="(max-width:992px)" />
                   <img
                     className="fullw cover"
                     src="/images/Frame-2131329712.svg"
@@ -873,9 +770,10 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <div className="sticky_space"></div>
 
       {/* Differentiation Section */}
-      <section className="contact-position-checker how_we_do_it_section next_block_sticky pt-200 pb-200 pt-100-mob pb-100-mob bg--dark clipped-bottom clipped-top radius-80 radius-32-mob">
+      <section className="contact-position-checker how_we_do_it_section pt-200 pb-200 pt-100-mob pb-100-mob bg--dark clipped-top radius-80 radius-32-mob">
         <div className="container">
           <div className="txt txt--caption-m color--white-light uppercase fw-600 inner-inherit">
             <div>WHAT MAKES US DIFFERENT</div>
@@ -1010,6 +908,7 @@ export default function AboutPage() {
       </section>
 
       {/* Interactive Zoom Team Card Tabs */}
+      {false && (
       <section className="zoom-team pt-200 pt-100-mob pb-200 pb-100-mob tabs pricing-tabs-wrapper bg--white">
         <div className="container">
           <div className="txt txt--caption-m color--dark-light uppercase fw-600 inner-inherit">
@@ -1103,8 +1002,10 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      )}
 
       {/* 17 Traits & Reaction State emoji picker */}
+      {false && (
       <section className="reactions">
         <div className="container">
           <div className="txt txt--caption-m color--dark-light uppercase fw-600 inner-inherit">
@@ -1113,7 +1014,7 @@ export default function AboutPage() {
           <div className="mt-24 mt-16-mob mw1040 title title--xl isview new-animate slidetop">
             <span>What</span> <span>our</span> <span>team</span> <span>said,</span> <span>in</span> <span>three</span>{" "}
             <span>words</span> <span>each,</span> <span>when</span> <span>asked</span> <span>to</span>{" "}
-            <span>describe</span> <span>Phenomenon</span>
+            <span>describe</span> <span>Catalyr</span>
           </div>
         </div>
         <div className="reactions_wrap mt-48 flex v--center h--wrap rows-wrapper-has-after">
@@ -1136,129 +1037,102 @@ export default function AboutPage() {
           <ReactionCol title="Responsible" traitKey="responsible-16" />
         </div>
       </section>
+      )}
 
       {/* Awards Section */}
-      <section className="awards-list pt-200 pt-100-mob pb-200 pb-100-mob">
+      {false && (
+      <section className="awards_section pb-200 pb-100-mob bg--white pt-200 pt-100-mob">
         <div className="container">
-          <div className="txt txt--caption-m color--dark-light uppercase fw-600 inner-inherit">
-            <div>Awards</div>
+          <div className="txt txt--caption-m color--dark-light uppercase fw-600 isview slidetop scramble">
+            Awards
           </div>
-          <div className="mt-24 mt-16-mob mw1040 title title--xl isview slidetop new-animate">
-            <span>Wins</span> <span>that</span> <span>inspire</span> <span>us</span> <span>forward</span>
+          <div className="title title--xl mt-24 mt-16-mob color--dark mw1040 isview slidetop new-animate trd02">
+            <span className="a-word"><span>Wins</span></span>{" "}
+            <span className="a-word"><span>that</span></span>{" "}
+            <span className="a-word"><span>inspire</span></span>{" "}
+            <span className="a-word"><span>us</span></span>{" "}
+            <span className="a-word"><span>forward</span></span>
           </div>
         </div>
-        <div className="awards-list_wrap mt-48 grid gap-24 rows-wrapper-has-after">
-          <div className="awards-list_row pt-30 pt-24-mob">
-            <div className="flex v--start h--between fd--column-mob gap-24">
-              <div className="left">
-                <div className="txt txt--l">Clutch</div>
+        <div className="mt-40 mt-32-mob awards_container ov-hidden">
+          <div className="grid awards_wrap col-3 col-2-tablet isview slidetop">
+            <div className="col flex fd--column v--start col-1">
+              <div className="img-wrap icon" style={{ width: '40px', height: '40px' }}>
+                <img src="/images/asterisk-svgrepo-com-2.svg" alt="Catalyr" style={{ filter: 'brightness(0)' }} />
               </div>
-              <div className="right">
-                <div className="row">
-                  <div className="txt txt--m color--dark">Top 1000 Company 2025</div>
-                  <img src="/images/Award-2.png.webp" alt="Award" loading="lazy" style={{ aspectRatio: 1.338 }} />
-                </div>
-                <div className="row">
-                  <div className="txt txt--m color--dark">Top Product Design Company 2024</div>
-                  <img src="/images/Award-2.png.webp" alt="Award" loading="lazy" style={{ aspectRatio: 1.338 }} />
-                </div>
-                <div className="row">
-                  <div className="txt txt--m color--dark">Top User Research Company 2024</div>
-                  <img src="/images/Award-2.png.webp" alt="Award" loading="lazy" style={{ aspectRatio: 1.338 }} />
-                </div>
-                <div className="row">
-                  <div className="txt txt--m color--dark">Top React Developers 2024</div>
-                  <img src="/images/Award-2.png.webp" alt="Award" loading="lazy" style={{ aspectRatio: 1.338 }} />
-                </div>
-                <div className="row">
-                  <div className="txt txt--m color--dark">Top Ukrainian Company 2024</div>
-                  <img src="/images/Award-2.png.webp" alt="Award" loading="lazy" style={{ aspectRatio: 1.338 }} />
-                </div>
-                <div className="row">
-                  <div className="txt txt--m color--dark">Top B2B Company 2021 - Creative & Design</div>
-                  <img src="/images/Award-2.png.webp" alt="Award" loading="lazy" style={{ aspectRatio: 1.338 }} />
-                </div>
+              <div className="txt txt--s mt-24 mt-8-mob color--dark-light">
+                <p className="fw-600 color--dark">Clutch Top Company</p>
+                <p className="mt-8">Recognized as a Top 1000 Company 2025, Top Product Design, and Top User Research Company.</p>
               </div>
-            </div>
-          </div>
-
-          <div className="awards-list_row pt-30 pt-24-mob">
-            <div className="flex v--start h--between fd--column-mob gap-24">
-              <div className="left">
-                <div className="txt txt--l">UX Design Awards</div>
-              </div>
-              <div className="right">
-                <a
-                  href="/projects/isora-governance-risk-and-compliance-assessment-platform"
-                  className="row has_case"
-                >
-                  <span className="txt txt--m color--dark">Isora GRC - Nomination 2024</span>
-                  <img src="/images/Case-Preview-5.png.webp" alt="Isora GRC" />
-                </a>
-                <a
-                  href="/projects/mywisdom-a-digital-platform-for-safer-more-connected-aging"
-                  className="row has_case"
-                >
-                  <span className="txt txt--m color--dark">MyWisdom - Nomination 2026</span>
-                  <img src="/images/Case-preview-10.png.webp" alt="MyWisdom" />
+              <div className="btn-wrap mt-auto pt-24">
+                <a className="btn btn--simple dark arr arr-45" href="https://clutch.co/profile/catalyr-studio" target="_blank" rel="noreferrer">
+                  <span><b>View on Clutch</b></span>
                 </a>
               </div>
             </div>
-          </div>
 
-          <div className="awards-list_row pt-30 pt-24-mob">
-            <div className="flex v--start h--between fd--column-mob gap-24">
-              <div className="left">
-                <div className="txt txt--l">Webflow</div>
+            <div className="col flex fd--column v--start col-2">
+              <div className="img-wrap icon" style={{ width: '40px', height: '40px' }}>
+                <img src="/images/asterisk-svgrepo-com-2.svg" alt="Catalyr" style={{ filter: 'brightness(0)' }} />
               </div>
-              <div className="right">
-                <div className="row">
-                  <div className="txt txt--m color--dark">Webflow 101 certification</div>
-                  <img src="/images/Group-1.png.webp" alt="Webflow" loading="lazy" style={{ aspectRatio: 1.338 }} />
-                </div>
-                <div className="row">
-                  <div className="txt txt--m color--dark">Webflow CMS certification</div>
-                  <img src="/images/Group-1.png.webp" alt="Webflow" loading="lazy" style={{ aspectRatio: 1.338 }} />
-                </div>
-                <div className="row">
-                  <div className="txt txt--m color--dark">Webflow experts certification</div>
-                  <img src="/images/Group-1.png.webp" alt="Webflow" loading="lazy" style={{ aspectRatio: 1.338 }} />
-                </div>
+              <div className="txt txt--s mt-24 mt-8-mob color--dark-light">
+                <p className="fw-600 color--dark">awwwards Honorable Mentions</p>
+                <p className="mt-8">Awarded Site of the Day for Shaga Odyssey, and Honorable Mentions for Pretty Patty and Paradigm.</p>
+              </div>
+              <div className="btn-wrap mt-auto pt-24">
+                <a className="btn btn--simple dark arr arr-45" href="/work" target="_self">
+                  <span><b>View Projects</b></span>
+                </a>
               </div>
             </div>
-          </div>
 
-          <div className="awards-list_row pt-30 pt-24-mob">
-            <div className="flex v--start h--between fd--column-mob gap-24">
-              <div className="left">
-                <div className="txt txt--l">awwwards</div>
+            <div className="col flex fd--column v--start col-3">
+              <div className="img-wrap icon" style={{ width: '40px', height: '40px' }}>
+                <img src="/images/asterisk-svgrepo-com-2.svg" alt="Catalyr" style={{ filter: 'brightness(0)' }} />
               </div>
-              <div className="right">
-                <a
-                  href="/projects/pretty-patty-a-deliciously-interactive-fast-food-experience"
-                  className="row has_case"
-                >
-                  <span className="txt txt--m color--dark">Pretty Patty – Honorable Mention 2025</span>
-                  <img src="/images/Case-preview-17.png.webp" alt="Pretty Patty" />
+              <div className="txt txt--s mt-24 mt-8-mob color--dark-light">
+                <p className="fw-600 color--dark">UX Design Awards</p>
+                <p className="mt-8">Nominated for outstanding user experience design in Isora GRC (2024) and MyWisdom (2026).</p>
+              </div>
+              <div className="btn-wrap mt-auto pt-24">
+                <a className="btn btn--simple dark arr arr-45" href="/work" target="_self">
+                  <span><b>View Projects</b></span>
                 </a>
-                <a href="/projects/paradigm-website-for-low-code-software-developers" className="row has_case">
-                  <span className="txt txt--m color--dark">Paradigm – Honorable Mention 2025</span>
-                  <img src="/images/IMg-Wrapper.png.webp" alt="Paradigm" />
+              </div>
+            </div>
+
+            <div className="col flex fd--column v--start col-1">
+              <div className="img-wrap icon" style={{ width: '40px', height: '40px' }}>
+                <img src="/images/asterisk-svgrepo-com-2.svg" alt="Catalyr" style={{ filter: 'brightness(0)' }} />
+              </div>
+              <div className="txt txt--s mt-24 mt-8-mob color--dark-light">
+                <p className="fw-600 color--dark">Webflow Certifications</p>
+                <p className="mt-8">Certified Webflow Experts with 101 and CMS certifications, guaranteeing top-tier development.</p>
+              </div>
+              <div className="btn-wrap mt-auto pt-24">
+                <a className="btn btn--simple dark arr arr-45" href="/services" target="_self">
+                  <span><b>View Services</b></span>
                 </a>
-                <a
-                  href="/projects/shaga-odyssey-awarded-website-development-for-web3-gamepad"
-                  className="row has_case"
-                >
-                  <span className="txt txt--m color--dark">Shaga Odyssey – Site Of The Day Oct 27, 2024</span>
-                  <img src="/images/Media-9-3-1.png.webp" alt="Shaga Odyssey" />
-                </a>
+              </div>
+            </div>
+
+            <div className="col flex fd--column v--start col-3">
+              <div className="inner color--dark radius-12 bg--gray bg--orange-mob flex fd--column v--start clipped-right-mob">
+                <div className="title title--l">Explore <br />Our Work</div>
+                <div className="btn-wrap mt-auto pt-24">
+                  <a href="/work" target="_self" className="btn btn--simple dark arr">
+                    <span><b>View all cases</b></span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      )}
 
       {/* Testimonials section */}
+      {false && (
       <section className="testimonials_section pb-200 pb-100-mob bg--white">
         <div className="container">
           <div className="flex v--end h--between heading_wrap flex--block-mob">
@@ -1277,7 +1151,7 @@ export default function AboutPage() {
             </div>
             <div className="services_cards grid col-2 gap-8 mt-32-mob">
               <a
-                href="https://clutch.co/profile/phenomenon-studio"
+                href="https://clutch.co/profile/catalyr-studio"
                 target="_blank"
                 rel="nofollow"
                 className="card bg--gray radius-12 p-12 flex fd--column isview slidetop"
@@ -1298,7 +1172,7 @@ export default function AboutPage() {
                 </div>
               </a>
               <a
-                href="https://www.designrush.com/agency/profile/phenomenon-studio"
+                href="https://www.designrush.com/agency/profile/catalyr-studio"
                 target="_blank"
                 rel="nofollow"
                 className="card bg--gray radius-12 p-12 flex fd--column isview slidetop"
@@ -1341,7 +1215,7 @@ export default function AboutPage() {
               <div className="video_wrap mt-auto isview slidetop">
                 <TestimonialVideo
                   src="/media/review-craig.mp4"
-                  poster="https://cdn.phenomenonstudio.com/wp-content/uploads/2025/03/cover-craig.webp"
+                  poster="https://cdn.catalyr.com/wp-content/uploads/2025/03/cover-craig.webp"
                 />
               </div>
             </div>
@@ -1389,7 +1263,7 @@ export default function AboutPage() {
               <div className="video_wrap mt-auto isview slidetop">
                 <TestimonialVideo
                   src="/media/klickex-review.mp4"
-                  poster="https://cdn.phenomenonstudio.com/wp-content/uploads/2025/03/klickex-cover.webp"
+                  poster="https://cdn.catalyr.com/wp-content/uploads/2025/03/klickex-cover.webp"
                 />
               </div>
             </div>
@@ -1412,7 +1286,7 @@ export default function AboutPage() {
               </div>
               <div className="txt txt--l mt-auto pt-24 text_wrap">
                 <p>
-                  The quality of the designs is fantastic. Phenomenon Studio works at speed and is extremely punctual
+                  The quality of the designs is fantastic. Catalyr works at speed and is extremely punctual
                   with timelines. They deliver top-notch outcomes with exceptional designs.
                 </p>
               </div>
@@ -1437,7 +1311,7 @@ export default function AboutPage() {
               <div className="video_wrap mt-auto isview slidetop">
                 <TestimonialVideo
                   src="/media/radcat-review.mp4"
-                  poster="https://cdn.phenomenonstudio.com/wp-content/uploads/2025/03/cover-andre-scaled.webp"
+                  poster="https://cdn.catalyr.com/wp-content/uploads/2025/03/cover-andre-scaled.webp"
                 />
               </div>
             </div>
@@ -1460,7 +1334,7 @@ export default function AboutPage() {
               </div>
               <div className="txt txt--l mt-auto pt-24 text_wrap">
                 <p>
-                  Phenomenon Studio's ability to translate concepts and rough design mock-ups into high-fidelity assets,
+                  Catalyr's ability to translate concepts and rough design mock-ups into high-fidelity assets,
                   designs, and visuals was very impressive. The goal was to maintain simple elegance in the design
                   aesthetic, and they did it very well.
                 </p>
@@ -1469,12 +1343,13 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      )}
 
       {/* Hiring CTA Section */}
-      <section className="pb-200 pb-100-mob bg--white">
+      <section className="pb-200 pb-100-mob mt-50 bg--white">
         <div className="container">
           <div className="txt txt--caption-m color--dark-light uppercase fw-600 isview slidetop">
-            WHAT IF YOU HIRE PHENOMENON
+            WHAT IF YOU HIRE CATALYR
           </div>
           <div className="title title--xl mt-24 mt-16-mob color--dark mw1040 isview slidetop new-animate">
             <span>Diving</span> <span>deeper</span> <span>into</span> <span>what</span> <span>we</span> <span>can</span>{" "}
@@ -1507,14 +1382,14 @@ export default function AboutPage() {
                 <div className="title title--xs color--dark">Cases</div>
                 <div className="txt txt--s mt-8 mt-4-mob color--dark-light">
                   <p>
-                    We design and build products across FinTech, EdTech, Healthcare, Web3, and SaaS. From mobile apps and
+                    We design and build products across EdTech, Healthcare, Web3, and SaaS. From mobile apps and
                     dashboards to branded websites and internal platforms, our work covers real user needs at every
                     product stage. Whether it’s shaping flows from scratch or delivering clean UI kits for development,
                     we focus on clarity, usability, and results that make sense.
                   </p>
                 </div>
                 <div className="btn-wrap mt-auto pt-48">
-                  <a href="/projects" className="btn btn--simple dark arr">
+                  <a href="/work" className="btn btn--simple dark arr">
                     <span>Explore</span>
                   </a>
                 </div>
@@ -1530,7 +1405,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div className="btn-wrap mt-auto pt-48">
-                  <a href="/pricing" className="btn btn--simple dark arr">
+                  <a href="/contact" className="btn btn--simple dark arr">
                     <span>Explore</span>
                   </a>
                 </div>

@@ -8,12 +8,13 @@ import SiteScripts from "./SiteScripts";
 import { SiteChrome } from "@/components/SiteChrome";
 import Script from "next/script";
 import { HydrationWarningSuppressor } from "@/components/HydrationWarningSuppressor";
+import AeoSchema from "@/components/AeoSchema";
 export const metadata: Metadata = {
-  metadataBase: new URL("https://phenomenonstudio.com"),
-  title: "Design Agency | Product Design and Development - Phenomenon",
-  description:
-    "Product design and development agency building market-ready apps for startups and enterprises. Explore Phenomenon's case studies.",
-  alternates: { canonical: "https://phenomenonstudio.com/" },
+  metadataBase: new URL(process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"),
+  title: "Catalyr - End-to-End Product Engineering & Transformation",
+  description: "Catalyr helps global enterprises and fast-growing startups build, scale, and transform their digital products. We deliver top-tier engineering across SaaS, Mobile, EdTech, FinTech, and Enterprise Solutions.",
+  keywords: ["Product Engineering", "Digital Transformation", "Custom Software Development", "SaaS Development", "Mobile App Development", "Tech Consulting"],
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/` },
   robots: {
     index: true,
     follow: true,
@@ -24,25 +25,25 @@ export const metadata: Metadata = {
   openGraph: {
     locale: "en_US",
     type: "website",
-    title: "Design Agency | Product Design and Development - Phenomenon",
+    title: "Design Agency | Product Design and Development - Catalyr",
     description:
-      "Product design and development agency building market-ready apps for startups and enterprises. Explore Phenomenon's case studies.",
-    url: "https://phenomenonstudio.com/",
-    siteName: "Phenomenon",
+      "Product design and development agency building market-ready apps for startups and enterprises. Explore Catalyr's case studies.",
+    url: `${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/`,
+    siteName: "Catalyr",
     images: [
       { url: "/images/main-5_1.gif", width: 1200, height: 630, type: "image/gif" },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@phenomenonstud1",
+    site: "@catalyrstud1",
   },
   icons: {
     icon: [
-      { url: "/images/cropped-logo_00009-32x32.png", sizes: "32x32" },
-      { url: "/images/cropped-logo_00009-192x192.png", sizes: "192x192" },
+      { url: "/work/icon.png", sizes: "32x32" },
+      { url: "/work/icon.png", sizes: "192x192" },
     ],
-    apple: "/images/cropped-logo_00009-180x180.png",
+    apple: "/work/icon.png",
   },
 };
 
@@ -69,8 +70,11 @@ export default function RootLayout({
         />
         {/* Original site stylesheet, served verbatim from /public/css. */}
         <link rel="stylesheet" href="/css/main.css" media="all" />
-        <Script id="bis-skin-remover" strategy="beforeInteractive">
-          {`
+        <Script
+          id="bis-skin-remover"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
             (function() {
               try {
                 const origSetAttr = Element.prototype.setAttribute;
@@ -97,8 +101,10 @@ export default function RootLayout({
                 });
               } catch (e) {}
             })();
-          `}
-        </Script>
+          `
+          }}
+        />
+        <AeoSchema />
       </head>
       <body className="disable-scrollbar loaded" id="top" suppressHydrationWarning={true}>
         <div id="progress-bar-wrapper" className="invisible">

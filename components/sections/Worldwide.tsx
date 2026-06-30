@@ -9,7 +9,7 @@ export default function Worldwide() {
           <span className="a-word"><span style={{transitionDelay:"0s"}}>Collaborating</span></span> <span className="a-word"><span style={{transitionDelay:"0.08s"}}>across</span></span> <span className="a-word"><span style={{transitionDelay:"0.16s"}}>borders</span></span> <span className="a-word"><span style={{transitionDelay:"0.24s"}}>to</span></span> <span className="a-word"><span style={{transitionDelay:"0.32s"}}>deliver</span></span> <span className="a-word"><span style={{transitionDelay:"0.4s"}}>seamless</span></span> <span className="a-word"><span style={{transitionDelay:"0.48s"}}>solutions</span></span> <span className="a-word"><span style={{transitionDelay:"0.56s"}}>—</span></span> <span><span className="a-word"><span style={{transitionDelay:"0.64s"}}>wherever</span></span> <span className="a-word"><span style={{transitionDelay:"0.72s"}}>you</span></span> <span className="a-word"><span style={{transitionDelay:"0.8s"}}>are</span></span></span>
         </div> 
         <div className="color--dark-secondary txt txt--l mt-48 mw706 isview slidetop trd02 inner-inherit">
-          <div>You’ll collaborate with project leads based near your region in the USA, and Switzerland, while your design & development team works across senior hubs in Europe. This setup gives you the proximity and trust of a local partner with the efficiency and speed of a global team.</div>
+          <div>You’ll collaborate with project leads based near your region in the USA, UK, UAE, and Singapore, while your design & development team works from our core hub in India. This setup gives you the proximity and trust of a local partner with the efficiency and speed of a global team.</div>
         </div>    
       </div>
       <div className="map_wrap mt-48">
@@ -17,7 +17,7 @@ export default function Worldwide() {
           <div className="pt-28 pt-0-mob fd--column-mob flex v--start gap-90 gap-48-mob">
             <div className="left grid gap-60 gap-48-mob">
               <div className="row">
-                <div className="title title--xs isview slidetop color--dark">North America & Switzerland</div>
+                <div className="title title--xs isview slidetop color--dark">USA, UK, UAE & Singapore</div>
                 <div className="styled_ul_wrap font1 mt-24 isview slidetop color--dark-light visible">
                   <ul>
                     <li>Client-facing</li>
@@ -27,7 +27,7 @@ export default function Worldwide() {
                 </div>
               </div>
               <div className="row">
-                <div className="title title--xs isview slidetop color--dark">Europe</div>
+                <div className="title title--xs isview slidetop color--dark">India</div>
                 <div className="styled_ul_wrap font1 mt-24 isview slidetop color--dark-light visible">
                   <ul>
                     <li>UX/UI design</li>
@@ -38,11 +38,17 @@ export default function Worldwide() {
                 </div>
               </div>
             </div>
-            <div className="right">
+            <div className="right" style={{ position: 'relative' }}>
               <picture className="image">
-                <source srcSet="/images/Frame-2131329712-1.svg" media="(max-width:992px)" />                        
-                <img className="fullw cover" src="/images/Frame-2131329712.svg" alt="Icon - Frame 2131329712" loading="lazy" decoding="async" />                    
+                <img
+                  className="fullw cover"
+                  src="/images/Frame-2131329712.svg"
+                  alt="Worldwide Locations"
+                  loading="lazy"
+                />
               </picture>
+              
+
             </div>
           </div>
         </div>  

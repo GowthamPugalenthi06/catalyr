@@ -3,7 +3,7 @@
 import { useState, type ReactNode } from "react";
 import AnimatedWords from "@/components/AnimatedWords";
 
-const SVC = "https://phenomenonstudio.com";
+const SVC = process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000";
 
 /* ─── Filter categories ─── */
 const FILTERS = [
@@ -41,92 +41,123 @@ type CaseData = {
 
 const CASES: CaseData[] = [
   {
-    href: `${SVC}/projects/isora-governance-risk-and-compliance-assessment-platform`,
-    pictureLg: "Case-Preview-5.png.webp",
-    pictureMob: "Case-Preview-mob.png.webp",
-    alt: "Isora – optimizing governance, risk & compliance for top institutions - image cover",
-    hashtags: ["UX Audit", "Product redesign", "Web development", "Team extention"],
-    title: ["Isora", "–", "optimizing", "governance,", "risk", "&", "compliance", "for", "top", "institutions"],
-    tagName: "SaltyCloud",
+    href: "",
+    pictureLg: "/images/downloaded/photo-1551288049-bebda4e38f71.jpg",
+    pictureMob: "/images/downloaded/photo-1551288049-bebda4e38f71.jpg",
+    alt: "HRMS SaaS Platform",
+    hashtags: ["SaaS", "HRMS", "Web development"],
+    title: ["HRMS", "SaaS", "—", "scalable", "human", "resource", "management"],
+    tagName: "HRMS",
     flag: "fi_4628635.svg",
-    country: "Texas, USA",
-    techStack: "React, Python, AWS",
-    timeline: "12 months, ongoing",
-    results: ["2x faster user workflows", "50% shorter time-to-market", "Nominated for UX Design Award 2024"],
+    country: "Global",
+    techStack: "React, Node.js, PostgreSQL",
+    timeline: "6 months",
+    results: ["Streamlined onboarding", "Automated payroll", "High scalability"],
     categories: ["web-app"],
   },
   {
-    href: `${SVC}/projects/mywisdom-a-digital-platform-for-safer-more-connected-aging`,
-    pictureLg: "Case-preview-10.png.webp",
-    pictureMob: "Case-preview-1.png.webp",
-    alt: "MyWisdom — a digital platform for safer, more connected aging - image cover",
-    hashtags: ["Product redesign", "Mobile app development"],
-    title: ["MyWisdom", "—", "a", "digital", "platform", "for", "safer,", "more", "connected", "aging"],
-    tagName: "MyWisdom",
+    href: "",
+    pictureLg: "/images/downloaded/photo-1512941937669-90a1b58e7e9c.jpg",
+    pictureMob: "/images/downloaded/photo-1512941937669-90a1b58e7e9c.jpg",
+    alt: "HRMS Mobile App",
+    hashtags: ["Mobile app", "HRMS"],
+    title: ["HRMS", "Mobile", "App", "—", "employee", "management", "on", "the", "go"],
+    tagName: "HRMS",
     flag: "fi_4628635_1.svg",
-    country: "USA",
-    techStack: "Flutter, Java, Spring Boot, Python, WebSocket, Computer Vision, AWS, PostgreSQL, Redis, Docker, Swagger, Liquibase",
-    timeline: "5 month",
-    results: ["$1.3M raised in pre-seed funding", "Strategic partnership with Samsung", "UX Design Award nomination"],
+    country: "Global",
+    techStack: "React Native, Node.js",
+    timeline: "4 months",
+    results: ["10k+ downloads", "Seamless tracking", "High user retention"],
     categories: ["mobile-app"],
   },
   {
-    href: `${SVC}/projects/highest-rated-mens-health-clinic-product-redesign-platform-development`,
-    pictureLg: "Case-preview-52.png.webp",
-    pictureMob: "Case-preview-1-9.png.webp",
-    alt: "Highest-rated men's health clinic – product redesign & platform development - image cover",
-    hashtags: ["Product redesign", "web development"],
-    title: ["Highest-rated", "men's", "health", "clinic", "–", "product", "redesign", "&", "platform", "development"],
-    tagName: "NDA",
+    href: "",
+    pictureLg: "/images/downloaded/photo-1556742049-0cfed4f6a45d.jpg",
+    pictureMob: "/images/downloaded/photo-1556742049-0cfed4f6a45d.jpg",
+    alt: "E-Commerce Web",
+    hashtags: ["E-Commerce", "Web development"],
+    title: ["E-Commerce", "Web", "Platform", "—", "high-conversion", "digital", "storefront"],
+    tagName: "E-Commerce",
     flag: "image-3.svg",
-    country: "Australia",
+    country: "Global",
     resultLabel: "Result",
-    results: ["10,000+ patients in the first month", "2,000+ new paid users", "$86K+ revenue in the first month"],
+    results: ["+45% conversion rate", "Integrated payments", "Blazing fast speeds"],
     categories: ["web-app", "website"],
   },
   {
-    href: `${SVC}/projects/klickex-how-a-fintech-redesign-boosted-conversion-by-35-and-grew-users-by-3k-monthly`,
-    pictureLg: "Case-preview-2-2.png.webp",
-    pictureMob: "Picture-2-2.png.webp",
-    alt: "KlickEx – frictionless cross-border payments for the Pacific Island communities - image cover",
-    hashtags: ["UX audit", "Product redesign", "web development"],
-    title: ["KlickEx", "–", "frictionless", "cross-border", "payments", "for", "the", "Pacific", "Island", "communities"],
-    tagName: "Nomupay",
+    href: "",
+    pictureLg: "/images/downloaded/photo-1485827404703-89b55fcc595e.jpg",
+    pictureMob: "/images/downloaded/photo-1485827404703-89b55fcc595e.jpg",
+    alt: "AI Command Center",
+    hashtags: ["AI", "RAG", "Lead generation"],
+    title: ["AI", "Command", "Center", "—", "RAG", "chat,", "task", "&", "lead", "generation"],
+    tagName: "AI",
     flag: "Clip-path-group.svg",
-    country: "New Zealand",
-    techStack: "Next.js, TypeScript, React Redux",
-    timeline: "6 months",
-    results: ['+35% "Add Money" conversion rate', '+30% "Money Transfer" completion rate', "Raised $1M in additional funding within 6 months"],
-    categories: ["web-app", "website"],
-    quote: {
-      avatar: "Case-preview-.webp",
-      avatarAspect: 1.1428571428571,
-      name: "Izek Lal",
-      role: "Country manager",
-      text: "We have seen a significant improvement in terms of mobile friendliness and the general flow of the system. I believe this has contributed significantly to the growth of our business. Many thanks, Phenomenon.",
-    },
+    country: "Global",
+    techStack: "Python, LangChain, React",
+    timeline: "3 months",
+    results: ["Automated task generation", "Intelligent lead scoring", "Context-aware RAG chat"],
+    categories: ["web-app"],
   },
   {
-    href: `${SVC}/projects/scrambly-rewarded-discovery-platform-for-games-and-apps-2`,
-    pictureLg: "Case-preview-14.png.webp",
-    pictureMob: "cover-mobile-4.png.webp",
-    alt: "Scrambly – rewarded discovery platform for games and apps - image cover",
-    hashtags: ["branding"],
-    title: ["Scrambly", "–", "rewarded", "discovery", "platform", "for", "games", "and", "apps"],
-    tagName: "Scrambly",
-    flag: "image.svg",
-    country: "Italy",
+    href: "",
+    pictureLg: "branding.png",
+    pictureMob: "branding.png",
+    alt: "Create.in Branding",
+    hashtags: ["branding", "Identity"],
+    title: ["Create.in", "—", "comprehensive", "branding", "&", "identity", "design"],
+    tagName: "Create.in",
+    flag: "/images/downloaded/in.svg",
+    country: "India",
     resultLabel: "Results",
     results: ["Clearer brand positioning", "Consistent visual system", "Improved market perception"],
     categories: ["branding"],
-    quote: {
-      avatar: "Rectangle-34624328-2.png.webp",
-      avatarAspect: 1,
-      name: "Illia Frantsevskyi",
-      role: "CTO & Co-Founder",
-      text: "They demonstrated a high level of expertise and efficiency in every phase of the project.",
-    },
   },
+  {
+    href: "",
+    pictureLg: "/images/downloaded/photo-1565299624946-b28f40a0ae38.jpg",
+    pictureMob: "/images/downloaded/photo-1565299624946-b28f40a0ae38.jpg",
+    alt: "Food Delivery App",
+    hashtags: ["Mobile app", "Food Tech"],
+    title: ["Food", "Delivery", "App", "—", "minimal", "feature", "food", "ordering"],
+    tagName: "Food Tech",
+    flag: "/images/downloaded/in.svg",
+    country: "India",
+    techStack: "Flutter, Firebase",
+    timeline: "8 weeks",
+    results: ["Streamlined checkout", "Real-time tracking", "High vendor adoption"],
+    categories: ["mobile-app"],
+  },
+  {
+    href: "",
+    pictureLg: "/images/downloaded/photo-1449965408869-eaa3f722e40d.jpg",
+    pictureMob: "/images/downloaded/photo-1449965408869-eaa3f722e40d.jpg",
+    alt: "Journey App",
+    hashtags: ["Mobile app", "Logistics"],
+    title: ["Journey", "—", "ride", "hailing", "&", "logistics", "app"],
+    tagName: "Journey",
+    flag: "/images/downloaded/in.svg",
+    country: "India",
+    techStack: "React Native, Google Maps API",
+    timeline: "3 months",
+    results: ["Efficient routing", "Low latency", "High driver retention"],
+    categories: ["mobile-app"],
+  },
+  {
+    href: "",
+    pictureLg: "/images/downloaded/photo-1460925895917-afdab827c52f.jpg",
+    pictureMob: "/images/downloaded/photo-1460925895917-afdab827c52f.jpg",
+    alt: "Full Dynamic Site CMS",
+    hashtags: ["CMS", "Web development", "Laravel"],
+    title: ["Dynamic", "CMS", "Platform", "—", "payments,", "emails,", "and", "dashboards"],
+    tagName: "CMS",
+    flag: "image-3.svg",
+    country: "Global",
+    techStack: "Laravel, MySQL, Stripe",
+    timeline: "10+ pages",
+    results: ["User & Admin Dashboards", "Automated Email Integration", "Seamless Payments"],
+    categories: ["website", "web-app"],
+  }
 ];
 
 /* ─── Sub-components ─── */
@@ -136,11 +167,10 @@ function CaseCard({ c }: { c: CaseData }) {
     <div className="grid col-2 col-1-mob gap-32 gap-0-mob case_card">
       <div className="col flex v--start h--start animated-media-wrapper isview fadein">
         <a href={c.href} className="media_wrap radius-12 ov-hidden animated-media">
-          <picture>
-            <source srcSet={`/images/${c.pictureLg}`} media="(min-width: 1440px)" />
-            <source srcSet={`/images/${c.pictureLg}`} media="(max-width: 1440px)" />
-            <img className="fullw radius-12" src={`/images/${c.pictureMob}`} loading="lazy" decoding="async" alt={c.alt} />
-          </picture>
+          <div className="crossfade-wrapper">
+            <img className="crossfade-img-1" src={c.pictureLg.startsWith('http') || c.pictureLg.startsWith('/') ? c.pictureLg : `/work/${c.pictureLg}`} loading="lazy" decoding="async" alt={c.alt} />
+            <img className="crossfade-img-2" src={c.pictureMob.startsWith('http') || c.pictureMob.startsWith('/') ? c.pictureMob : `/work/${c.pictureMob}`} loading="lazy" decoding="async" alt={c.alt} />
+          </div>
         </a>
       </div>
 
@@ -158,7 +188,7 @@ function CaseCard({ c }: { c: CaseData }) {
         <div className="mt-20 mt-16-mob tags flex v--center h--start h--wrap gap-8">
           <span className="tag">{c.tagName}</span>
           <span className="tag">
-            <img className="" src={`/images/${c.flag}`} alt="Product Design and Development Agency" loading="lazy" decoding="async" />
+            <img className="" src={c.flag.startsWith('http') || c.flag.startsWith('/') ? c.flag : `/images/${c.flag}`} alt="Country flag" loading="lazy" decoding="async" style={{ aspectRatio: 1.475 }} />
             {c.country}
           </span>
         </div>

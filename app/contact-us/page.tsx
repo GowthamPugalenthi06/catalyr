@@ -33,16 +33,18 @@ export default function ContactUsPage() {
   }
 
   return (
-    <main className="next_block_sticky">
-      <ContactForm 
-        caption="WE TURN BOLD IDEAS INTO SUCCESSFUL PRODUCTS"
-        titleLine1={["Got", "an", "idea?"]}
-        titleLine2={["Let's", "talk!"]}
-        isHero={true}
-      />
-      <Worldwide />
-      <IndustriesTabs />
-      <Testimonials />
-    </main>
+    <>
+      <main>
+        <ContactForm 
+          caption="WE TURN BOLD IDEAS INTO SUCCESSFUL PRODUCTS"
+          titleLine1={["Got", "an", "idea?"]}
+          titleLine2={["Let's", "talk!"]}
+          isHero={true}
+        />
+        <Worldwide />
+        <IndustriesTabs />
+        <Testimonials />
+      </main>
+    </>
   );
 }

@@ -1,0 +1,27 @@
+{
+  "company": {
+    "mainEmail": "getcatalyr@gmail.com",
+    "location": "Salem, Tamil Nadu, India",
+    "linkedin": "https://www.linkedin.com/company/catalyr/",
+    "twitter": "https://twitter.com/catalyr06",
+    "instagram": "https://instagram.com/catalyr"
+  },
+  "founders": [
+    {
+      "roleContext": "Have a project to discuss?",
+      "name": "Himanshu Ranjan Saravanan",
+      "role": "Co-Founder & CTO",
+      "email": "himanshu@catalyr.com",
+      "avatar": "https://ui-avatars.com/api/?name=Himanshu&background=eaeaea&color=333",
+      "linkedin": "https://www.linkedin.com/company/catalyr/"
+    },
+    {
+      "roleContext": "Have a partnership in mind?",
+      "name": "Gowtham Pugalenthi",
+      "role": "Founder & CEO",
+      "email": "gowthamp1614@gmail.com",
+      "avatar": "https://ui-avatars.com/api/?name=Gowtham&background=eaeaea&color=333",
+      "linkedin": "https://www.linkedin.com/company/catalyr/"
+    }
+  ]
+}
