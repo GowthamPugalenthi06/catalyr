@@ -9,6 +9,7 @@ import { SiteChrome } from "@/components/SiteChrome";
 import Script from "next/script";
 import { HydrationWarningSuppressor } from "@/components/HydrationWarningSuppressor";
 import AeoSchema from "@/components/AeoSchema";
+import { GoogleAnalytics } from "@next/third-parties/google";
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"),
   title: "Catalyr - End-to-End Product Engineering & Transformation",
@@ -105,23 +106,6 @@ export default function RootLayout({
           }}
         />
         <AeoSchema />
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-37KGL4CPNY"
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'G-37KGL4CPNY');
-            `
-          }}
-        />
       </head>
       <body className="disable-scrollbar loaded" id="top" suppressHydrationWarning={true}>
         <div id="progress-bar-wrapper" className="invisible">
@@ -139,6 +123,7 @@ export default function RootLayout({
           {children}
         </SiteChrome>
       </body>
+      <GoogleAnalytics gaId="G-37KGL4CPNY" />
     </html>
   );
 }
