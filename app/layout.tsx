@@ -105,6 +105,23 @@ export default function RootLayout({
           }}
         />
         <AeoSchema />
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-37KGL4CPNY"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-37KGL4CPNY');
+            `
+          }}
+        />
       </head>
       <body className="disable-scrollbar loaded" id="top" suppressHydrationWarning={true}>
         <div id="progress-bar-wrapper" className="invisible">
