@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "About Us | Product Design and Development Agency - Catalyr",
   description:
     "Learn about Catalyr, a product design and development agency. Discover our team, our values, and how we collaborate to deliver digital products.",
-  alternates: { canonical: `${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/about-us/` },
+  alternates: { canonical: '/about-us' },
 };
 
 export default function AboutRoute() {

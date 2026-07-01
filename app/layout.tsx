@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "Design Agency | Product Design and Development - Catalyr",
     description:
       "Product design and development agency building market-ready apps for startups and enterprises. Explore Catalyr's case studies.",
-    url: `${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/`,
+    url: '/',
     siteName: "Catalyr",
     images: [
       { url: "/images/main-5_1.gif", width: 1200, height: 630, type: "image/gif" },

@@ -7,7 +7,7 @@ import Testimonials from "@/components/sections/Testimonials";
 export const metadata: Metadata = {
   title: "Contact | Catalyr",
   description: "Get in touch with Catalyr to discuss your next digital product.",
-  alternates: { canonical: `${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/contact` },
+  alternates: { canonical: '/contact' },
 };
 
 export default function ContactRoute() {

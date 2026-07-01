@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "Product design & development company specializing in data-driven solutions and business-centric digital products. - Projects",
   description:
     "We use fact- and research-based methodologies whilst partnering closely with clients to deliver their end-goal vision.",
-  alternates: { canonical: `${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/work/` },
+  alternates: { canonical: '/work' },
   openGraph: {
     locale: "en_US",
     type: "article",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
       "Product design & development company specializing in data-driven solutions and business-centric digital products. - Projects",
     description:
       "We use fact- and research-based methodologies whilst partnering closely with clients to deliver their end-goal vision.",
-    url: `${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/work/`,
+    url: '/work',
     siteName: "Catalyr",
   },
   twitter: {

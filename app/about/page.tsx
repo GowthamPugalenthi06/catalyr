@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "About | Catalyr",
   description:
     "Learn about Catalyr, a technology and growth partner. Discover our team, our values, and how we collaborate to deliver digital products.",
-  alternates: { canonical: `${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/about` },
+  alternates: { canonical: '/about' },
 };
 
 export default function AboutRoute() {

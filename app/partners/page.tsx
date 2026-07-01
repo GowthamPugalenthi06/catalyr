@@ -5,7 +5,7 @@ import AnimatedWords from "@/components/AnimatedWords";
 export const metadata: Metadata = {
   title: "Partner Program | Catalyr",
   description: "Join the Catalyr partner network. We collaborate with agencies, consultants, and technology platforms to deliver exceptional digital products.",
-  alternates: { canonical: `${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/partners` },
+  alternates: { canonical: '/partners' },
 };
 
 const PARTNER_TYPES = [
