@@ -43,6 +43,9 @@ img:is([sizes="auto" i], [sizes^="auto," i]) {
   background-color: #002b73 !important;
   border-color: #002b73 !important;
 }
+.btn--orange.hover--white:hover, .bg--orange.hover--white:hover {
+  color: #000 !important;
+}
 .color--orange {
   color: #003a99 !important;
 }
