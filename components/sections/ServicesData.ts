@@ -32,11 +32,12 @@ export const SERVICES_DATA: Record<string, any> = {
       { icon: "images/asterisk-svgrepo-com-2-1-2.svg", title: "Future-Proof Tech", desc: "We build using modern, adaptable frameworks that allow your product to evolve easily." }
     ],
     faqs: [
-      { q: "How long does it take to deploy an AI solution?", a: "Deployment time varies by complexity, but most of our custom AI models and RAG integrations are live within 6 to 12 weeks." },
-      { q: "Is our data secure when training your AI models?", a: "Absolutely. We use enterprise-grade encryption and isolated environments to ensure your proprietary data never leaks into public models." },
-      { q: "Do you integrate AI into legacy systems?", a: "Yes. We build custom API wrappers and middleware to seamlessly connect modern AI capabilities with older infrastructure." },
-      { q: "What kind of ROI can we expect?", a: "While it depends on the use case, our clients typically see a 30-50% reduction in manual processing time within the first quarter." },
-      { q: "Do you provide ongoing maintenance for the models?", a: "Yes, we offer continuous monitoring, retraining, and optimization to ensure your AI models don't drift and remain accurate." }
+      { q: "What does Catalyr do in AI development?", a: "Catalyr builds and integrates custom AI models, RAG architectures, and intelligent workflows to automate your business processes and enhance decision-making." },
+      { q: "Who is this service for?", a: "This is for enterprise leaders and fast-growing startups looking to leverage their data, reduce manual overhead, or deploy intelligent conversational agents." },
+      { q: "How does the process work?", a: "We start with a data strategy and feasibility audit. Then, we train and fine-tune custom models, integrate them into your existing systems via secure APIs, and continuously optimize them." },
+      { q: "How long does development take?", a: "Deployment timelines vary by complexity, but most of our custom AI models and RAG integrations are live within 6 to 12 weeks." },
+      { q: "How much does it cost?", a: "Costs depend on the complexity of the data, the chosen models, and integration scope. We provide detailed, milestone-based quotes after our initial discovery phase." },
+      { q: "Why choose Catalyr?", a: "We focus on data-driven ROI and enterprise-grade security. Our models are built to integrate seamlessly without disrupting your current operations, ensuring scalable and predictable performance." }
     ],
     cases: [
       { title: "Predictive AI for Retail", category: "AI Solutions", tags: ["Machine Learning", "Data Analytics"], img: "AI.png", img2: "ai2.png", link: "" },
@@ -84,11 +85,12 @@ export const SERVICES_DATA: Record<string, any> = {
       { icon: "images/asterisk-svgrepo-com-2-1-2.svg", title: "24/7 Dedicated Support", desc: "Our engineering team provides continuous maintenance, monitoring, and updates to ensure flawless operation." }
     ],
     faqs: [
-      { q: "What technologies do you use for SaaS development?", a: "We primarily use modern, scalable frameworks like Next.js, React, Node.js, and Python, hosted on AWS or Google Cloud for enterprise-grade performance." },
-      { q: "How do you ensure data isolation in multi-tenant architectures?", a: "We implement robust row-level security and logically isolated databases to guarantee that tenant data is never exposed across accounts." },
-      { q: "Can you help migrate our existing app to a SaaS model?", a: "Yes, we specialize in legacy modernization, refactoring existing monolithic applications into scalable, cloud-native microservices." },
-      { q: "Do you handle third-party integrations?", a: "Absolutely. We build custom API connectors to integrate your SaaS with CRMs, payment gateways (like Stripe), and ERP systems." },
-      { q: "What is your typical timeline for a SaaS MVP?", a: "Depending on complexity, a fully functional SaaS MVP usually takes between 10 to 16 weeks to design, develop, and launch." }
+      { q: "What does Catalyr do in SaaS development?", a: "Catalyr engineers robust, multi-tenant SaaS platforms featuring high performance, cloud-native scalability, and enterprise-grade security." },
+      { q: "Who is this service for?", a: "Our SaaS development is designed for founders and enterprises looking to build B2B tools, FinTech platforms, EdTech solutions, or scalable subscription-based software." },
+      { q: "How does the process work?", a: "We begin with scalable architecture design and UX prototyping, followed by agile engineering of core features and payment gateways, culminating in rigorous load testing and launch." },
+      { q: "How long does development take?", a: "Depending on the feature set and complexity, a fully functional SaaS MVP typically takes between 10 to 16 weeks to design, develop, and launch." },
+      { q: "How much does it cost?", a: "Pricing is tailored to the platform's complexity, API integrations, and security requirements. We provide transparent, phase-based pricing after scoping the product." },
+      { q: "Why choose Catalyr?", a: "We build with modern, community-supported frameworks like Next.js and React on AWS. Our focus is on multi-tenant architecture, data isolation, and rapid iteration to keep you ahead of the competition." }
     ],
     cases: [
       { title: "Multi-tenant CRM", category: "SaaS Development", tags: ["Cloud-Native", "React"], img: "hrms-web.png", img2: "hrmsweb2.png", link: "" },
@@ -136,11 +138,12 @@ export const SERVICES_DATA: Record<string, any> = {
       { icon: "images/asterisk-svgrepo-com-2-1-2.svg", title: "Lightning Fast Speeds", desc: "We utilize Edge caching and optimized asset delivery for near-instant page loads globally." }
     ],
     faqs: [
-      { q: "How to design a web app?", a: "Designing a web app is a multifaceted process that requires a deep understanding of user needs, behaviors, and goals. It involves creating intuitive interfaces that are not only visually appealing but also functional, ensuring users can navigate the app easily and achieve their desired outcomes without frustration." },
-      { q: "What are web app design patterns?", a: "Web app design patterns are standardized, reusable solutions to common design challenges that developers and designers face when building applications. These patterns provide a framework or guideline for addressing issues such as navigation, user input, data display, and interactivity." },
-      { q: "Why is custom web app design important?", a: "Custom web app design goes beyond a one-size-fits-all approach, tailoring the application to meet your specific business needs and goals. By focusing on your unique requirements, it ensures that every feature and functionality aligns with your objectives, improving efficiency and productivity." },
-      { q: "How does web design for mobile apps differ from web apps?", a: "Web design for mobile apps focuses primarily on creating interfaces that are optimized for touchscreens and smaller screens. This requires an emphasis on simplicity, large touch targets, and intuitive navigation to cater to mobile-specific user behaviors." },
-      { q: "What is web app UI design?", a: "Web app UI design is the process of creating the visual and interactive elements of a web application to ensure it is both functional and appealing to users. This involves designing layouts, typography, color schemes, buttons, and other interface components." }
+      { q: "What does Catalyr do in web development?", a: "Catalyr builds high-performance, secure, and fully customized web applications tailored specifically to solve your unique business logic and workflows." },
+      { q: "Who is this service for?", a: "We partner with global enterprises and startups that need custom portals, high-traffic e-commerce platforms, data dashboards, or specialized CMS solutions." },
+      { q: "How does the process work?", a: "We start by gathering technical requirements, move into UI/UX design and prototyping, execute full-stack development, and finish with extensive QA and deployment." },
+      { q: "How long does development take?", a: "A custom web application generally takes anywhere from 8 to 14 weeks from initial scoping to live deployment, depending on functionality." },
+      { q: "How much does it cost?", a: "Costs scale with the application's complexity, third-party integrations, and performance requirements. We provide a comprehensive estimate after the initial discovery phase." },
+      { q: "Why choose Catalyr?", a: "We deliver optimized performance with lightning-fast speeds and seamless API integrations. Our code is clean, responsive, SEO-optimized, and built on future-proof technology stacks." }
     ],
     cases: [
       { title: "B2B Vendor Portal", category: "Web Development", tags: ["Next.js", "Web App"], img: "hrms-web.png", img2: "hrmsweb2.png", link: "" },
@@ -188,11 +191,12 @@ export const SERVICES_DATA: Record<string, any> = {
       { icon: "images/asterisk-svgrepo-com-2-1-2.svg", title: "Cross-Platform Consistency", desc: "We guarantee that the user experience is equally pristine on both iOS and Android." }
     ],
     faqs: [
-      { q: "Should we build native or cross-platform apps?", a: "It depends on your goals. Native apps offer the absolute best performance for graphics-heavy games. For 95% of business applications, cross-platform frameworks like React Native provide near-native performance at half the development cost." },
-      { q: "How much does it cost to build a mobile app?", a: "App development costs vary widely based on features and complexity. A simple MVP might take 6 weeks, while a complex enterprise app can take 4-6 months to develop." },
-      { q: "Will you help us publish the app to the app stores?", a: "Yes, we handle the entire submission process for both the Apple App Store and Google Play Store, ensuring all compliance guidelines are met." },
-      { q: "Do mobile apps require ongoing maintenance?", a: "Yes, as iOS and Android operating systems release new versions, your app will need updates to remain compatible and secure." },
-      { q: "Can you rescue an app project that another agency failed to complete?", a: "We frequently take over stalled projects. We'll start with a code audit to determine if we can salvage the existing codebase or if it's more cost-effective to rewrite." }
+      { q: "What does Catalyr do in mobile app development?", a: "Catalyr designs and develops high-performance, engaging native and cross-platform mobile applications for both iOS and Android." },
+      { q: "Who is this service for?", a: "Our mobile solutions are perfect for businesses needing on-demand services, m-commerce, enterprise mobility tools, or specialized health and fitness tracking apps." },
+      { q: "How does the process work?", a: "We define the product strategy and mobile UI/UX, then develop the frontend and backend concurrently, followed by comprehensive testing and App Store submission." },
+      { q: "How long does development take?", a: "A robust mobile MVP generally takes 8 to 12 weeks to build, while complex enterprise applications can take 4 to 6 months." },
+      { q: "How much does it cost?", a: "App development costs vary widely based on hardware integrations, backend complexity, and cross-platform requirements. We provide accurate quotes post-scoping." },
+      { q: "Why choose Catalyr?", a: "We specialize in React Native to provide near-native performance at half the development cost. We also handle the entire App Store compliance and submission process for you." }
     ],
     cases: [
       { title: "Mobile Fintech Wallet", category: "Mobile App Development", tags: ["React Native", "Fintech"], img: "journeyride.png", img2: "journeyride2.png", link: "" },
@@ -240,11 +244,12 @@ export const SERVICES_DATA: Record<string, any> = {
       { icon: "images/asterisk-svgrepo-com-2-1-2.svg", title: "Data-Driven Decisions", desc: "Every design choice is backed by analytics, heatmaps, and real user feedback." }
     ],
     faqs: [
-      { q: "What is the difference between UI and UX?", a: "UX (User Experience) is the strategic, analytical process of determining how an app works and flows. UI (User Interface) is the visual design process of determining how the app looks (colors, typography, buttons)." },
-      { q: "Do you offer UX Audits for existing products?", a: "Yes, our UX audits involve heuristic evaluations and usability testing to identify exactly where users are dropping off in your current product." },
-      { q: "What design tools do you use?", a: "We primarily use Figma for all UI/UX design, prototyping, and developer handoff, as it allows for seamless real-time collaboration." },
-      { q: "Can you work with our existing brand guidelines?", a: "Absolutely. We adapt to your established brand identity and expand upon it to create a comprehensive digital design system." },
-      { q: "How do you ensure developers can actually build your designs?", a: "We design with development in mind, creating structured component libraries, using consistent spacing grids, and providing thorough handoff documentation." }
+      { q: "What does Catalyr do in UI/UX design?", a: "Catalyr crafts stunning, intuitive, and user-centric digital interfaces that are strategically designed to engage users and drive business conversions." },
+      { q: "Who is this service for?", a: "This service is for companies suffering from poor user retention, launching a new product, or needing a comprehensive UX audit and redesign of their existing platform." },
+      { q: "How does the process work?", a: "We conduct deep user research and map information architecture. Then, we create wireframes, apply visual brand identity, and validate everything through clickable prototypes and user testing." },
+      { q: "How long does development take?", a: "A complete UI/UX design phase for a standard application usually takes 4 to 8 weeks, including research, wireframing, and high-fidelity prototyping." },
+      { q: "How much does it cost?", a: "Design costs depend on the number of screens, complexity of user flows, and required research. We offer project-based pricing tailored to your scope." },
+      { q: "Why choose Catalyr?", a: "Our designs are not just visually appealing; they are data-driven, accessibility-first, and delivered in development-ready component libraries that significantly reduce engineering costs." }
     ],
     cases: [
       { title: "SaaS Platform Redesign", category: "UI/UX Design", tags: ["UX Audit", "Design System"], img: "branding.png", link: "" },
@@ -292,11 +297,12 @@ export const SERVICES_DATA: Record<string, any> = {
       { icon: "images/asterisk-svgrepo-com-2-1-2.svg", title: "Scalable Foundation", desc: "While we build fast, we never compromise on architecture, ensuring the MVP can scale when you find product-market fit." }
     ],
     faqs: [
-      { q: "What exactly is an MVP?", a: "A Minimum Viable Product (MVP) is a version of a new product that allows a team to collect the maximum amount of validated learning about customers with the least effort." },
-      { q: "How long does it take to build an MVP?", a: "We typically design, build, and launch functional MVPs in 6 to 10 weeks, depending on the complexity of the core feature set." },
-      { q: "Will the MVP code be thrown away later?", a: "Not if built correctly. We build MVPs using scalable architectures (like React and Node.js) so the codebase can be expanded upon, not discarded." },
-      { q: "Can we use no-code tools for our MVP?", a: "Yes! If speed is the absolute priority, we can leverage no-code platforms like Webflow or Bubble to validate your idea in a matter of days." },
-      { q: "What happens after the MVP is launched?", a: "Once live, we monitor analytics, gather user feedback, and iterate in rapid sprints to improve retention and find product-market fit." }
+      { q: "What does Catalyr do in MVP development?", a: "Catalyr helps founders build, launch, and validate Minimum Viable Products quickly, focusing strictly on core features to test market fit." },
+      { q: "Who is this service for?", a: "Our MVP service is tailored for early-stage startups and enterprise innovation labs that need a functional product quickly to pitch investors or test user demand." },
+      { q: "How does the process work?", a: "We relentlessly prioritize features during product scoping, create rapid clickable prototypes, execute an agile build sprint, and deploy for immediate user feedback." },
+      { q: "How long does development take?", a: "We pride ourselves on speed. A fully functional, coded MVP is typically designed, built, and launched within 6 to 10 weeks." },
+      { q: "How much does it cost?", a: "MVP costs are highly optimized by eliminating feature bloat. We provide a fixed-price engagement based on the absolute essential feature set." },
+      { q: "Why choose Catalyr?", a: "We build fast without compromising architecture. Your MVP will be built on a scalable foundation (like React and Node.js) so the code can be expanded upon, not discarded when you grow." }
     ],
     cases: [
       { title: "Accounting MVP", category: "MVP Development", tags: ["Rapid Prototyping", "React"], img: "journeyride.png", img2: "journeyride2.png", link: "" },
@@ -344,11 +350,12 @@ export const SERVICES_DATA: Record<string, any> = {
       { icon: "images/asterisk-svgrepo-com-2-1-2.svg", title: "Scalable Operations", desc: "We ensure your strategy aligns not just with code, but with your entire business model." }
     ],
     faqs: [
-      { q: "Why is product strategy necessary before development?", a: "Building without a strategy is like building a house without a blueprint. A strategy ensures you're building the right features for the right audience, preventing costly pivots later." },
-      { q: "What does a product strategy workshop involve?", a: "Our workshops are intensive sessions where we align stakeholders, define the core problem, map user journeys, and prioritize the feature set for your MVP." },
-      { q: "Do you help with market research?", a: "Yes. We conduct competitive analysis, user interviews, and market sizing to validate that a demand actually exists for your product concept." },
-      { q: "How do you determine what features make the MVP?", a: "We use prioritization frameworks like the MoSCoW method (Must have, Should have, Could have, Won't have) to ruthlessly cut non-essential features." },
-      { q: "Will you provide a concrete timeline and budget?", a: "Absolutely. The final deliverable of our strategy phase is a detailed product roadmap, complete with technical requirements, timelines, and budget estimates." }
+      { q: "What does Catalyr do in product strategy?", a: "Catalyr provides strategic clarity by conducting market research, defining value propositions, and creating actionable product roadmaps that minimize risk." },
+      { q: "Who is this service for?", a: "It's for founders and product managers who need to align internal teams, define monetization strategies, or validate a concept before investing in full-scale development." },
+      { q: "How does the process work?", a: "We lead discovery workshops to align on vision, conduct deep market research, map out the unique value proposition, and deliver a phased development roadmap." },
+      { q: "How long does development take?", a: "A comprehensive product strategy engagement, including workshops and research deliverables, typically takes 3 to 5 weeks." },
+      { q: "How much does it cost?", a: "Strategy engagements are priced as a flat consulting fee, yielding a detailed roadmap, budget estimates, and technical requirements for the build phase." },
+      { q: "Why choose Catalyr?", a: "We prevent costly pivots later by ensuring you build the right features for the right audience. Our strategy aligns with both technical reality and your overall business model." }
     ],
     cases: [
       { title: "Fintech Platform Strategy", category: "Product Strategy", tags: ["Roadmapping", "Research"], img: "branding.png", link: "" },
@@ -396,11 +403,12 @@ export const SERVICES_DATA: Record<string, any> = {
       { icon: "images/asterisk-svgrepo-com-2-1-2.svg", title: "Reduced Bottlenecks", desc: "Remove dependencies on key personnel for routine data entry tasks." }
     ],
     faqs: [
-      { q: "What kind of tasks can be automated?", a: "Almost any repetitive digital task can be automated. This includes data entry, lead routing, email follow-ups, invoice generation, and inventory synchronization." },
-      { q: "Do you use tools like Zapier or write custom code?", a: "We use a hybrid approach. For simple integrations, we leverage tools like Make or Zapier. For complex, high-volume data transfers, we build custom API middleware in Node.js or Python." },
-      { q: "Is it safe to automate sensitive data transfers?", a: "Yes. We use secure, encrypted API connections and implement rigorous error-handling and logging to ensure data is transferred safely and accurately." },
-      { q: "How do we know if automation is worth the investment?", a: "We calculate ROI by estimating the hours your team currently spends on manual tasks, multiplying it by their hourly rate, and comparing it to the cost of the automation setup." },
-      { q: "Will automation replace my staff?", a: "No, automation doesn't replace people; it replaces repetitive tasks. It frees your team from administrative burdens so they can focus on high-value, strategic work." }
+      { q: "What does Catalyr do in automation solutions?", a: "Catalyr eliminates manual bottlenecks by building custom API middleware and automated workflows that sync your disparate software systems in real-time." },
+      { q: "Who is this service for?", a: "This service is for operations and sales teams bogged down by manual data entry, disconnected CRMs, or complex internal workflows that slow down growth." },
+      { q: "How does the process work?", a: "We audit your current processes to find inefficiencies, design a solution architecture, implement secure integrations, and set up continuous monitoring." },
+      { q: "How long does development take?", a: "Simple integrations can be deployed in a few weeks, while complex, enterprise-grade data pipelines and custom middleware may take 6 to 10 weeks." },
+      { q: "How much does it cost?", a: "Costs are based on the complexity of the APIs and data volume. We focus on ensuring the ROI heavily outweighs the setup cost through massive time savings." },
+      { q: "Why choose Catalyr?", a: "We provide secure, scalable automation that reduces human error and accelerates response times. We use a hybrid of tools like Zapier for speed and custom Node.js/Python scripts for complex data." }
     ],
     cases: [
       { title: "CRM Automation Setup", category: "Automation", tags: ["Zapier", "API Integration"], img: "AI.png", img2: "ai2.png", link: "" },
@@ -448,11 +456,12 @@ export const SERVICES_DATA: Record<string, any> = {
       { icon: "images/asterisk-svgrepo-com-2-1-2.svg", title: "Data Transparency", desc: "We provide crystal clear reporting so you always know exactly where your budget is going." }
     ],
     faqs: [
-      { q: "What marketing channels do you specialize in?", a: "We focus on data-driven channels: Google Ads (Search & Display), LinkedIn Ads for B2B, Meta Ads (Facebook/Instagram), and technical SEO for long-term organic growth." },
-      { q: "How long does it take to see results?", a: "Paid advertising (PPC) can generate leads within the first week of launch. SEO and organic content strategies typically take 3 to 6 months to show significant momentum." },
-      { q: "Do you create the ad creatives and copy?", a: "Yes, our team handles everything end-to-end. We design the graphics, write the ad copy, build the landing pages, and set up the tracking." },
-      { q: "How do you track the success of campaigns?", a: "We implement advanced tracking using Google Tag Manager, GA4, and CRM integrations to track every interaction from the first click to the final sale." },
-      { q: "Do we have to sign a long-term contract?", a: "We typically recommend a minimum 3-month engagement to allow time for data collection and algorithmic optimization, but we do not lock clients into restrictive long-term contracts." }
+      { q: "What does Catalyr do in digital marketing?", a: "Catalyr engineers data-driven marketing campaigns combining technical SEO, targeted paid ads, and conversion optimization to acquire high-quality leads." },
+      { q: "Who is this service for?", a: "We work with tech companies, SaaS platforms, and digital product owners who need to scale their revenue and lower their Customer Acquisition Cost." },
+      { q: "How does the process work?", a: "We start with an SEO/Ads audit, set up robust tracking and high-converting landing pages, launch targeted campaigns, and continuously A/B test to scale winners." },
+      { q: "How long does development take?", a: "Paid advertising (PPC) campaigns can launch and generate leads within weeks. Organic SEO and content strategies build significant momentum over 3 to 6 months." },
+      { q: "How much does it cost?", a: "Marketing retainers depend on ad spend volume, content frequency, and campaign scope. We ensure transparent reporting so you know exactly where every dollar goes." },
+      { q: "Why choose Catalyr?", a: "We track true ROI through advanced analytics like GA4 and Tag Manager. By combining our engineering expertise with marketing strategy, we optimize the entire funnel for maximum conversion." }
     ],
     cases: [
       { title: "B2B Lead Generation", category: "Marketing", tags: ["LinkedIn Ads", "SEO"], img: "branding.png", link: "" },
