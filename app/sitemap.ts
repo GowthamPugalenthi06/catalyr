@@ -3,7 +3,7 @@ import { SERVICES_DATA } from "@/components/sections/ServicesData";
 import { readBlogs } from "@/lib/blogStorage";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const rawBaseUrl = process.env.NEXT_PUBLIC_FRONTEND_URL || "https://catalyr.com";
+  const rawBaseUrl = process.env.NEXT_PUBLIC_FRONTEND_URL || "https://www.catalyr.com";
   const baseUrl = rawBaseUrl.endsWith('/') ? rawBaseUrl.slice(0, -1) : rawBaseUrl;
 
   const staticRoutes = [
