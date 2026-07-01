@@ -15,7 +15,6 @@ export const metadata: Metadata = {
   title: "Catalyr - End-to-End Product Engineering & Transformation",
   description: "Catalyr helps global enterprises and fast-growing startups build, scale, and transform their digital products. We deliver top-tier engineering across SaaS, Mobile, EdTech, FinTech, and Enterprise Solutions.",
   keywords: ["Product Engineering", "Digital Transformation", "Custom Software Development", "SaaS Development", "Mobile App Development", "Tech Consulting"],
-  alternates: { canonical: `${process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"}/` },
   robots: {
     index: true,
     follow: true,
