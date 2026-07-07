@@ -146,6 +146,9 @@ export default function EcommercePage() {
       <section className="cta mt-200 mt-100-mob bg--white">
         <div className="container">
           <div className="cta_content">
+            <span className="icon icon--2xl" style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>
+                <img className="fullw" src="https://ui-avatars.com/api/?name=Himanshu&background=eaeaea&color=333" alt="Himanshu Ranjan Saravanan" loading="lazy" decoding="async" style={{ aspectRatio: 1, borderRadius: '50%', maxWidth: '120px' }} />
+            </span>
             <div className="title title--m title--with-mark mt-24 text--center isview slidetop new-animate">
               <span className="a-word"><span style={{ transitionDelay: "0s" }}>Ready</span></span>{" "}
               <span className="a-word"><span style={{ transitionDelay: "0.08s" }}>to</span></span>{" "}
@@ -154,7 +157,7 @@ export default function EcommercePage() {
               <span className="a-word"><span style={{ transitionDelay: "0.32s" }}>store?</span></span>
             </div>
             <div className="txt txt--l mt-16 text--center color--dark-secondary fullw inner-inherit">
-              Let&apos;s design and launch your e-commerce platform — in as little as 8 weeks.
+              Book a call with Himanshu Ranjan Saravanan, our Head of Partnerships, to discuss your e-commerce platform needs.
             </div>
             <div className="mt-48 mb-200 flex v--center h--center isview slidetop">
               <a className="btn btn--orange arr arr-right hover--dark btn--lg-desk" href="/contact" target="_self"><span><b>Let&apos;s Talk</b></span></a>

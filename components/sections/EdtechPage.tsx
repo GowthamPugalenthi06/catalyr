@@ -258,11 +258,11 @@ export default function EdtechPage() {
     <div className="container">
         <div className="cta_content">
             <span className="icon icon--2xl">
-                <img className="fullw" src="/images/IMG_7877.jpeg.webp" alt="MORE THAN A EDTECH DESIGN AGENCY" loading="lazy" decoding="async" style={{ aspectRatio: 1 }} />            </span>
+                <img className="fullw" src="https://ui-avatars.com/api/?name=Himanshu&background=eaeaea&color=333" alt="Himanshu Ranjan Saravanan" loading="lazy" decoding="async" style={{ aspectRatio: 1, borderRadius: '50%' }} />            </span>
                             <div className="title title--m title--with-mark mt-48 mt-24-mob  text--center isview slidetop new-animate">
                     <span className="a-word"><span style={{ transitionDelay: '0s' }}>Need</span></span> <span className="a-word"><span style={{ transitionDelay: '0.08s' }}>to</span></span> <span className="a-word"><span style={{ transitionDelay: '0.16s' }}>design</span></span> <span className="a-word"><span style={{ transitionDelay: '0.24s' }}>one</span></span> <span className="a-word"><span style={{ transitionDelay: '0.32s' }}>of</span></span> <span className="a-word"><span style={{ transitionDelay: '0.4s' }}>these?</span></span>                </div>
                 <div className="txt txt--l mt-16 text--center isview slidetop color--dark-secondary fullw inner-inherit">
-                    Book a call with Anastasia Danylenko, our sales team lead, to discuss what your website redesign needs next.                </div>
+                    Book a call with Himanshu Ranjan Saravanan, our Head of Partnerships, to discuss what your product needs next.                </div>
                         <div className="mt-48 mt-20-mob flex v--center h--center isview slidetop">
                 <a className="btn btn--orange arr arr-right hover--dark btn--lg-desk" href="#contact-form" target="_self"><span><b>Book a Consultation</b></span></a>            </div>
         </div>
@@ -1427,148 +1427,7 @@ export default function EdtechPage() {
                         <div className="mt-80 mt-40-mob text--center flex h--center isview slidetop">
             <a className="btn btn--simple dark arr" href="/work" target="_self"><span><b>Explore All Cases</b></span></a>        </div>
             </div>
-</section>)}<section className="testimonials_section pb-200 pb-100-mob bg--white">
-    <div className="container">
-        <div className="flex v--end h--between heading_wrap flex--block-mob">
-            <div className="left">
-                <div className="txt txt--caption-m color--dark-light uppercase fw-600 isview slidetop scramble">
-                    <h2>What Our Clients Say</h2>                </div>
-                <div className="title title--xl mt-16 color--dark mw1040 isview slidetop new-animate trd02"><h2><span><span className="a-word"><span style={{ transitionDelay: '0s' }}>5.0</span></span></span> <span className="a-word"><span style={{ transitionDelay: '0.08s' }}>is</span></span> <span className="a-word"><span style={{ transitionDelay: '0.16s' }}>our</span></span> <span className="a-word"><span style={{ transitionDelay: '0.24s' }}>average</span></span> <br /><span className="a-word"><span style={{ transitionDelay: '0.32s' }}>on</span></span> <span className="a-word"><span style={{ transitionDelay: '0.4s' }}>clutch</span></span> <span className="a-word"><span style={{ transitionDelay: '0.48s' }}>&amp;</span></span> <span className="a-word"><span style={{ transitionDelay: '0.56s' }}>designrush</span></span></h2></div>
-            </div>
-            <div className="services_cards grid col-2 gap-8 mt-32-mob">
-                                <a href="https://clutch.co/profile/catalyr-studio" target="_blank" rel="nofollow" className="card bg--gray radius-12 p-12 flex fd--column isview slidetop">
-                    <span className="icon">
-                        <img className="visible-icon" src="/images/clutch-icon.svg" alt="MORE THAN A EDTECH DESIGN AGENCY" loading="lazy" decoding="async" style={{  }} />                        <img className="hover-icon" src="/images/Icon.svg" alt="MORE THAN A EDTECH DESIGN AGENCY" loading="lazy" decoding="async" style={{  }} />                    </span>
-                    <div className="ratings flex v--center h--between mt-auto">
-                        <div className="stars flex v--center h--start gap-2">
-                                                            <img src="/images/star.svg" alt="star" loading="lazy" decoding="async" />
-                                                            <img src="/images/star.svg" alt="star" loading="lazy" decoding="async" />
-                                                            <img src="/images/star.svg" alt="star" loading="lazy" decoding="async" />
-                                                            <img src="/images/star.svg" alt="star" loading="lazy" decoding="async" />
-                                                            <img src="/images/star.svg" alt="star" loading="lazy" decoding="async" />
-                                                    </div>
-                        <div className="txt txt--caption-m color--dark-light fw-600">5.0</div>
-                    </div>
-                </a>
-                                <a href="https://www.designrush.com/agency/profile/catalyr-studio" target="_blank" rel="nofollow" className="card bg--gray radius-12 p-12 flex fd--column isview slidetop">
-                    <span className="icon">
-                        <img className="visible-icon" src="/images/design-icon.svg" alt="MORE THAN A EDTECH DESIGN AGENCY" loading="lazy" decoding="async" style={{  }} />                        <img className="hover-icon" src="/images/icon2.svg" alt="MORE THAN A EDTECH DESIGN AGENCY" loading="lazy" decoding="async" style={{  }} />                    </span>
-                    <div className="ratings flex v--center h--between mt-auto">
-                        <div className="stars flex v--center h--start gap-2">
-                                                            <img src="/images/star.svg" alt="star" loading="lazy" decoding="async" />
-                                                            <img src="/images/star.svg" alt="star" loading="lazy" decoding="async" />
-                                                            <img src="/images/star.svg" alt="star" loading="lazy" decoding="async" />
-                                                            <img src="/images/star.svg" alt="star" loading="lazy" decoding="async" />
-                                                            <img src="/images/star.svg" alt="star" loading="lazy" decoding="async" />
-                                                    </div>
-                        <div className="txt txt--caption-m color--dark-light fw-600">4.9</div>
-                    </div>
-                </a>
-                            </div>
-        </div>
-        <div className="mt-40 mt-12-mob testimonials_wrap grid col-3 col-2-tablet col-1-mob gap-12">
-                        <div className="col radius-12 bg--gray flex fd--column isview slidetop">
-                <div className="top auth_wrap flex v--center h--start gap-16">
-                    <img className="md" src="/images/1516924597216.jpeg.webp" alt="MORE THAN A EDTECH DESIGN AGENCY" loading="lazy" decoding="async" style={{ aspectRatio: 1 }} />                    <div className="bio">
-                        <div className="txt txt--m gap-0">
-                            <p>Craig Tortolani</p>
-                            <span>CPO at Dekryption Labs </span>
-                        </div>
-                    </div>
-                </div>
-                                <div className="video_wrap mt-auto  isview slidetop">
-                    {/* <div className="animated-media"> */}
-                        <div className="video_player radius-12 clipped-right-hover clipped-right-mob">
-                            <video src="/media/review-craig.mp4" className="fullw" preload="none" poster="https://cdn.catalyr.com/wp-content/uploads/2025/03/cover-craig.webp"></video>
-                                                        <div className="btn-wrap">
-                                <button className="btn btn--play"></button>
-                            </div>
-                        </div>
-                    {/* </div> */}
-                </div>
-                                            </div>
-                        <div className="col radius-12 bg--gray flex fd--column isview slidetop">
-                <div className="top auth_wrap flex v--center h--start gap-16">
-                    <img className="md" src="/images/1766946800665.jpeg.webp" alt="MORE THAN A EDTECH DESIGN AGENCY" loading="lazy" decoding="async" style={{ aspectRatio: 1 }} />                    <div className="bio">
-                        <div className="txt txt--m gap-0">
-                            <p>Ash Bryant</p>
-                            <span>Founder of Hormn</span>
-                        </div>
-                    </div>
-                </div>
-                                                <div className="txt txt--l mt-auto pt-24 text_wrap">
-                    <p>The design team is truly world-class, excelling in both user interface design and creating solutions optimized for conversion.</p>
-                </div>
-                            </div>
-                        <div className="col radius-12 bg--gray flex fd--column isview slidetop">
-                <div className="top auth_wrap flex v--center h--start gap-16">
-                    <img className="md" src="/images/KlickEx.jpeg.webp" alt="MORE THAN A EDTECH DESIGN AGENCY" loading="lazy" decoding="async" style={{ aspectRatio: 1 }} />                    <div className="bio">
-                        <div className="txt txt--m gap-0">
-                            <p>KlickEx Team </p>
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-                                <div className="video_wrap mt-auto  isview slidetop">
-                    {/* <div className="animated-media"> */}
-                        <div className="video_player radius-12 clipped-right-hover clipped-right-mob">
-                            <video src="/media/klickex-review.mp4" className="fullw" preload="none" poster="https://cdn.catalyr.com/wp-content/uploads/2025/03/klickex-cover.webp"></video>
-                                                        <div className="btn-wrap">
-                                <button className="btn btn--play"></button>
-                            </div>
-                        </div>
-                    {/* </div> */}
-                </div>
-                                            </div>
-                        <div className="col radius-12 bg--gray flex fd--column isview slidetop">
-                <div className="top auth_wrap flex v--center h--start gap-16">
-                    <img className="md" src="/images/Rectangle-34624326.png.webp" alt="MORE THAN A EDTECH DESIGN AGENCY" loading="lazy" decoding="async" style={{ aspectRatio: 1.0064102564103 }} />                    <div className="bio">
-                        <div className="txt txt--m gap-0">
-                            <p>George Fry</p>
-                            <span>Founder at Neap</span>
-                        </div>
-                    </div>
-                </div>
-                                                <div className="txt txt--l mt-auto pt-24 text_wrap">
-                    <p>The quality of the designs is fantastic. Catalyr works at speed and is extremely punctual with timelines. They deliver top-notch outcomes with exceptional designs.</p>
-                </div>
-                            </div>
-                        <div className="col radius-12 bg--gray flex fd--column isview slidetop">
-                <div className="top auth_wrap flex v--center h--start gap-16">
-                    <img className="md" src="/images/image.png.webp" alt="MORE THAN A EDTECH DESIGN AGENCY" loading="lazy" decoding="async" style={{ aspectRatio: 1.0064102564103 }} />                    <div className="bio">
-                        <div className="txt txt--m gap-0">
-                            <p>Andre Guerra</p>
-                            <span>Co-Owner at RADCAT Design</span>
-                        </div>
-                    </div>
-                </div>
-                                <div className="video_wrap mt-auto  isview slidetop">
-                    {/* <div className="animated-media"> */}
-                        <div className="video_player radius-12 clipped-right-hover clipped-right-mob">
-                            <video src="/media/radcat-review.mp4" className="fullw" preload="none" poster="https://cdn.catalyr.com/wp-content/uploads/2025/03/cover-andre-scaled.webp"></video>
-                                                        <div className="btn-wrap">
-                                <button className="btn btn--play"></button>
-                            </div>
-                        </div>
-                    {/* </div> */}
-                </div>
-                                            </div>
-                        <div className="col radius-12 bg--gray flex fd--column isview slidetop">
-                <div className="top auth_wrap flex v--center h--start gap-16">
-                    <img className="md" src="/images/1683997337066.jpeg.webp" alt="MORE THAN A EDTECH DESIGN AGENCY" loading="lazy" decoding="async" style={{ aspectRatio: 1 }} />                    <div className="bio">
-                        <div className="txt txt--m gap-0">
-                            <p>Kevin Alvarez</p>
-                            <span>Founder & General Partner, Predictive</span>
-                        </div>
-                    </div>
-                </div>
-                                                <div className="txt txt--l mt-auto pt-24 text_wrap">
-                    <p>Catalyr's ability to translate concepts and rough design mock-ups into high-fidelity assets, designs, and visuals was very impressive. The goal was to maintain simple elegance in the design aesthetic, and they did it very well.</p>
-                </div>
-                            </div>
-                    </div>
-            </div>
-</section> <section className="services_section pt-200 pb-200 pt-100-mob pb-100-mob bg--dark clipped-bottom clipped-top radius-80 radius-32-mob">
+</section>)} <section className="services_section pt-200 pb-200 pt-100-mob pb-100-mob bg--dark clipped-bottom clipped-top radius-80 radius-32-mob">
     <div className="container">
         <div className="txt txt--caption-m color--white-light uppercase fw-600 isview slidetop scramble"><div><h2>HOW TO WORK WITH US</h2></div></div>        <div className="mt-24 mt-16-mob color--white mw1040 title title--xl isview slidetop new-animate trd02 inner-inherit"><span className="a-word"><span style={{ transitionDelay: '0s' }}>Three</span></span> <span className="a-word"><span style={{ transitionDelay: '0.08s' }}>flexible</span></span> <span className="a-word"><span style={{ transitionDelay: '0.16s' }}>collaboration</span></span> <span className="a-word"><span style={{ transitionDelay: '0.24s' }}>models</span></span> <span className="a-word"><span style={{ transitionDelay: '0.32s' }}>tailored</span></span> <span className="a-word"><span style={{ transitionDelay: '0.4s' }}>to</span></span> <span className="a-word"><span style={{ transitionDelay: '0.48s' }}>your</span></span> <span><h3><span className="a-word"><span style={{ transitionDelay: '0.56s' }}>Edtech</span></span> <span className="a-word"><span style={{ transitionDelay: '0.64s' }}>website</span></span> <span className="a-word"><span style={{ transitionDelay: '0.72s' }}>design</span></span></h3></span> <span className="a-word"><span style={{ transitionDelay: '0.8s' }}>and</span></span> <span className="a-word"><span style={{ transitionDelay: '0.88s' }}>development</span></span> <span className="a-word"><span style={{ transitionDelay: '0.96s' }}>needs</span></span></div>
         <div className="mt-100 mt-32-mob">

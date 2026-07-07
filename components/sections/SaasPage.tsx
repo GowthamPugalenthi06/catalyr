@@ -258,11 +258,11 @@ export default function SaasPage() {
     <div className="container">
         <div className="cta_content">
             <span className="icon icon--2xl">
-                <img className="fullw" src="/images/IMG_7877.jpeg.webp" alt="MORE THAN A SAAS DESIGN AGENCY" loading="lazy" decoding="async" style={{ aspectRatio: 1 }} />            </span>
+                <img className="fullw" src="https://ui-avatars.com/api/?name=Himanshu&background=eaeaea&color=333" alt="Himanshu Ranjan Saravanan" loading="lazy" decoding="async" style={{ aspectRatio: 1, borderRadius: '50%' }} />            </span>
                             <div className="title title--m title--with-mark mt-48 mt-24-mob  text--center isview slidetop new-animate">
                     <span className="a-word"><span style={{ transitionDelay: '0s' }}>Need</span></span> <span className="a-word"><span style={{ transitionDelay: '0.08s' }}>to</span></span> <span className="a-word"><span style={{ transitionDelay: '0.16s' }}>design</span></span> <span className="a-word"><span style={{ transitionDelay: '0.24s' }}>one</span></span> <span className="a-word"><span style={{ transitionDelay: '0.32s' }}>of</span></span> <span className="a-word"><span style={{ transitionDelay: '0.4s' }}>these?</span></span>                </div>
                 <div className="txt txt--l mt-16 text--center isview slidetop color--dark-secondary fullw inner-inherit">
-                    Book a call with Anastasia Danylenko, our sales team lead, to discuss what your website redesign needs next.                </div>
+                    Book a call with Himanshu Ranjan Saravanan, our Head of Partnerships, to discuss what your product needs next.                </div>
                         <div className="mt-48 mt-20-mob flex v--center h--center isview slidetop">
                 <a className="btn btn--orange arr arr-right hover--dark btn--lg-desk" href="#contact-form" target="_self"><span><b>Book a Consultation</b></span></a>            </div>
         </div>

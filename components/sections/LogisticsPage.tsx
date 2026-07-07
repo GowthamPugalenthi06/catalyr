@@ -146,6 +146,9 @@ export default function LogisticsPage() {
       <section className="cta mt-200 mt-100-mob bg--white">
         <div className="container">
           <div className="cta_content">
+            <span className="icon icon--2xl" style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>
+                <img className="fullw" src="https://ui-avatars.com/api/?name=Himanshu&background=eaeaea&color=333" alt="Himanshu Ranjan Saravanan" loading="lazy" decoding="async" style={{ aspectRatio: 1, borderRadius: '50%', maxWidth: '120px' }} />
+            </span>
             <div className="title title--m title--with-mark mt-24 text--center isview slidetop new-animate">
               <span className="a-word"><span style={{ transitionDelay: "0s" }}>Modernise</span></span>{" "}
               <span className="a-word"><span style={{ transitionDelay: "0.08s" }}>your</span></span>{" "}
@@ -153,7 +156,7 @@ export default function LogisticsPage() {
               <span className="a-word"><span style={{ transitionDelay: "0.24s" }}>operations</span></span>
             </div>
             <div className="txt txt--l mt-16 text--center color--dark-secondary fullw inner-inherit">
-              From MVP to production-ready platform — we deliver logistics software on time, on budget.
+              Book a call with Himanshu Ranjan Saravanan, our Head of Partnerships, to discuss your logistics platform needs.
             </div>
             <div className="mt-48 mb-100 flex v--center h--center isview slidetop">
               <a className="btn btn--orange arr arr-right hover--dark btn--lg-desk" href="/contact" target="_self"><span><b>Talk to Our Team</b></span></a>
