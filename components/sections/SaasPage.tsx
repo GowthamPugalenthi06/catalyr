@@ -586,7 +586,7 @@ export default function SaasPage() {
             <div className="grid col-3 col-1-mob services_row clipped">
                                 <div className="vertical_line grid col-3 col-1-mob span-3 span-1-mob clipped isview full fadein"><span></span><span></span><span></span></div>
                 <div className="col flex p-32 pb-40 p-20-mob pt-28-mob pb-28-mob fd--column v--start">
-                                        <img className="" src="/images/asterisk-svgrepo-com-2-19.svg" alt="MORE THAN A SAAS DESIGN AGENCY" loading="lazy" decoding="async" style={{  }} />                                        <div className="pt-48 mt-auto">
+                                        <img className="" src="/images/asterisk-svgrepo-com-2-19_1.svg" alt="MORE THAN A SAAS DESIGN AGENCY" loading="lazy" decoding="async" style={{  }} />                                        <div className="pt-48 mt-auto">
                         <div className="title title--xs color--dark">Onboarding flows</div>
                         <div className="txt txt--m mt-8 mt-4-mob color--dark-secondary">
                             <p>Smooth first-time experiences that increase activation and reduce early churn. </p>
@@ -595,7 +595,7 @@ export default function SaasPage() {
                 </div>
                                 <div className="vertical_line grid col-3 col-1-mob span-3 span-1-mob clipped isview full fadein mob-visible"><span></span><span></span><span></span></div>
                 <div className="col flex p-32 pb-40 p-20-mob pt-28-mob pb-28-mob fd--column v--start">
-                                        <img className="" src="/images/asterisk-svgrepo-com-2-1-2.svg" alt="MORE THAN A SAAS DESIGN AGENCY" loading="lazy" decoding="async" style={{  }} />                                        <div className="pt-48 mt-auto">
+                                        <img className="" src="/images/asterisk-svgrepo-com-2-1-2-dark.svg" alt="MORE THAN A SAAS DESIGN AGENCY" loading="lazy" decoding="async" style={{  }} />                                        <div className="pt-48 mt-auto">
                         <div className="title title--xs color--dark">Navigation & layouts</div>
                         <div className="txt txt--m mt-8 mt-4-mob color--dark-secondary">
                             <p>Clear menus and layouts designed for role-based user journeys.</p>

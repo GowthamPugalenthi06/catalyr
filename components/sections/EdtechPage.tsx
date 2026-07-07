@@ -166,7 +166,7 @@ export default function EdtechPage() {
                              
                                 <div className="isview slidetop animated-media-wrapper">
                                     <div className="image media_wrap animated-media">
-                                        <img className="fullw radius-12" src="https://images.unsplash.com/photo-1427504141085-f3f2e42d9eb8?auto=format&fit=crop&w=800&q=80" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />                                    </div>
+                                        <img className="fullw radius-12" src="/images/downloaded/photo-1563986768494-4dee2763ff3f.jpg" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />                                    </div>
                                 </div>
                                                     </div>
                     </div>
@@ -205,7 +205,7 @@ export default function EdtechPage() {
                              
                                 <div className="isview slidetop animated-media-wrapper">
                                     <div className="image media_wrap animated-media">
-                                        <img className="fullw radius-12" src="https://images.unsplash.com/photo-1519389953810-c518a402e030?auto=format&fit=crop&w=800&q=80" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />                                    </div>
+                                        <img className="fullw radius-12" src="/images/downloaded/photo-1549317661-bd32c8ce0db2.jpg" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />                                    </div>
                                 </div>
                                                     </div>
                     </div>
@@ -291,7 +291,7 @@ export default function EdtechPage() {
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     01                                                </div>
                                                 <div className="media_file">
-                                                                                                                                                                <img className="fullw radius-12" src="https://images.unsplash.com/photo-1524178232363-1e420a25152c?auto=format&fit=crop&w=800&q=80" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />
+                                                                                                                                                                <img className="fullw radius-12" src="/images/downloaded/photo-1542744173-8e7e53415bb0.jpg" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />
                                                                                                             
                                                 </div>
                                                 <div className="bottom-row mt-200">
@@ -310,7 +310,7 @@ export default function EdtechPage() {
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     02                                                </div>
                                                 <div className="media_file">
-                                                                                                                                                                <img className="fullw radius-12" src="https://images.unsplash.com/photo-1509869172322-ce4b13bd5ce0?auto=format&fit=crop&w=800&q=80" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />
+                                                                                                                                                                <img className="fullw radius-12" src="/images/downloaded/photo-1551288049-bebda4e38f71.jpg" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />
                                                                                                             
                                                 </div>
                                                 <div className="bottom-row mt-200">
@@ -329,7 +329,7 @@ export default function EdtechPage() {
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     03                                                </div>
                                                 <div className="media_file">
-                                                                                                                                                                <img className="fullw radius-12" src="https://images.unsplash.com/photo-1523240875995-c6a0c0c7d422?auto=format&fit=crop&w=800&q=80" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />
+                                                                                                                                                                <img className="fullw radius-12" src="/images/downloaded/photo-1522071820081-009f0129c71c.jpg" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />
                                                                                                             
                                                 </div>
                                                 <div className="bottom-row mt-200">
@@ -397,7 +397,7 @@ export default function EdtechPage() {
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     03                                                </div>
                                                 <div className="media_file">
-                                                                                                                                                                <img className="fullw radius-12" src="https://images.unsplash.com/photo-1427504141085-f3f2e42d9eb8?auto=format&fit=crop&w=800&q=80" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />
+                                                                                                                                                                <img className="fullw radius-12" src="/images/downloaded/photo-1563986768494-4dee2763ff3f.jpg" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />
                                                                                                             
                                                 </div>
                                                 <div className="bottom-row mt-200">
@@ -435,7 +435,7 @@ export default function EdtechPage() {
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     05                                                </div>
                                                 <div className="media_file">
-                                                                                                                                                                <img className="fullw radius-12" src="https://images.unsplash.com/photo-1519389953810-c518a402e030?auto=format&fit=crop&w=800&q=80" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />
+                                                                                                                                                                <img className="fullw radius-12" src="/images/downloaded/photo-1549317661-bd32c8ce0db2.jpg" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />
                                                                                                             
                                                 </div>
                                                 <div className="bottom-row mt-200">
@@ -518,7 +518,7 @@ export default function EdtechPage() {
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     03                                                </div>
                                                 <div className="media_file">
-                                                                                                                                                                <img className="fullw radius-12" src="https://images.unsplash.com/photo-1524178232363-1e420a25152c?auto=format&fit=crop&w=800&q=80" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />
+                                                                                                                                                                <img className="fullw radius-12" src="/images/downloaded/photo-1542744173-8e7e53415bb0.jpg" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />
                                                                                                             
                                                 </div>
                                                 <div className="bottom-row mt-200">
@@ -537,7 +537,7 @@ export default function EdtechPage() {
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     04                                                </div>
                                                 <div className="media_file">
-                                                                                                                                                                <img className="fullw radius-12" src="https://images.unsplash.com/photo-1509869172322-ce4b13bd5ce0?auto=format&fit=crop&w=800&q=80" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />
+                                                                                                                                                                <img className="fullw radius-12" src="/images/downloaded/photo-1551288049-bebda4e38f71.jpg" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />
                                                                                                             
                                                 </div>
                                                 <div className="bottom-row mt-200">
@@ -556,7 +556,7 @@ export default function EdtechPage() {
                                                                                             <div className="num h6 color--white-tertiary mob-hidden">
                                                     05                                                </div>
                                                 <div className="media_file">
-                                                                                                                                                                <img className="fullw radius-12" src="https://images.unsplash.com/photo-1523240875995-c6a0c0c7d422?auto=format&fit=crop&w=800&q=80" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />
+                                                                                                                                                                <img className="fullw radius-12" src="/images/downloaded/photo-1522071820081-009f0129c71c.jpg" loading="lazy" style={{ aspectRatio: 1.33, objectFit: 'cover' }} />
                                                                                                             
                                                 </div>
                                                 <div className="bottom-row mt-200">
@@ -587,7 +587,7 @@ export default function EdtechPage() {
             <div className="grid col-3 col-1-mob services_row clipped">
                                 <div className="vertical_line grid col-3 col-1-mob span-3 span-1-mob clipped isview full fadein"><span></span><span></span><span></span></div>
                 <div className="col flex p-32 pb-40 p-20-mob pt-28-mob pb-28-mob fd--column v--start">
-                                        <img className="" src="/images/asterisk-svgrepo-com-2-19.svg" alt="MORE THAN A EDTECH DESIGN AGENCY" loading="lazy" decoding="async" style={{  }} />                                        <div className="pt-48 mt-auto">
+                                        <img className="" src="/images/asterisk-svgrepo-com-2-19_1.svg" alt="MORE THAN A EDTECH DESIGN AGENCY" loading="lazy" decoding="async" style={{  }} />                                        <div className="pt-48 mt-auto">
                         <div className="title title--xs color--dark">Onboarding flows</div>
                         <div className="txt txt--m mt-8 mt-4-mob color--dark-secondary">
                             <p>Smooth first-time experiences that increase activation and reduce early churn. </p>
@@ -596,7 +596,7 @@ export default function EdtechPage() {
                 </div>
                                 <div className="vertical_line grid col-3 col-1-mob span-3 span-1-mob clipped isview full fadein mob-visible"><span></span><span></span><span></span></div>
                 <div className="col flex p-32 pb-40 p-20-mob pt-28-mob pb-28-mob fd--column v--start">
-                                        <img className="" src="/images/asterisk-svgrepo-com-2-1-2.svg" alt="MORE THAN A EDTECH DESIGN AGENCY" loading="lazy" decoding="async" style={{  }} />                                        <div className="pt-48 mt-auto">
+                                        <img className="" src="/images/asterisk-svgrepo-com-2-1-2-dark.svg" alt="MORE THAN A EDTECH DESIGN AGENCY" loading="lazy" decoding="async" style={{  }} />                                        <div className="pt-48 mt-auto">
                         <div className="title title--xs color--dark">Navigation & layouts</div>
                         <div className="txt txt--m mt-8 mt-4-mob color--dark-secondary">
                             <p>Clear menus and layouts designed for role-based user journeys.</p>
