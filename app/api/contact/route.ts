@@ -31,6 +31,12 @@ export async function POST(req: Request) {
       data = await req.json();
     }
     
+    // Check honeypot field (if filled out, it's likely a bot)
+    if (data.phone_number) {
+      console.log("Spam detected via honeypot, ignoring submission.");
+      return NextResponse.json({ success: true, message: "Mock email sent (Spam blocked)" });
+    }
+    
     // Read dynamic email from settings
     const settingsFilePath = path.join(process.cwd(), 'data', 'settings.json');
     let toEmail = "hello@getcatalyr.com"; // fallback

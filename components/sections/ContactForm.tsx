@@ -111,6 +111,10 @@ export default function ContactForm({
                   <input type="hidden" name="action" defaultValue="validate_captcha" />
                   <input type="hidden" name="form_type" defaultValue="1" />
                   <input type="hidden" name="source_page" defaultValue={process.env.NEXT_PUBLIC_FRONTEND_URL + "/"} />
+                  {/* Honeypot field to prevent spam bots */}
+                  <div style={{ display: "none" }} aria-hidden="true">
+                    <input type="text" name="phone_number" tabIndex={-1} autoComplete="off" />
+                  </div>
                   <div className="input-wrap w50 isview slidetop">
                     <div className="txt txt--control-s color--white-light uppercase fw-600">Your Name</div>
                     <input type="text" name="your_name" placeholder=" " className="required" data-max-length="40" data-pattern="[A-Za-z]" />
